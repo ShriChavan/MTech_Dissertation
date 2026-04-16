@@ -1,0 +1,14 @@
+Feature,Importance
+speed_index,0.79859245
+Response Time(s),0.09665521
+Load Time(s),0.079280615
+Total_Time,0.010980991
+Page Size (KB),0.0036380745
+num_requests,0.002633719
+total_byte_weight,0.002418736
+Size_LoadTime_Ratio,0.0017789378
+Bytes_Per_Request,0.0014050393
+Throughput,0.001380992
+Throughput_ResponseTime_Ratio,0.0012351823
+Log_Page_Size,0.0
+Log_Throughput,0.0

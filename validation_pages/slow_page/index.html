@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slow Performance Test Page - Before Optimization</title>
+    
+    <!-- 
+    ==========================================================================
+    INTENTIONALLY SLOW PAGE FOR RESEARCH VALIDATION
+    ==========================================================================
+    This page is designed to score poorly on Web Performance metrics:
+    1. Large uncompressed image (~2-5MB) - High Transfer Size
+    2. 500 empty <div> tags - High DOM Complexity  
+    3. Heavy render-blocking script - Poor FCP/LCP/TTI
+    ==========================================================================
+    -->
+    
+    <!-- ====================================================================
+         PROBLEM #3: RENDER-BLOCKING SCRIPT (Heavy synchronous JavaScript)
+         This blocks parsing and rendering, severely impacting FCP, LCP, TTI, TBT
+    ==================================================================== -->
+    <script>
+        // INTENTIONALLY HEAVY BLOCKING COMPUTATION
+        // This runs synchronously before any content renders
+        
+        console.log("Starting heavy blocking computation...");
+        const startTime = performance.now();
+        
+        // CPU-intensive operation: Calculate Fibonacci numbers
+        function fibonacci(n) {
+            if (n <= 1) return n;
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+        
+        // Calculate multiple large Fibonacci numbers (blocking)
+        const results = [];
+        for (let i = 30; i <= 38; i++) {
+            results.push(fibonacci(i));
+        }
+        
+        // Additional blocking: Large array operations
+        const largeArray = [];
+        for (let i = 0; i < 100000; i++) {
+            largeArray.push({
+                id: i,
+                value: Math.random() * 1000,
+                name: 'Item_' + i.toString().padStart(6, '0'),
+                data: Array(50).fill(Math.random())
+            });
+        }
+        
+        // Sort the large array multiple times (CPU intensive)
+        for (let j = 0; j < 5; j++) {
+            largeArray.sort((a, b) => a.value - b.value);
+            largeArray.sort((a, b) => b.value - a.value);
+        }
+        
+        // String manipulation (memory intensive)
+        let heavyString = '';
+        for (let i = 0; i < 10000; i++) {
+            heavyString += 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ';
+        }
+        
+        // Regular expression operations (CPU intensive)
+        for (let i = 0; i < 1000; i++) {
+            heavyString.match(/[a-z]+/gi);
+        }
+        
+        const endTime = performance.now();
+        console.log(`Blocking computation completed in ${(endTime - startTime).toFixed(2)}ms`);
+        console.log(`Fibonacci results: ${results.join(', ')}`);
+        
+        // Store results globally to prevent optimization
+        window.heavyComputationResults = {
+            fibonacci: results,
+            arrayLength: largeArray.length,
+            stringLength: heavyString.length,
+            executionTime: endTime - startTime
+        };
+    </script>
+    
+    <!-- Additional render-blocking script -->
+    <script>
+        // More blocking operations
+        const matrix = [];
+        const size = 200;
+        
+        // Create and multiply matrices
+        for (let i = 0; i < size; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < size; j++) {
+                matrix[i][j] = Math.random();
+            }
+        }
+        
+        // Matrix operations
+        function multiplyMatrices(a, b) {
+            const result = [];
+            for (let i = 0; i < a.length; i++) {
+                result[i] = [];
+                for (let j = 0; j < b[0].length; j++) {
+                    let sum = 0;
+                    for (let k = 0; k < a[0].length; k++) {
+                        sum += a[i][k] * b[k][j];
+                    }
+                    result[i][j] = sum;
+                }
+            }
+            return result;
+        }
+        
+        // Perform multiple matrix multiplications
+        let tempMatrix = matrix;
+        for (let i = 0; i < 3; i++) {
+            tempMatrix = multiplyMatrices(tempMatrix, matrix);
+        }
+        
+        window.matrixResult = tempMatrix;
+        console.log("Matrix operations completed");
+    </script>
+    
+    <style>
+        /* Basic styling - minimal CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .metrics-info {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .metrics-info h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .metrics-info ul {
+            margin-left: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .dom-complexity {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .dom-complexity h3 {
+            color: #721c24;
+        }
+        
+        /* Styles for the 500 empty divs */
+        .empty-div {
+            /* Each div has styles to ensure browser processes them */
+            display: block;
+            width: 100%;
+            height: 1px;
+            margin: 1px 0;
+            opacity: 0.01;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐌 Slow Performance Test Page</h1>
+        <p class="subtitle">Intentionally Poor Performance for Research Validation</p>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Purpose of This Page</h2>
+            <p>
+                This webpage is intentionally designed to perform poorly on web performance metrics.
+                It is used to validate a prescriptive AI optimization model for a research dissertation.
+            </p>
+            <p>
+                After running PageSpeed Insights on this page and collecting metrics, the AI model
+                will predict it as "slow" and provide optimization recommendations. A new optimized
+                version will be created based on these recommendations.
+            </p>
+        </div>
+        
+        <div class="metrics-info">
+            <h3>⚠️ Performance Issues Intentionally Included:</h3>
+            <ul>
+                <li><strong>Issue #1:</strong> Large uncompressed image (~2-5MB) - Increases Transfer Size</li>
+                <li><strong>Issue #2:</strong> 500 empty &lt;div&gt; elements - Increases DOM Complexity</li>
+                <li><strong>Issue #3:</strong> Heavy render-blocking JavaScript - Impacts FCP, LCP, TTI, TBT</li>
+            </ul>
+        </div>
+        
+        <!-- ====================================================================
+             PROBLEM #1: LARGE UNCOMPRESSED IMAGE
+             This should be a 2-5MB uncompressed image for high transfer size
+             Using placeholder - REPLACE WITH ACTUAL LARGE IMAGE
+        ==================================================================== -->
+        <div class="image-container">
+            <h3>Large Uncompressed Image (High Transfer Size)</h3>
+            <p style="margin-bottom: 15px;">
+                <em>Note: Replace the placeholder below with a large uncompressed BMP/PNG image (2-5MB)</em>
+            </p>
+            <!-- 
+                IMPORTANT: Replace this with an actual large uncompressed image file
+                Options:
+                1. Generate a large BMP: Use Python script provided below
+                2. Download large test image from: https://sample-videos.com/img/Sample-jpg-image-5mb.jpg
+                3. Use uncompressed PNG screenshot at high resolution
+            -->
+            <img src="large_image.bmp" alt="Large uncompressed test image" 
+                 onerror="this.src='https://via.placeholder.com/2000x1500/667eea/ffffff?text=Large+Uncompressed+Image+Placeholder+(Replace+with+2-5MB+BMP)'; this.style.border='3px dashed red';">
+        </div>
+        
+        <div class="dom-complexity">
+            <h3>🔴 DOM Complexity Section (500 Empty Divs Below)</h3>
+            <p>The following section contains 500 empty &lt;div&gt; elements to increase DOM complexity.</p>
+        </div>
+        
+        <!-- ====================================================================
+             PROBLEM #2: 500 EMPTY DIV TAGS (DOM Complexity)
+             These increase DOM size and parsing time
+        ==================================================================== -->
+        <div id="dom-complexity-container">
+            <!-- 500 Empty Divs - Generated to increase DOM complexity -->
+            <div class="empty-div" data-index="1"></div>
+            <div class="empty-div" data-index="2"></div>
+            <div class="empty-div" data-index="3"></div>
+            <div class="empty-div" data-index="4"></div>
+            <div class="empty-div" data-index="5"></div>
+            <div class="empty-div" data-index="6"></div>
+            <div class="empty-div" data-index="7"></div>
+            <div class="empty-div" data-index="8"></div>
+            <div class="empty-div" data-index="9"></div>
+            <div class="empty-div" data-index="10"></div>
+            <div class="empty-div" data-index="11"></div>
+            <div class="empty-div" data-index="12"></div>
+            <div class="empty-div" data-index="13"></div>
+            <div class="empty-div" data-index="14"></div>
+            <div class="empty-div" data-index="15"></div>
+            <div class="empty-div" data-index="16"></div>
+            <div class="empty-div" data-index="17"></div>
+            <div class="empty-div" data-index="18"></div>
+            <div class="empty-div" data-index="19"></div>
+            <div class="empty-div" data-index="20"></div>
+            <div class="empty-div" data-index="21"></div>
+            <div class="empty-div" data-index="22"></div>
+            <div class="empty-div" data-index="23"></div>
+            <div class="empty-div" data-index="24"></div>
+            <div class="empty-div" data-index="25"></div>
+            <div class="empty-div" data-index="26"></div>
+            <div class="empty-div" data-index="27"></div>
+            <div class="empty-div" data-index="28"></div>
+            <div class="empty-div" data-index="29"></div>
+            <div class="empty-div" data-index="30"></div>
+            <div class="empty-div" data-index="31"></div>
+            <div class="empty-div" data-index="32"></div>
+            <div class="empty-div" data-index="33"></div>
+            <div class="empty-div" data-index="34"></div>
+            <div class="empty-div" data-index="35"></div>
+            <div class="empty-div" data-index="36"></div>
+            <div class="empty-div" data-index="37"></div>
+            <div class="empty-div" data-index="38"></div>
+            <div class="empty-div" data-index="39"></div>
+            <div class="empty-div" data-index="40"></div>
+            <div class="empty-div" data-index="41"></div>
+            <div class="empty-div" data-index="42"></div>
+            <div class="empty-div" data-index="43"></div>
+            <div class="empty-div" data-index="44"></div>
+            <div class="empty-div" data-index="45"></div>
+            <div class="empty-div" data-index="46"></div>
+            <div class="empty-div" data-index="47"></div>
+            <div class="empty-div" data-index="48"></div>
+            <div class="empty-div" data-index="49"></div>
+            <div class="empty-div" data-index="50"></div>
+            <div class="empty-div" data-index="51"></div>
+            <div class="empty-div" data-index="52"></div>
+            <div class="empty-div" data-index="53"></div>
+            <div class="empty-div" data-index="54"></div>
+            <div class="empty-div" data-index="55"></div>
+            <div class="empty-div" data-index="56"></div>
+            <div class="empty-div" data-index="57"></div>
+            <div class="empty-div" data-index="58"></div>
+            <div class="empty-div" data-index="59"></div>
+            <div class="empty-div" data-index="60"></div>
+            <div class="empty-div" data-index="61"></div>
+            <div class="empty-div" data-index="62"></div>
+            <div class="empty-div" data-index="63"></div>
+            <div class="empty-div" data-index="64"></div>
+            <div class="empty-div" data-index="65"></div>
+            <div class="empty-div" data-index="66"></div>
+            <div class="empty-div" data-index="67"></div>
+            <div class="empty-div" data-index="68"></div>
+            <div class="empty-div" data-index="69"></div>
+            <div class="empty-div" data-index="70"></div>
+            <div class="empty-div" data-index="71"></div>
+            <div class="empty-div" data-index="72"></div>
+            <div class="empty-div" data-index="73"></div>
+            <div class="empty-div" data-index="74"></div>
+            <div class="empty-div" data-index="75"></div>
+            <div class="empty-div" data-index="76"></div>
+            <div class="empty-div" data-index="77"></div>
+            <div class="empty-div" data-index="78"></div>
+            <div class="empty-div" data-index="79"></div>
+            <div class="empty-div" data-index="80"></div>
+            <div class="empty-div" data-index="81"></div>
+            <div class="empty-div" data-index="82"></div>
+            <div class="empty-div" data-index="83"></div>
+            <div class="empty-div" data-index="84"></div>
+            <div class="empty-div" data-index="85"></div>
+            <div class="empty-div" data-index="86"></div>
+            <div class="empty-div" data-index="87"></div>
+            <div class="empty-div" data-index="88"></div>
+            <div class="empty-div" data-index="89"></div>
+            <div class="empty-div" data-index="90"></div>
+            <div class="empty-div" data-index="91"></div>
+            <div class="empty-div" data-index="92"></div>
+            <div class="empty-div" data-index="93"></div>
+            <div class="empty-div" data-index="94"></div>
+            <div class="empty-div" data-index="95"></div>
+            <div class="empty-div" data-index="96"></div>
+            <div class="empty-div" data-index="97"></div>
+            <div class="empty-div" data-index="98"></div>
+            <div class="empty-div" data-index="99"></div>
+            <div class="empty-div" data-index="100"></div>
+            <div class="empty-div" data-index="101"></div>
+            <div class="empty-div" data-index="102"></div>
+            <div class="empty-div" data-index="103"></div>
+            <div class="empty-div" data-index="104"></div>
+            <div class="empty-div" data-index="105"></div>
+            <div class="empty-div" data-index="106"></div>
+            <div class="empty-div" data-index="107"></div>
+            <div class="empty-div" data-index="108"></div>
+            <div class="empty-div" data-index="109"></div>
+            <div class="empty-div" data-index="110"></div>
+            <div class="empty-div" data-index="111"></div>
+            <div class="empty-div" data-index="112"></div>
+            <div class="empty-div" data-index="113"></div>
+            <div class="empty-div" data-index="114"></div>
+            <div class="empty-div" data-index="115"></div>
+            <div class="empty-div" data-index="116"></div>
+            <div class="empty-div" data-index="117"></div>
+            <div class="empty-div" data-index="118"></div>
+            <div class="empty-div" data-index="119"></div>
+            <div class="empty-div" data-index="120"></div>
+            <div class="empty-div" data-index="121"></div>
+            <div class="empty-div" data-index="122"></div>
+            <div class="empty-div" data-index="123"></div>
+            <div class="empty-div" data-index="124"></div>
+            <div class="empty-div" data-index="125"></div>
+            <div class="empty-div" data-index="126"></div>
+            <div class="empty-div" data-index="127"></div>
+            <div class="empty-div" data-index="128"></div>
+            <div class="empty-div" data-index="129"></div>
+            <div class="empty-div" data-index="130"></div>
+            <div class="empty-div" data-index="131"></div>
+            <div class="empty-div" data-index="132"></div>
+            <div class="empty-div" data-index="133"></div>
+            <div class="empty-div" data-index="134"></div>
+            <div class="empty-div" data-index="135"></div>
+            <div class="empty-div" data-index="136"></div>
+            <div class="empty-div" data-index="137"></div>
+            <div class="empty-div" data-index="138"></div>
+            <div class="empty-div" data-index="139"></div>
+            <div class="empty-div" data-index="140"></div>
+            <div class="empty-div" data-index="141"></div>
+            <div class="empty-div" data-index="142"></div>
+            <div class="empty-div" data-index="143"></div>
+            <div class="empty-div" data-index="144"></div>
+            <div class="empty-div" data-index="145"></div>
+            <div class="empty-div" data-index="146"></div>
+            <div class="empty-div" data-index="147"></div>
+            <div class="empty-div" data-index="148"></div>
+            <div class="empty-div" data-index="149"></div>
+            <div class="empty-div" data-index="150"></div>
+            <div class="empty-div" data-index="151"></div>
+            <div class="empty-div" data-index="152"></div>
+            <div class="empty-div" data-index="153"></div>
+            <div class="empty-div" data-index="154"></div>
+            <div class="empty-div" data-index="155"></div>
+            <div class="empty-div" data-index="156"></div>
+            <div class="empty-div" data-index="157"></div>
+            <div class="empty-div" data-index="158"></div>
+            <div class="empty-div" data-index="159"></div>
+            <div class="empty-div" data-index="160"></div>
+            <div class="empty-div" data-index="161"></div>
+            <div class="empty-div" data-index="162"></div>
+            <div class="empty-div" data-index="163"></div>
+            <div class="empty-div" data-index="164"></div>
+            <div class="empty-div" data-index="165"></div>
+            <div class="empty-div" data-index="166"></div>
+            <div class="empty-div" data-index="167"></div>
+            <div class="empty-div" data-index="168"></div>
+            <div class="empty-div" data-index="169"></div>
+            <div class="empty-div" data-index="170"></div>
+            <div class="empty-div" data-index="171"></div>
+            <div class="empty-div" data-index="172"></div>
+            <div class="empty-div" data-index="173"></div>
+            <div class="empty-div" data-index="174"></div>
+            <div class="empty-div" data-index="175"></div>
+            <div class="empty-div" data-index="176"></div>
+            <div class="empty-div" data-index="177"></div>
+            <div class="empty-div" data-index="178"></div>
+            <div class="empty-div" data-index="179"></div>
+            <div class="empty-div" data-index="180"></div>
+            <div class="empty-div" data-index="181"></div>
+            <div class="empty-div" data-index="182"></div>
+            <div class="empty-div" data-index="183"></div>
+            <div class="empty-div" data-index="184"></div>
+            <div class="empty-div" data-index="185"></div>
+            <div class="empty-div" data-index="186"></div>
+            <div class="empty-div" data-index="187"></div>
+            <div class="empty-div" data-index="188"></div>
+            <div class="empty-div" data-index="189"></div>
+            <div class="empty-div" data-index="190"></div>
+            <div class="empty-div" data-index="191"></div>
+            <div class="empty-div" data-index="192"></div>
+            <div class="empty-div" data-index="193"></div>
+            <div class="empty-div" data-index="194"></div>
+            <div class="empty-div" data-index="195"></div>
+            <div class="empty-div" data-index="196"></div>
+            <div class="empty-div" data-index="197"></div>
+            <div class="empty-div" data-index="198"></div>
+            <div class="empty-div" data-index="199"></div>
+            <div class="empty-div" data-index="200"></div>
+            <div class="empty-div" data-index="201"></div>
+            <div class="empty-div" data-index="202"></div>
+            <div class="empty-div" data-index="203"></div>
+            <div class="empty-div" data-index="204"></div>
+            <div class="empty-div" data-index="205"></div>
+            <div class="empty-div" data-index="206"></div>
+            <div class="empty-div" data-index="207"></div>
+            <div class="empty-div" data-index="208"></div>
+            <div class="empty-div" data-index="209"></div>
+            <div class="empty-div" data-index="210"></div>
+            <div class="empty-div" data-index="211"></div>
+            <div class="empty-div" data-index="212"></div>
+            <div class="empty-div" data-index="213"></div>
+            <div class="empty-div" data-index="214"></div>
+            <div class="empty-div" data-index="215"></div>
+            <div class="empty-div" data-index="216"></div>
+            <div class="empty-div" data-index="217"></div>
+            <div class="empty-div" data-index="218"></div>
+            <div class="empty-div" data-index="219"></div>
+            <div class="empty-div" data-index="220"></div>
+            <div class="empty-div" data-index="221"></div>
+            <div class="empty-div" data-index="222"></div>
+            <div class="empty-div" data-index="223"></div>
+            <div class="empty-div" data-index="224"></div>
+            <div class="empty-div" data-index="225"></div>
+            <div class="empty-div" data-index="226"></div>
+            <div class="empty-div" data-index="227"></div>
+            <div class="empty-div" data-index="228"></div>
+            <div class="empty-div" data-index="229"></div>
+            <div class="empty-div" data-index="230"></div>
+            <div class="empty-div" data-index="231"></div>
+            <div class="empty-div" data-index="232"></div>
+            <div class="empty-div" data-index="233"></div>
+            <div class="empty-div" data-index="234"></div>
+            <div class="empty-div" data-index="235"></div>
+            <div class="empty-div" data-index="236"></div>
+            <div class="empty-div" data-index="237"></div>
+            <div class="empty-div" data-index="238"></div>
+            <div class="empty-div" data-index="239"></div>
+            <div class="empty-div" data-index="240"></div>
+            <div class="empty-div" data-index="241"></div>
+            <div class="empty-div" data-index="242"></div>
+            <div class="empty-div" data-index="243"></div>
+            <div class="empty-div" data-index="244"></div>
+            <div class="empty-div" data-index="245"></div>
+            <div class="empty-div" data-index="246"></div>
+            <div class="empty-div" data-index="247"></div>
+            <div class="empty-div" data-index="248"></div>
+            <div class="empty-div" data-index="249"></div>
+            <div class="empty-div" data-index="250"></div>
+            <div class="empty-div" data-index="251"></div>
+            <div class="empty-div" data-index="252"></div>
+            <div class="empty-div" data-index="253"></div>
+            <div class="empty-div" data-index="254"></div>
+            <div class="empty-div" data-index="255"></div>
+            <div class="empty-div" data-index="256"></div>
+            <div class="empty-div" data-index="257"></div>
+            <div class="empty-div" data-index="258"></div>
+            <div class="empty-div" data-index="259"></div>
+            <div class="empty-div" data-index="260"></div>
+            <div class="empty-div" data-index="261"></div>
+            <div class="empty-div" data-index="262"></div>
+            <div class="empty-div" data-index="263"></div>
+            <div class="empty-div" data-index="264"></div>
+            <div class="empty-div" data-index="265"></div>
+            <div class="empty-div" data-index="266"></div>
+            <div class="empty-div" data-index="267"></div>
+            <div class="empty-div" data-index="268"></div>
+            <div class="empty-div" data-index="269"></div>
+            <div class="empty-div" data-index="270"></div>
+            <div class="empty-div" data-index="271"></div>
+            <div class="empty-div" data-index="272"></div>
+            <div class="empty-div" data-index="273"></div>
+            <div class="empty-div" data-index="274"></div>
+            <div class="empty-div" data-index="275"></div>
+            <div class="empty-div" data-index="276"></div>
+            <div class="empty-div" data-index="277"></div>
+            <div class="empty-div" data-index="278"></div>
+            <div class="empty-div" data-index="279"></div>
+            <div class="empty-div" data-index="280"></div>
+            <div class="empty-div" data-index="281"></div>
+            <div class="empty-div" data-index="282"></div>
+            <div class="empty-div" data-index="283"></div>
+            <div class="empty-div" data-index="284"></div>
+            <div class="empty-div" data-index="285"></div>
+            <div class="empty-div" data-index="286"></div>
+            <div class="empty-div" data-index="287"></div>
+            <div class="empty-div" data-index="288"></div>
+            <div class="empty-div" data-index="289"></div>
+            <div class="empty-div" data-index="290"></div>
+            <div class="empty-div" data-index="291"></div>
+            <div class="empty-div" data-index="292"></div>
+            <div class="empty-div" data-index="293"></div>
+            <div class="empty-div" data-index="294"></div>
+            <div class="empty-div" data-index="295"></div>
+            <div class="empty-div" data-index="296"></div>
+            <div class="empty-div" data-index="297"></div>
+            <div class="empty-div" data-index="298"></div>
+            <div class="empty-div" data-index="299"></div>
+            <div class="empty-div" data-index="300"></div>
+            <div class="empty-div" data-index="301"></div>
+            <div class="empty-div" data-index="302"></div>
+            <div class="empty-div" data-index="303"></div>
+            <div class="empty-div" data-index="304"></div>
+            <div class="empty-div" data-index="305"></div>
+            <div class="empty-div" data-index="306"></div>
+            <div class="empty-div" data-index="307"></div>
+            <div class="empty-div" data-index="308"></div>
+            <div class="empty-div" data-index="309"></div>
+            <div class="empty-div" data-index="310"></div>
+            <div class="empty-div" data-index="311"></div>
+            <div class="empty-div" data-index="312"></div>
+            <div class="empty-div" data-index="313"></div>
+            <div class="empty-div" data-index="314"></div>
+            <div class="empty-div" data-index="315"></div>
+            <div class="empty-div" data-index="316"></div>
+            <div class="empty-div" data-index="317"></div>
+            <div class="empty-div" data-index="318"></div>
+            <div class="empty-div" data-index="319"></div>
+            <div class="empty-div" data-index="320"></div>
+            <div class="empty-div" data-index="321"></div>
+            <div class="empty-div" data-index="322"></div>
+            <div class="empty-div" data-index="323"></div>
+            <div class="empty-div" data-index="324"></div>
+            <div class="empty-div" data-index="325"></div>
+            <div class="empty-div" data-index="326"></div>
+            <div class="empty-div" data-index="327"></div>
+            <div class="empty-div" data-index="328"></div>
+            <div class="empty-div" data-index="329"></div>
+            <div class="empty-div" data-index="330"></div>
+            <div class="empty-div" data-index="331"></div>
+            <div class="empty-div" data-index="332"></div>
+            <div class="empty-div" data-index="333"></div>
+            <div class="empty-div" data-index="334"></div>
+            <div class="empty-div" data-index="335"></div>
+            <div class="empty-div" data-index="336"></div>
+            <div class="empty-div" data-index="337"></div>
+            <div class="empty-div" data-index="338"></div>
+            <div class="empty-div" data-index="339"></div>
+            <div class="empty-div" data-index="340"></div>
+            <div class="empty-div" data-index="341"></div>
+            <div class="empty-div" data-index="342"></div>
+            <div class="empty-div" data-index="343"></div>
+            <div class="empty-div" data-index="344"></div>
+            <div class="empty-div" data-index="345"></div>
+            <div class="empty-div" data-index="346"></div>
+            <div class="empty-div" data-index="347"></div>
+            <div class="empty-div" data-index="348"></div>
+            <div class="empty-div" data-index="349"></div>
+            <div class="empty-div" data-index="350"></div>
+            <div class="empty-div" data-index="351"></div>
+            <div class="empty-div" data-index="352"></div>
+            <div class="empty-div" data-index="353"></div>
+            <div class="empty-div" data-index="354"></div>
+            <div class="empty-div" data-index="355"></div>
+            <div class="empty-div" data-index="356"></div>
+            <div class="empty-div" data-index="357"></div>
+            <div class="empty-div" data-index="358"></div>
+            <div class="empty-div" data-index="359"></div>
+            <div class="empty-div" data-index="360"></div>
+            <div class="empty-div" data-index="361"></div>
+            <div class="empty-div" data-index="362"></div>
+            <div class="empty-div" data-index="363"></div>
+            <div class="empty-div" data-index="364"></div>
+            <div class="empty-div" data-index="365"></div>
+            <div class="empty-div" data-index="366"></div>
+            <div class="empty-div" data-index="367"></div>
+            <div class="empty-div" data-index="368"></div>
+            <div class="empty-div" data-index="369"></div>
+            <div class="empty-div" data-index="370"></div>
+            <div class="empty-div" data-index="371"></div>
+            <div class="empty-div" data-index="372"></div>
+            <div class="empty-div" data-index="373"></div>
+            <div class="empty-div" data-index="374"></div>
+            <div class="empty-div" data-index="375"></div>
+            <div class="empty-div" data-index="376"></div>
+            <div class="empty-div" data-index="377"></div>
+            <div class="empty-div" data-index="378"></div>
+            <div class="empty-div" data-index="379"></div>
+            <div class="empty-div" data-index="380"></div>
+            <div class="empty-div" data-index="381"></div>
+            <div class="empty-div" data-index="382"></div>
+            <div class="empty-div" data-index="383"></div>
+            <div class="empty-div" data-index="384"></div>
+            <div class="empty-div" data-index="385"></div>
+            <div class="empty-div" data-index="386"></div>
+            <div class="empty-div" data-index="387"></div>
+            <div class="empty-div" data-index="388"></div>
+            <div class="empty-div" data-index="389"></div>
+            <div class="empty-div" data-index="390"></div>
+            <div class="empty-div" data-index="391"></div>
+            <div class="empty-div" data-index="392"></div>
+            <div class="empty-div" data-index="393"></div>
+            <div class="empty-div" data-index="394"></div>
+            <div class="empty-div" data-index="395"></div>
+            <div class="empty-div" data-index="396"></div>
+            <div class="empty-div" data-index="397"></div>
+            <div class="empty-div" data-index="398"></div>
+            <div class="empty-div" data-index="399"></div>
+            <div class="empty-div" data-index="400"></div>
+            <div class="empty-div" data-index="401"></div>
+            <div class="empty-div" data-index="402"></div>
+            <div class="empty-div" data-index="403"></div>
+            <div class="empty-div" data-index="404"></div>
+            <div class="empty-div" data-index="405"></div>
+            <div class="empty-div" data-index="406"></div>
+            <div class="empty-div" data-index="407"></div>
+            <div class="empty-div" data-index="408"></div>
+            <div class="empty-div" data-index="409"></div>
+            <div class="empty-div" data-index="410"></div>
+            <div class="empty-div" data-index="411"></div>
+            <div class="empty-div" data-index="412"></div>
+            <div class="empty-div" data-index="413"></div>
+            <div class="empty-div" data-index="414"></div>
+            <div class="empty-div" data-index="415"></div>
+            <div class="empty-div" data-index="416"></div>
+            <div class="empty-div" data-index="417"></div>
+            <div class="empty-div" data-index="418"></div>
+            <div class="empty-div" data-index="419"></div>
+            <div class="empty-div" data-index="420"></div>
+            <div class="empty-div" data-index="421"></div>
+            <div class="empty-div" data-index="422"></div>
+            <div class="empty-div" data-index="423"></div>
+            <div class="empty-div" data-index="424"></div>
+            <div class="empty-div" data-index="425"></div>
+            <div class="empty-div" data-index="426"></div>
+            <div class="empty-div" data-index="427"></div>
+            <div class="empty-div" data-index="428"></div>
+            <div class="empty-div" data-index="429"></div>
+            <div class="empty-div" data-index="430"></div>
+            <div class="empty-div" data-index="431"></div>
+            <div class="empty-div" data-index="432"></div>
+            <div class="empty-div" data-index="433"></div>
+            <div class="empty-div" data-index="434"></div>
+            <div class="empty-div" data-index="435"></div>
+            <div class="empty-div" data-index="436"></div>
+            <div class="empty-div" data-index="437"></div>
+            <div class="empty-div" data-index="438"></div>
+            <div class="empty-div" data-index="439"></div>
+            <div class="empty-div" data-index="440"></div>
+            <div class="empty-div" data-index="441"></div>
+            <div class="empty-div" data-index="442"></div>
+            <div class="empty-div" data-index="443"></div>
+            <div class="empty-div" data-index="444"></div>
+            <div class="empty-div" data-index="445"></div>
+            <div class="empty-div" data-index="446"></div>
+            <div class="empty-div" data-index="447"></div>
+            <div class="empty-div" data-index="448"></div>
+            <div class="empty-div" data-index="449"></div>
+            <div class="empty-div" data-index="450"></div>
+            <div class="empty-div" data-index="451"></div>
+            <div class="empty-div" data-index="452"></div>
+            <div class="empty-div" data-index="453"></div>
+            <div class="empty-div" data-index="454"></div>
+            <div class="empty-div" data-index="455"></div>
+            <div class="empty-div" data-index="456"></div>
+            <div class="empty-div" data-index="457"></div>
+            <div class="empty-div" data-index="458"></div>
+            <div class="empty-div" data-index="459"></div>
+            <div class="empty-div" data-index="460"></div>
+            <div class="empty-div" data-index="461"></div>
+            <div class="empty-div" data-index="462"></div>
+            <div class="empty-div" data-index="463"></div>
+            <div class="empty-div" data-index="464"></div>
+            <div class="empty-div" data-index="465"></div>
+            <div class="empty-div" data-index="466"></div>
+            <div class="empty-div" data-index="467"></div>
+            <div class="empty-div" data-index="468"></div>
+            <div class="empty-div" data-index="469"></div>
+            <div class="empty-div" data-index="470"></div>
+            <div class="empty-div" data-index="471"></div>
+            <div class="empty-div" data-index="472"></div>
+            <div class="empty-div" data-index="473"></div>
+            <div class="empty-div" data-index="474"></div>
+            <div class="empty-div" data-index="475"></div>
+            <div class="empty-div" data-index="476"></div>
+            <div class="empty-div" data-index="477"></div>
+            <div class="empty-div" data-index="478"></div>
+            <div class="empty-div" data-index="479"></div>
+            <div class="empty-div" data-index="480"></div>
+            <div class="empty-div" data-index="481"></div>
+            <div class="empty-div" data-index="482"></div>
+            <div class="empty-div" data-index="483"></div>
+            <div class="empty-div" data-index="484"></div>
+            <div class="empty-div" data-index="485"></div>
+            <div class="empty-div" data-index="486"></div>
+            <div class="empty-div" data-index="487"></div>
+            <div class="empty-div" data-index="488"></div>
+            <div class="empty-div" data-index="489"></div>
+            <div class="empty-div" data-index="490"></div>
+            <div class="empty-div" data-index="491"></div>
+            <div class="empty-div" data-index="492"></div>
+            <div class="empty-div" data-index="493"></div>
+            <div class="empty-div" data-index="494"></div>
+            <div class="empty-div" data-index="495"></div>
+            <div class="empty-div" data-index="496"></div>
+            <div class="empty-div" data-index="497"></div>
+            <div class="empty-div" data-index="498"></div>
+            <div class="empty-div" data-index="499"></div>
+            <div class="empty-div" data-index="500"></div>
+        </div>
+        <!-- End of 500 empty divs -->
+        
+        <div class="content">
+            <h3>Research Information</h3>
+            <p><strong>Project:</strong> AI-Driven Web Performance Optimization Framework</p>
+            <p><strong>Phase:</strong> Real-World Validation (Phase 2 Extension)</p>
+            <p><strong>Purpose:</strong> Validate prescriptive optimization model on actual hosted webpage</p>
+            <p><strong>Expected Result:</strong> PageSpeed API should classify this page as "slow"</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Slow Performance Test Page | Dissertation Research | January 2026</p>
+        <p>DOM Elements Count: ~520+ (including 500 empty divs)</p>
+    </footer>
+    
+    <!-- Additional blocking script at the end for measurement -->
+    <script>
+        // Log final DOM stats
+        document.addEventListener('DOMContentLoaded', function() {
+            const domStats = {
+                totalElements: document.getElementsByTagName('*').length,
+                divCount: document.getElementsByTagName('div').length,
+                emptyDivCount: document.querySelectorAll('.empty-div').length,
+                scriptCount: document.getElementsByTagName('script').length
+            };
+            console.log("DOM Statistics:", domStats);
+            console.log("Heavy computation results:", window.heavyComputationResults);
+        });
+    </script>
+</body>
+</html>

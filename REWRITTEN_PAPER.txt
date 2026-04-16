@@ -1,0 +1,570 @@
+An Explainable Predictive-Prescriptive AI Framework for Performance Optimization in Intelligent Web Environments
+
+Shrimant Chavan and Pratiksha R. Deshmukh
+
+Department of Computer Engineering, COEP Technological University, Wellesley Road, Pune, 411005, Maharashtra, India.
+Corresponding author: chavansa24.comp@coeptech.ac.in
+Contributing author: dpr.comp@coeptech.ac.in
+
+
+ABSTRACT
+
+Web application performance remains a persistent engineering challenge, yet existing tooling largely confines practitioners to manual, reactive diagnostics. This paper describes an integrated predictive-prescriptive-explainable AI framework that shifts the workflow from passive assessment to active, automated optimization. A primary dataset of 885 webpages, enriched with Core Web Vitals from the Google PageSpeed Insights API, is used to train four supervised classifiers within a leak-proof scikit-learn Pipeline. XGBoost achieves 90.60 percent test accuracy (pipeline cross-validation: 90.96 plus-or-minus 1.40 percent), with superiority confirmed by Friedman, Wilcoxon, and McNemar tests. A Differential Evolution engine translates these predictions into domain-compliant, direction-aware feature prescriptions, achieving a 100 percent success rate on batch optimization. To move explainability beyond routine SHAP and LIME reporting, we contribute four methodological advances: (i) a fidelity-weighted multi-method consensus ranking, (ii) a quantitative stability and robustness analysis of local explanations, (iii) category-stratified feature importance with Kruskal-Wallis significance testing, and (iv) hybrid counterfactual explanations that reveal feature influence and feature actionability to be fundamentally different constructs. External generalizability is established through a separate study on 8,000 HTTP Archive URLs, where a model trained on the 885-URL primary set transferred at 97.54 percent accuracy. A controlled real-world experiment independently verifies the prescriptive output: implementing the framework's recommendations on a deployed test site reduced Largest Contentful Paint by 97.3 percent and raised the Google PageSpeed score from 55 to 100. The combined evidence positions the framework as a practical, transparent, and empirically grounded tool for intelligent web performance engineering.
+
+Keywords: Web Performance Optimization, Predictive-Prescriptive Analytics, Explainable Artificial Intelligence, Cross-Dataset Generalizability, Performance Engineering
+
+
+1  INTRODUCTION
+
+How fast a web page loads shapes virtually every downstream business metric: conversion rate, bounce rate, search-engine ranking, and long-term user retention. As front-end stacks migrate towards single-page applications, micro-frontends, and distributed cloud-edge delivery, maintaining reliably low latency has grown from a minor operational concern into a first-order engineering problem [1, 2]. A slow page is no longer just an annoyance; it is a measurable revenue leak. Google reports that a one-second delay in mobile load time can reduce conversions by up to 20 percent, and the introduction of Core Web Vitals as a ranking signal has given performance optimization strategic urgency [5, 8].
+
+Against this backdrop, two broad traditions have emerged. The first is predictive: machine learning models that classify or forecast performance states from structural and runtime features [4--7]. The second is prescriptive: optimization approaches that recommend actions to improve a diagnosed state [9--12]. A smaller but growing third strand insists that any automated recommendation must be accompanied by transparent justification, drawing on Explainable AI (XAI) techniques such as SHAP and LIME [14, 16, 21]. Each tradition has produced valuable results in isolation, yet their integration within a single, externally validated pipeline remains rare.
+
+Several gaps persist. First, most predictive studies report hold-out accuracy without rigorous cross-validation safeguards (e.g., scaling performed before the split, leaking test-fold statistics into the training process) and without formal statistical significance tests to confirm that one model truly outperforms another. Second, explainability analyses in web performance research seldom go beyond generating a SHAP summary plot or a handful of LIME tables; questions of explanation stability, inter-method agreement, or how explanations vary across different categories of websites are left unexplored. Third, the small, hand-curated datasets common in this field invite legitimate concerns about generalizability: does a model trained on 885 pages say anything about the broader web? Fourth, almost no prior work in this domain uses counterfactual reasoning, despite its value in answering the practitioner's real question: what is the smallest set of changes that would flip this slow page to fast?
+
+This paper addresses each of these gaps within single, cohesive framework. Our contributions are:
+
+1. A leak-proof predictive pipeline using scikit-learn Pipeline objects that wrap scaling inside cross-validation folds. Four classifiers (SVM, Random Forest, Gradient Boosting, XGBoost) are compared via RandomizedSearchCV, and the best model is confirmed through Friedman, Wilcoxon, and McNemar significance tests.
+
+2. An external generalizability study on 8,000 real-world URLs drawn from the HTTP Archive, independently labelled using Google's published performance thresholds. Cross-dataset transfer accuracy reaches 97.54 percent, and an ablation study quantifies the marginal contribution of engineered features.
+
+3. A direction-aware prescriptive engine based on Differential Evolution that respects domain constraints (metrics that should decrease are bounded above by their current value; metrics that should increase are bounded below). Batch evaluation on five slow websites yields a 100 percent success rate with full domain compliance.
+
+4. Four novel explainability contributions: (a) a fidelity-weighted consensus ranking across SHAP, LIME, and Permutation Importance; (b) quantitative LIME stability analysis (Jaccard index) and SHAP perturbation sensitivity; (c) category-stratified Kruskal-Wallis testing revealing that 9 of 22 features differ significantly in importance across website categories; (d) hybrid counterfactual explanations demonstrating that although SHAP and counterfactual rankings share moderate overall agreement (SHAP-counterfactual rank correlation tau = 0.598, p < 0.001), specific features diverge markedly in their influence vs actionability, with composite timing metrics (tti, tbt, TBT_TTI_Ratio) appearing far more frequently in counterfactuals than their SHAP importance implies.
+
+5. A controlled real-world experiment where prescriptions are implemented on a live-deployed test site and audited by the external Google PageSpeed Insights API, eliminating the circular validation common in prior work.
+
+6. End-to-end reproducibility: all pipelines use a fixed random seed (42), stratified splits, and exported model artefacts.
+
+The rest of the paper proceeds as follows. Section 2 reviews related work. Section 3 formalizes the problem. Section 4 describes the system architecture. Section 5 covers datasets and experimental protocols. Section 6 presents the results. Section 7 discusses findings and limitations, and Section 8 concludes.
+
+
+2  LITERATURE REVIEW
+
+Research on intelligent web performance management spans three interconnected themes: predictive modelling, prescriptive optimization, and explainability. We review each in turn before identifying the gaps that motivate this work.
+
+2.1  Predictive Modelling for Web Performance
+
+Early efforts focused on structural page attributes. Ghattas et al. [4] and Kaushik et al. [1] showed that DOM complexity, script density, and micro-frontend composition can effectively separate performance classes with standard supervised learners. These results established that pre-deployment detection of bottlenecks is feasible, although neither study attempted to recommend corrections.
+
+Sehwag et al. [6] shifted the lens to perceived latency, treating browsing sessions as sequential data and training a deep learning model for predictive prefetching. Their approach reduced network-induced delays but remained narrow, ignoring application-level factors such as render-blocking resources or layout shifts. Mathur et al. [5] brought user-centric and business metrics into the picture, demonstrating quantitatively that latency increases map onto measurable drops in conversion rate.
+
+At the infrastructure layer, Huang et al. [7] employed ensemble learning for cloud workload prediction, Xin et al. [2] combined neural networks with tree-based detectors for anomaly identification, and Dakic et al. [3] optimized Kubernetes scheduling for web workloads. Collectively, these studies confirm the viability of ML-driven prediction across both the application and platform layers, though none couple their predictions with a systematic mechanism for acting on them.
+
+2.2  Prescriptive Optimization Approaches
+
+Van Riet et al. [8] documented, through an industrial case study at a major e-commerce company, the degree to which performance engineering still depends on expert intuition and ad-hoc trial-and-error. Their findings highlight the scalability ceiling of manual optimization and make a strong case for automated prescriptive techniques.
+
+Algorithmic decision-making has started to fill this gap. Notz and Pibernik [9] proposed a paradigm that maps system states directly to optimal decisions through explainable subgradient tree boosting, bypassing separate solvers. Meta-heuristic search has also gained traction: Asha and Ramya [12] used Predator Crow Search for cardiac disease classification under non-linear constraints, and Surianarayanan et al. [10] surveyed evolutionary algorithms for edge AI optimization. Hybrid heuristic-learning systems by Liu et al. [19] and Goscien [11] optimized resource placement in materials-science web platforms and elastic optical networks, respectively. Yang et al. [28] combined ML-driven clinical decision support with embedded XAI to generate actionable web-based predictions in healthcare. Despite this progress, direct application of prescriptive optimization to web page performance, where the search space includes both continuous metrics (load time) and categorical ones (site category), remains limited.
+
+Table 1 summarizes representative prescriptive techniques and their relevance.
+
+Table 1: Representative Prescriptive Optimization Techniques
+-----------------------------------------------------------------------
+Methodology              | Reference | Applicability to Web Performance
+-----------------------------------------------------------------------
+Subgradient Tree         | Notz and  | Integrates prediction with optimi-
+Boosting                 | Pibernik  | zation to produce decision-oriented
+                         | [9]       | recommendations.
+-----------------------------------------------------------------------
+Predator Crow Search     | Asha and  | Navigates high-dimensional configu-
+                         | Ramya [12]| ration spaces under nonlinear
+                         |           | constraints.
+-----------------------------------------------------------------------
+Hybrid Heuristic-ML      | Goscien   | Combines predictive learning with
+                         | [11]      | heuristic placement for resource
+                         |           | allocation with computational
+                         |           | efficiency.
+-----------------------------------------------------------------------
+
+2.3  Explainability in Performance-Critical Systems
+
+The deployment of opaque ML models in reliability-sensitive loops raises well-documented trust and transparency concerns [13, 20]. SHAP (SHapley Additive exPlanations) offers exact Shapley values for tree ensembles, while LIME (Local Interpretable Model-agnostic Explanations) provides surrogate-model-based local explanations [14, 16, 21]. Surveys by Hassija et al. [16], Mersha et al. [17], and Ortigossa et al. [21] present broad taxonomies of XAI methods, while Bennetot et al. [22] provide a hands-on tutorial with implementation guidelines.
+
+A practical concern is explanation reliability. Goldwasser and Hooker [15] explored conditions under which SHAP and LIME rankings are provably stable, and Salih et al. [14] warned that collinear features, common in web metrics, can distort Shapley attribution. Hosain et al. [26] reviewed XAI approaches within deep learning specifically, noting that gradient-based and perturbation-based explanations frequently disagree. Sharma et al. [27] surveyed existing XAI frameworks across domains, identifying a gap in systematic consensus mechanisms that reconcile outputs from multiple explanation methods.
+
+Applied XAI studies have appeared in anomaly detection [23], recommender systems [18, 24], data augmentation [25], healthcare decision support [28], and privacy-preserving frameworks [29]. Ali et al. [20] distilled a broader lesson: for XAI to achieve trustworthiness, it must go beyond one-off visualizations and provide quantifiable evidence of faithfulness and stability. In the web performance domain, however, XAI usage has been almost exclusively limited to single-method reporting with no stability analysis, no inter-method comparison, and no counterfactual reasoning.
+
+2.4  Research Gap
+
+Existing work addresses prediction, prescription, and explainability as separate endeavours. No prior study in web performance engineering has (a) unified all three within a single pipeline with rigorous statistical validation, (b) demonstrated cross-dataset generalizability on an external corpus of thousands of real-world URLs, or (c) advanced explainability beyond standard single-method reporting through consensus frameworks, stability quantification, category-stratified analysis, or counterfactual generation. These gaps define the scope of the present work.
+
+
+3  PROBLEM DEFINITION AND CONCEPTUAL FRAMEWORK
+
+Web application performance arises from the interplay of DOM structure, network latencies, resource composition, and browser rendering logic. Current tooling (Lighthouse, WebPageTest) provides granular diagnostic metrics but functions as isolated observatories rather than integrated reasoning engines [4, 8]. What is missing is a mechanism that simultaneously predicts performance, prescribes corrective actions, explains its reasoning, and demonstrates that its recommendations hold beyond the training data.
+
+3.1  Formal Problem Statement
+
+Let W = {w_1, w_2, ..., w_n} be a set of web applications. For each w_i, define a feature vector X_i = {x_{i1}, x_{i2}, ..., x_{id}} containing structural, network, and runtime attributes. We address four formally distinct tasks:
+
+Task 1 --- The Predictive Task: Learn a supervised mapping f_theta : X_i -> y_i, where y_i in {fast, medium, slow}. The mapping must generalize across diverse web architectures [4, 6].
+
+Task 2 --- The Prescriptive Task: For a given under-performing instance, find an optimized feature vector X*_i:
+
+    X*_i = arg max_X  P(y = fast | f_theta(X))
+
+subject to domain constraints (e.g., load-time metrics may only decrease, throughput may only increase, site category is fixed) [9, 12].
+
+Task 3 --- The Explainability Task: Generate transparent interpretations for both the classification f_theta(X_i) and the prescription X*_i, using multiple attribution methods and reconciling their outputs [14, 15].
+
+Task 4 --- The Generalizability Task: Verify that f_theta, trained on a curated primary dataset, transfers to an independent external corpus drawn from a different collection methodology and labelling scheme.
+
+3.2  Rationale for the Multi-Phase Approach
+
+The pipeline is arranged sequentially, with each phase addressing a specific deficiency in current practice:
+
+Data Enrichment. Standard datasets rely on static file metrics (total byte size, request count) that correlate poorly with user experience. We therefore augment the feature space with runtime Core Web Vitals retrieved from the Google PageSpeed Insights API [5].
+
+From Prediction to Prescription. Identifying a bottleneck only solves half the problem. Developers need concrete guidance on what to change [8]. By embedding the predictive model within a Differential Evolution optimization loop, the system explores the feature space and discovers configurations that a human engineer might overlook [9, 10].
+
+Empirical Validation. Theoretical prescriptions carry little weight without ground-truth verification. A distinguishing feature of this framework is the inclusion of a real-world experiment in which prescriptions are implemented on a live deployment and independently audited.
+
+Trust via Explainability. Automated recommendations routinely meet scepticism. SHAP and LIME provide the reasoning behind every decision, and our multi-method consensus framework quantifies how much that reasoning should be trusted [16, 22].
+
+External Generalizability. A model trained on 885 pages invites questions about representativeness. We answer these by running a separate evaluation on 8,000 HTTP Archive URLs, labelled independently of the primary model.
+
+3.3  Conceptual Framework
+
+The architecture consists of five layers:
+
+1. Data Layer: Acquires and fuses static structural features with dynamic runtime metrics.
+2. Predictive Layer: Maps feature vectors to performance classes using XGBoost inside a Pipeline-based cross-validation.
+3. Generalizability Layer: Validates the learned representations on an external HTTP Archive dataset.
+4. Prescriptive Layer: Runs Differential Evolution against the predictive model to find optimal feature adjustments under directional domain constraints [12].
+5. Explainability Layer: Applies SHAP (global), LIME (local), Permutation Importance, and counterfactual generation, integrating them through a fidelity-weighted consensus mechanism [15].
+
+
+4  SYSTEM ARCHITECTURE
+
+This section describes the technical structure of the framework. The architecture integrates data acquisition, predictive modelling, prescriptive optimization, and explainable AI into a cohesive system designed for reproducible web performance engineering [4, 5, 8, 9].
+
+4.1  Overview
+
+The system is organized into four tightly coupled phases, flanked by input processing and external validation, as illustrated in Figure 6. Phase 1 (Predictive Modelling) enriches raw URL data with runtime metrics and trains a supervised classifier inside a Pipeline that prevents data leakage. Phase 1b (Generalizability) evaluates the model's transferability on an independent HTTP Archive dataset. Phase 2 (Prescriptive Optimization) uses the trained model as an evaluation function for Differential Evolution, generating direction-aware feature prescriptions. Phase 3 (Explainability) provides multi-method transparency using SHAP, LIME, Permutation Importance, and counterfactual reasoning. A final Real-World Validation loop deploys the prescriptions and verifies them through an external audit.
+
+[FIGURE 6 HERE — system_architecture_diagram.png]
+Figure 6: End-to-end system architecture. Data flows left to right through four phases: (1) Predictive Modelling with leak-proof Pipeline CV, (1b) Cross-Dataset Generalizability validation on 8,000 HTTP Archive URLs, (2) Prescriptive Optimization via Differential Evolution under direction-aware domain constraints, and (3) Explainability comprising SHAP, LIME, Permutation Importance, consensus ranking, stability analysis, category-stratified testing, and counterfactual generation. A Real-World Validation loop closes the pipeline by deploying prescriptions and auditing them through the external Google PageSpeed Insights API.
+
+4.2  Data Enrichment Layer
+
+Standard performance datasets lean heavily on static file characteristics, which correlate poorly with perceived user experience. The framework addresses this by combining structural attributes (resource counts, total byte weight) with real-world runtime metrics retrieved from the Google PageSpeed Insights API. This introduces Core Web Vitals---specifically LCP, TBT, and CLS---as first-class features, consistent with recent studies that treat user-centric metrics as essential for reliable performance modelling [6, 7].
+
+4.3  Phase 1: Predictive Modelling
+
+The predictive layer is the analytical core. After preprocessing (median imputation, IQR-based outlier capping, zero-variance removal) and feature engineering (eight derived features), the enriched data is passed to four supervised classifiers. Training uses RandomizedSearchCV with 20 candidate configurations per model, and all cross-validation is performed within a scikit-learn Pipeline wrapping RobustScaler and the classifier together. This design ensures that the scaler is fit only on training folds, preventing information leakage [2].
+
+The predictive model serves a dual role: (a) classification of web applications into fast, medium, and slow categories; and (b) fitness evaluation for the optimization engine in Phase 2, returning P(fast) for any candidate feature vector.
+
+4.4  Phase 1b: External Generalizability
+
+To test whether the framework's learned representations hold beyond the primary dataset, a separate study trains and evaluates models on 8,000 URLs from the HTTP Archive. Labels are assigned using Google's published performance thresholds (Speed Index, Load Time, Time to First Byte) via majority vote, with no dependence on the Phase 1 model or its labelling scheme.
+
+4.5  Phase 2: Prescriptive Optimization Engine
+
+While prediction identifies the problem, Phase 2 generates a concrete solution. A Differential Evolution optimizer [12] iteratively mutates the feature vector of a slow webpage to maximize P(fast). The objective function is:
+
+    min_x [ -P(fast | x) + lambda * sum_i ((x_i - x_i^current) / (|x_i^current| + epsilon))^2 ]
+
+where the regularization term (lambda = 0.01) penalises large deviations from the current configuration, encouraging the optimizer to find minimal, realistic changes.
+
+Direction-aware domain constraints ensure physical plausibility: load-time metrics may only decrease, throughput may only increase, and the site category is fixed. Engineered features (8 of 22) are recomputed from the base features after each candidate evaluation, rather than being optimized independently.
+
+4.6  Phase 3: Explainability Module
+
+The explainability layer goes beyond standard single-method reporting:
+
+Global Explanation (SHAP): TreeExplainer computes exact Shapley values for the XGBoost model, identifying system-wide performance drivers [14].
+
+Local Explanation (LIME): LimeTabularExplainer provides per-instance reasoning, clarifying why a specific URL received a particular prescription.
+
+Multi-Method Consensus: A fidelity-weighted ranking integrates SHAP, LIME, and Permutation Importance into a single trustworthy feature ordering, with bootstrap confidence intervals.
+
+Stability Analysis: LIME is run 20 times per sample to measure top-5 Jaccard consistency; SHAP values are perturbed with 5 percent Gaussian noise to quantify sensitivity.
+
+Category-Stratified Importance: SHAP values are partitioned by website category and tested for significant cross-category differences using Kruskal-Wallis H-tests.
+
+Counterfactual Generation: A hybrid generator combining nearest-prototype seeding with growing-spheres search identifies the smallest directionally valid set of changes needed to flip a non-fast page to fast.
+
+4.7  Real-World Validation Loop
+
+A critical addition to the architecture is external verification of prescriptive outputs. Recommendations from Phase 2 are implemented on a live deployment, and the resulting performance is re-evaluated using the Google PageSpeed Insights API. This establishes a ground-truth feedback loop that is independent of the internal predictive model, eliminating the circular validation that plagues most prior work in this domain [8].
+
+
+5  DATASET AND EXPERIMENTAL SETUP
+
+5.1  Primary Dataset
+
+The primary corpus was constructed by merging static structural records from a public repository with dynamic runtime metrics from the Google PageSpeed Insights API. After cleaning, the dataset contains 885 unique webpages characterized by 27 raw columns. Five columns (dom_size, uses_text_compression, render_blocking_resources, uses_http2, modern_image_formats) were dropped because they were entirely null, and one column (unused_js) was dropped for zero variance. Missing values in the remaining features were imputed with the column median. Outliers were capped at 1.5 times the interquartile range.
+
+The 14 base features retained after preprocessing are: Category, Page Size (KB), Load Time (s), Response Time (s), Throughput, performance_score, lcp, fcp, cls, tti, tbt, speed_index, total_byte_weight, and num_requests. Eight additional features were engineered:
+
+Table 2: Engineered Features
+-----------------------------------------------------------------------
+Feature                         | Formula                    | Rationale
+-----------------------------------------------------------------------
+Size_LoadTime_Ratio             | Page Size / Load Time      | Efficiency metric
+Total_Time                      | Response Time + Load Time  | Combined latency
+Throughput_ResponseTime_Ratio   | Throughput / Response Time | Network efficiency
+Log_Page_Size                   | log1p(Page Size)           | Reduce skewness
+Log_Throughput                  | log1p(Throughput)          | Reduce skewness
+CWV_Composite                  | (LCP + FCP + TTI) / 3      | Core Web Vitals aggregate
+TBT_TTI_Ratio                  | TBT / TTI                  | Main-thread blocking ratio
+Bytes_Per_Request               | total_byte_weight / num_requests | Per-request payload
+-----------------------------------------------------------------------
+
+This yields 22 model features (14 base + 8 engineered). Performance labels (fast, medium, slow) were assigned using composite metric thresholds across Response Time, LCP, FCP, Load Time, TTI, and TBT. The resulting class distribution is roughly balanced: 299 fast, 271 medium, 315 slow.
+
+5.2  HTTP Archive Dataset
+
+To evaluate generalizability on a larger, independently collected corpus, we queried the httparchive.crawl.pages table via Google BigQuery. The query targeted the December 2025 mobile crawl for URLs ranked in the Tranco top 200,000 list, returning 8,000 records with the following base attributes: page_size_kb, total_byte_weight, load_time_s, response_time_s, num_requests, speed_index, dom_size, and num_domains. From these, six of the eight engineered features were computable (CWV_Composite and TBT_TTI_Ratio could not be derived because the HTTP Archive summary table lacks LCP, FCP, TTI, and TBT). This gave 13 features in total (7 base + 6 engineered).
+
+Labels were assigned independently of the Phase 1 model, using Google's published thresholds:
+- Speed Index: fast < 3,400 ms; medium 3,400--5,800 ms; slow > 5,800 ms.
+- Load Time: fast < 2.5 s; medium 2.5--5.0 s; slow > 5.0 s.
+- TTFB (Response Time proxy): fast < 0.8 s; medium 0.8--1.8 s; slow > 1.8 s.
+
+The final label is the majority vote across the three metrics. The resulting distribution is: fast 1,193 (14.9 percent), medium 2,383 (29.8 percent), slow 4,424 (55.3 percent).
+
+5.3  Model Training Protocol
+
+Four classifiers were trained: Support Vector Machine (RBF kernel), Random Forest, Gradient Boosting, and XGBoost. Each was tuned with RandomizedSearchCV over 20 candidate configurations and 5-fold stratified cross-validation. A deliberate design choice was to wrap all preprocessing (RobustScaler) and the classifier together inside a scikit-learn Pipeline. This ensures that the scaler is fit exclusively on training-fold data during each CV iteration, preventing the information leakage that arises when scaling is applied to the full dataset before splitting [2, 3].
+
+The primary dataset was partitioned into a 70:30 stratified train-test split (619 training, 266 testing samples). All experiments used a fixed random seed of 42 and were implemented in Python 3.14 with scikit-learn, XGBoost, SHAP, LIME, and SciPy on commodity hardware.
+
+Model superiority was confirmed through three formal statistical tests:
+- Friedman test (non-parametric repeated-measures ANOVA) across per-fold CV accuracies.
+- Pairwise Wilcoxon signed-rank tests on CV fold scores.
+- Pairwise McNemar tests on test-set prediction vectors.
+
+5.4  Prescriptive Engine Configuration
+
+The prescriptive module uses scipy.optimize.differential_evolution with population size proportional to the feature dimension. Feature bounds are derived from the 5th to 95th percentile of the training data, and direction-aware constraints are enforced: metrics that should decrease (load time, response time, page size, LCP, FCP, CLS, TTI, TBT, speed_index, total_byte_weight, num_requests) have their upper bound set to the current value, while metrics that should increase (throughput, performance_score) have their lower bound set to the current value. Category is fixed. The eight engineered features are recomputed from the optimized base features after each candidate evaluation.
+
+5.5  Explainability Configuration
+
+SHAP values are computed with TreeExplainer (exact Shapley values for tree ensembles). LIME explanations use LimeTabularExplainer with 5,000 perturbation samples per instance. Permutation Importance is computed with 10 repeats. The consensus ranking normalises each method's importance vector to [0, 1] and weights them by measured fidelity (SHAP: 0.438, Permutation: 0.438, LIME: 0.123). Bootstrap confidence intervals (1,000 resamples) accompany each consensus score.
+
+For the stability analysis, LIME is run 20 times on each of 30 samples, and top-5 Jaccard similarity is measured per sample. SHAP sensitivity is evaluated by injecting +/-5 percent Gaussian noise into the feature matrix and measuring L2 drift in Shapley values.
+
+Category-stratified analysis partitions SHAP values by website category (8 categories with n >= 10) and applies Kruskal-Wallis H-tests to each feature independently.
+
+Counterfactual generation uses a hybrid strategy: nearest-prototype seeding (finding the closest fast-class sample in feature space) combined with growing-spheres random search under directional domain constraints. Among successful candidates, the algorithm selects the one that changes the fewest features.
+
+5.6  Real-World Validation Setup
+
+We constructed two deliberately contrasting web deployments:
+
+Baseline ("Bad") Page (https://baddummypage.onrender.com/): A 6 MB uncompressed BMP image, 500 redundant empty div elements, and a synchronous Fibonacci calculation to block the main thread.
+
+Optimized ("Good") Page (https://gooddummypage.onrender.com/): The Phase 2 prescriptions were applied: the image was compressed from 6 MB BMP to 5 KB WebP, blocking JavaScript was removed, scripts were deferred, and redundant DOM nodes were eliminated.
+
+Both pages were audited by the external Google PageSpeed Insights API. This setup provides an independent ground truth that is entirely separate from the internal model's predictions.
+
+
+6  RESULTS AND ANALYSIS
+
+6.1  Predictive Model Performance
+
+Table 3 summarizes the performance of all four classifiers on the primary dataset using a 70:30 stratified split and pipeline-based cross-validation.
+
+Table 3: Predictive Model Comparison (Primary Dataset, 22 Features)
+-----------------------------------------------------------------------
+Model               | Test Acc. | F1-Score | CV Accuracy (Pipeline)
+-----------------------------------------------------------------------
+SVM (RBF)           | 36.84%    | 0.2227   | ---
+Random Forest       | 87.97%    | 0.8778   | 88.47% +/- 1.65%
+Gradient Boosting   | 89.85%    | 0.8977   | 89.60% +/- 1.56%
+XGBoost             | 90.60%    | 0.9058   | 90.96% +/- 1.40%
+-----------------------------------------------------------------------
+
+XGBoost achieved the highest accuracy on both the test set (90.60 percent) and in cross-validation (90.96 percent). The test-CV gap of negative 0.36 percentage points indicates excellent generalization with no sign of overfitting. Precision (0.9063), recall (0.9060), and F1-score (0.9058) are tightly grouped, confirming balanced performance across all three classes. As Figure 1 illustrates, the confusion matrix reveals strong per-class classification with no evidence of majority-class dominated accuracy.
+
+[FIGURE 1 HERE — fig1_confusion_matrix.png]
+Figure 1: Confusion matrix for the XGBoost classifier on the held-out test set (n = 266). Each cell shows the count and row-normalised percentage. Per-class precision and recall are annotated below.
+
+SVM with an RBF kernel performed poorly (36.84 percent), which is unsurprising given that radial basis functions scale badly with the heterogeneous, mixed-type features present in web performance data. The three tree-based models, by contrast, all exceeded 87 percent, benefiting from their native ability to handle non-linear interactions and mixed feature types [2, 7].
+
+Statistical Significance. The Friedman test across per-fold CV scores returned p < 0.05, confirming that performance differences among the three tree-based classifiers are not due to chance. Pairwise Wilcoxon signed-rank tests showed a significant difference between XGBoost and Random Forest. McNemar tests on the test-set prediction vectors confirmed XGBoost's superiority over all other models on a per-sample basis. These results move beyond reporting point estimates and establish, with statistical rigour, that the gains from XGBoost are genuine.
+
+6.2  External Generalizability Study
+
+One of the most common criticisms of web-performance ML studies is that their datasets are small and hand-curated. To address this head-on, we conducted a separate study on 8,000 HTTP Archive URLs using the 13 common features available in both datasets.
+
+Experiment 1 --- XGBoost on HTTP Archive (8,000 URLs): CV accuracy reached 99.71 percent (+/- 0.08 percent) with a test accuracy of 99.71 percent and F1 of 0.9971. The near-perfect performance reflects the fact that Google's published thresholds create well-separated clusters, with speed_index alone carrying 79.9 percent of the feature importance.
+
+Experiment 2 --- XGBoost on Primary Dataset (13 features only): When restricted to the same 13-feature subset, the primary-dataset model drops to 71.72 percent CV accuracy and 73.68 percent test accuracy. This decline is expected: the primary dataset uses a composite labelling scheme involving LCP, FCP, TTI, and TBT, which are not available in the 13-feature overlap. The 22-feature primary model (90.60 percent) recovers this information through the full Core Web Vitals suite.
+
+Experiment 3 --- Cross-Dataset Transfer:
+
+Table 4: Cross-Dataset Transfer Results
+-----------------------------------------------------------------------
+Direction                              | Accuracy | F1-Score
+-----------------------------------------------------------------------
+Train on Primary (885) -> Test on HA (8,000) | 97.54%  | 0.9752
+Train on HA (8,000) -> Test on Primary (885) | 88.36%  | 0.8870
+-----------------------------------------------------------------------
+
+The headline result is the first row: a model trained on just 885 curated URLs predicts the performance class of 8,000 independently labelled HTTP Archive URLs with 97.54 percent accuracy. This demonstrates that the feature representations learned on the primary dataset capture genuine performance patterns that transfer to a much larger, independently collected corpus. The reverse transfer (88.36 percent) is lower because the HA-trained model has never seen the richer CWV-based features dominant in the primary labelling scheme.
+
+Experiment 4 --- Multi-Model Comparison on HTTP Archive:
+
+Table 5: Multi-Model Comparison (HTTP Archive, 8,000 URLs)
+-----------------------------------------------------------------------
+Model               | CV Accuracy          | Test Accuracy
+-----------------------------------------------------------------------
+Random Forest       | 99.71% +/- 0.12%    | 99.71%
+Gradient Boosting   | 99.96% +/- 0.05%    | 99.83%
+XGBoost             | 99.71% +/- 0.08%    | 99.71%
+Friedman test       | chi-sq = 7.60, p = 0.022 | Significant
+-----------------------------------------------------------------------
+
+All three tree-based classifiers exceed 99.7 percent on the larger dataset. The Friedman test confirms a statistically significant difference (p = 0.022), with Gradient Boosting marginally ahead.
+
+Ablation Study. To measure the contribution of feature engineering, we compared the 7-base-feature configuration (99.65 percent CV) against the 13-feature configuration (99.71 percent CV). The improvement of +0.06 percentage points is marginal on the HA dataset because speed_index alone accounts for 79.9 percent of feature importance; on the primary dataset, where no single feature dominates to this extent, the full set of 8 engineered features contributes a much larger gain (from roughly 72 percent to 91 percent).
+
+6.3  Prescriptive Optimization Outcomes
+
+The prescriptive engine was tested on a set of under-performing pages from the primary dataset.
+
+Single-Website Optimization. For a representative slow page, the optimizer shifted the predicted class from slow (P(fast) = 0.0 percent) to fast (P(fast) = 99.8 percent). The top recommended changes were:
+- LCP: reduce by 60.5 percent (Critical)
+- Response Time: reduce by 59.0 percent (Critical)
+- TTI: reduce by 32.2 percent (High)
+- FCP: reduce by 28.1 percent (High)
+- Load Time: reduce by 9.2 percent (Medium)
+
+These align with established web engineering best practices: reducing LCP typically involves compressing hero images, reducing response time points to server-side optimization, and lowering TTI calls for deferring non-critical JavaScript [8, 10]. Importantly, the regularization term (lambda = 0.01) in the objective function penalises large deviations, meaning the optimizer favours the smallest realistic changes that still flip the prediction. This is a desirable property: practitioners are more likely to act on a recommendation of "reduce LCP by 60 percent" than on one that demands simultaneous overhaul of every metric.
+
+Batch Optimization (5 Slow Websites). All five were successfully transitioned from slow to fast, with an average P(fast) improvement of +0.95 and 100 percent domain compliance. Every one of the 12 individual recommendations was directionally correct: metrics that should decrease showed negative changes, and metrics that should increase showed positive changes. The optimizer converged within the default iteration budget in all cases, confirming that the performance-feature landscape, despite its 22-dimensional search space, is sufficiently smooth for population-based meta-heuristics to navigate effectively.
+
+A common concern with model-in-the-loop optimization is that the optimizer may exploit weaknesses in the classifier rather than find genuinely better configurations. The real-world validation experiment in Section 6.5 provides a direct check: if the optimizer were gaming the model, the external PageSpeed API would not confirm the improvement. That it does confirms the prescriptive output reflects authentic performance gains.
+
+6.4  Explainability Analysis
+
+6.4.1  Standard SHAP and LIME
+
+SHAP values computed via TreeExplainer identified Response Time (2.920), FCP (2.168), performance_score (1.685), LCP (1.585), and Total_Time (1.462) as the five strongest global drivers. These are primarily Core Web Vitals and latency indicators, confirming that the model has learned domain-appropriate relationships rather than artefactual correlations. Figure 2 presents both the global importance bar chart and the beeswarm plot for the fast class, where each dot represents one sample and its colour encodes the feature value.
+
+[FIGURE 2 HERE — fig2_shap_beeswarm.png]
+Figure 2: SHAP global feature importance. (a) Mean absolute SHAP values across all classes (top 15 features). (b) Beeswarm plot for the fast class, showing how each feature's value (colour) pushes predictions towards or away from fast.
+
+LIME analysis of four representative samples (one correctly classified per class plus one misclassified) provided complementary local perspective. For a correctly classified fast page, LIME assigned the highest positive contributions to low Response Time and low LCP, mirroring the global SHAP ranking. For a correctly classified slow page, LIME highlighted elevated FCP and TTI as the primary drivers pushing the prediction towards slow. The misclassified sample --- predicted medium but labelled slow --- fell on the medium-slow decision boundary, where the model's uncertainty is highest; LIME's prediction probabilities for this case were nearly evenly split between the two classes (P(medium) = 0.44, P(slow) = 0.41), illustrating a genuine ambiguity in the data rather than a model deficiency. These local explanations confirm that SHAP's global rankings translate into consistent per-instance reasoning, reinforcing the trustworthiness of the model's decision logic across individual predictions.
+
+6.4.2  Novel Contribution 1: Multi-Method Explainability Consensus
+
+A recurring problem in applied XAI is that SHAP and LIME can produce different feature rankings for the same model. Practitioners are then left without guidance on which ranking to trust. We address this by computing global importance from three independent methods, measuring each method's fidelity to the model, and producing a fidelity-weighted consensus.
+
+Fidelity weights were: SHAP (TreeExplainer, exact): 0.438; Permutation Importance (10 repeats, reference): 0.438; LIME (aggregated over 80 samples, mean local R-squared = 0.281): 0.123.
+
+Table 6: Top-5 Consensus Features
+-----------------------------------------------------------------------
+Rank | Feature           | Consensus Score | 95% CI
+-----------------------------------------------------------------------
+1    | Response Time(s)  | 0.9939          | [0.951, 1.000]
+2    | CWV_Composite     | 0.8190          | [0.707, 1.000]
+3    | fcp               | 0.8023          | [0.766, 0.852]
+4    | Total_Time         | 0.6868          | [0.632, 0.750]
+5    | lcp               | 0.4918          | [0.307, 0.646]
+-----------------------------------------------------------------------
+
+Inter-method rank correlations (Kendall's tau) were: SHAP vs LIME = 0.633, SHAP vs Permutation = 0.565, LIME vs Permutation = 0.599. These moderate-to-strong correlations indicate that the methods broadly agree but diverge enough to justify a formal consensus rather than reliance on any single technique. Figure 3 visualises the consensus scores alongside the per-method contributions.
+
+[FIGURE 3 HERE — fig3_consensus_ranking.png]
+Figure 3: Fidelity-weighted consensus ranking. (a) Top-15 features ranked by consensus score with 95 percent bootstrap confidence intervals. (b) Per-method normalised importance heatmap (SHAP, LIME, Permutation Importance).
+
+6.4.3  Novel Contribution 2: Explanation Stability and Robustness
+
+LIME employs stochastic perturbation sampling, which means that repeated runs on the same input can yield different rankings. We quantify this instability directly.
+
+LIME Stability: Over 30 samples and 20 runs each, the mean top-5 Jaccard similarity was 0.8764 (+/- 0.1048). This exceeds the 0.80 threshold conventionally used to declare stability, confirming that LIME's stochastic element does not, in practice, invalidate its rankings.
+
+SHAP Sensitivity: Injecting +/- 5 percent Gaussian noise produced a mean L2 drift of 0.3278 (+/- 0.2544) in Shapley values, indicating moderate sensitivity to small input perturbations.
+
+Cross-Method Agreement by Predicted Class: The agreement between SHAP and LIME rankings varied by class. The mean Kendall's tau was 0.604 for fast, 0.492 for slow, and 0.342 for medium. The weakest agreement occurs precisely where the model is least confident - the medium class sits at the decision boundary, making explanations inherently harder to pin down.
+
+6.4.4  Novel Contribution 3: Category-Stratified Explainability
+
+Standard XAI treats all websites as a single population. In practice, different categories (News, Travel, Sports, E-commerce) have fundamentally different architectures: news sites tend to be text-heavy with many ad scripts; e-commerce sites carry large product images and complex DOM trees. A one-size-fits-all feature importance ranking may obscure these structural differences.
+
+We partitioned SHAP values by website category (eight categories with at least 10 samples each) and applied a Kruskal-Wallis H-test per feature. Nine of 22 features showed statistically significant cross-category differences at p < 0.05:
+
+Category (p ~ 0.000), Page Size (p ~ 0.000), TTI (p = 0.0002), Load Time (p = 0.0002), CLS (p = 0.0005), Size_LoadTime_Ratio (p = 0.0017), CWV_Composite (p = 0.0093), num_requests (p = 0.0097), and Throughput (p = 0.0364).
+
+All eight categories share the same top-three overall features (Response Time, CWV_Composite, FCP), but the magnitudes differ. This has a direct practical implication: optimization strategies should be tailored to the site category rather than applied generically.
+
+6.4.5  Novel Contribution 4: Counterfactual Explanations
+
+SHAP and LIME answer "why was this page classified as slow?" Counterfactual explanations answer a more actionable question: "what is the minimal change needed to make it fast?" These are related but distinct: the features a model relies on most heavily for prediction need not be the features most amenable to practical change.
+
+We generated counterfactual explanations for 100 non-fast samples using a hybrid approach: nearest-prototype seeding (finding the closest fast sample in feature space) followed by growing-spheres random search with directional domain constraints. The success rate was 100 percent (all 100 samples found a valid counterfactual), with a mean of 13.2 features changed per counterfactual.
+
+The features appearing most frequently in successful counterfactuals were: FCP (93%), performance_score (91%), CWV_Composite (89%), LCP (87%), and Response Time (85%). Notably, timing composites such as tti, tbt, and TBT_TTI_Ratio also appeared in 75–88% of counterfactuals, highlighting their high actionability.
+
+SHAP-Counterfactual Rank Correlation: Kendall's tau = 0.598 (p < 0.001); Spearman's rho = 0.772. The moderate-to-strong rank correlation confirms that the most influential features (SHAP) tend also to appear frequently in counterfactuals, yet the magnitude of divergence for specific features is striking. The features tti, tbt, speed_index, and TBT_TTI_Ratio each appear in 75–90% of counterfactuals (indicating high actionability), yet carry comparatively low SHAP importance (normalised score ≤ 0.15). Conversely, Category appears as the 4th most SHAP-influential feature but almost never in a counterfactual, correctly reflecting that site category is a structural property practitioners cannot directly optimise. Figure 4 makes this per-feature divergence visually explicit: moderate global agreement masks locally important divergences that matter for practitioner guidance.
+
+[FIGURE 4 HERE — fig4_shap_vs_counterfactual.png]
+Figure 4: Feature influence vs feature actionability. (a) Rank scatter plot: each dot is a feature, with SHAP rank on the x-axis and counterfactual frequency rank on the y-axis (Kendall's tau = 0.598, Spearman's rho = 0.772). Dot colour encodes the absolute rank difference; annotated points are the six features with the largest divergence between influence and actionability. (b) Side-by-side normalised SHAP vs CF importance comparison for the top 15 SHAP features, revealing that composite timing metrics (tti, tbt, TBT_TTI_Ratio) and total_byte_weight are substantially more actionable than their SHAP rank implies, while Category has high SHAP influence but near-zero actionability. The distinction between feature influence and feature actionability has been discussed in the counterfactual XAI literature but, to our knowledge, has not been empirically demonstrated in the web performance domain with this level of feature-level resolution.
+
+6.5  Real-World Experimental Validation
+
+We deployed the baseline (slow) and optimized (fast) pages on Render.com and had both audited by the external Google PageSpeed Insights API.
+
+Table 7: Real-World Validation Results
+-----------------------------------------------------------------------
+Metric                 | Baseline (Slow) | Optimized (Fast) | Improvement
+-----------------------------------------------------------------------
+PageSpeed Score        | 55 / 100        | 100 / 100        | +81.8%
+FCP                    | 11,167 ms       | 854 ms           | -92.4%
+LCP                    | 31,616 ms       | 854 ms           | -97.3%
+TTI                    | 31,616 ms       | 878 ms           | -97.2%
+TBT                    | 3 ms            | 0 ms             | -100.0%
+Page Size              | 6,080 KB        | 8.85 KB          | -99.9%
+Model Confidence P(fast) | 2.74%         | 99.74%           | +97.0 pp
+-----------------------------------------------------------------------
+
+The model correctly predicted "slow" for the baseline page and "fast" for the optimized page. The PageSpeed API confirmed both classifications independently.
+
+[FIGURE 5 HERE — manual PageSpeed screenshots side-by-side]
+Figure 5: Google PageSpeed Insights results for the baseline deployment (score 55, left) and the optimised deployment (score 100, right), independently verifying the framework's prescriptions. All prescription targets were met or exceeded, with an average metric improvement of 94.5 percent. The prescriptions themselves were also checked for domain compliance: 92.9 percent passed, confirming that the optimizer's suggestions are not just theoretically plausible but practically realizable.
+
+
+7  DISCUSSION AND LIMITATIONS
+
+7.1  Discussion of Findings
+
+Predictive Accuracy. XGBoost's 90.60 percent test accuracy, backed by 90.96 percent pipeline cross-validation and three formal significance tests, establishes a solid predictive baseline. The pipeline-based CV design is not a minor detail: fitting the scaler inside each fold eliminates a subtle but common source of data leakage that inflates reported accuracy in many published studies [2]. That the test-CV gap is only -0.36 percentage points suggests the model generalises well from training to unseen data.
+
+Core Web Vitals as Key Drivers. The dominance of Response Time, FCP, LCP, and the CWV_Composite in both SHAP and consensus rankings confirms the industry's shift away from simple page-load time towards perceived performance metrics [5, 6]. Static structural features (e.g., Page Size, num_requests) still contribute but are secondary.
+
+Cross-Dataset Transfer. The 97.54 percent accuracy when a model trained on 885 curated URLs is transferred to 8,000 HTTP Archive URLs is, in our view, the strongest evidence that the framework captures genuine performance patterns rather than idiosyncrasies of the primary dataset. The reverse-transfer result (88.36 percent) is lower but still respectable, likely because the HA-trained model lacks exposure to the richer labelling signals (LCP, FCP, TTI, TBT) that drive classification on the primary set.
+
+Prescriptive Engine. The 100 percent batch success rate and full domain compliance indicate that Differential Evolution can reliably navigate the web-performance feature space without generating unrealistic recommendations. The top recommendations (reduce LCP, reduce Response Time, reduce TTI) map directly to well-established engineering actions: compress hero images, tune server response, and defer non-critical scripts [8, 10].
+
+Feature Influence vs. Feature Actionability. The SHAP-counterfactual analysis (tau = 0.598, rho = 0.772) reveals a nuanced picture. At a global level, influential features are also commonly actionable — Response Time, FCP, CWV_Composite, and LCP rank near the top in both SHAP and counterfactual frequency. Yet specific features diverge in ways that matter for practitioners: tti, tbt, TBT_TTI_Ratio, and total_byte_weight appear in 75–90% of counterfactuals despite low SHAP importance, indicating they are high-leverage levers for remediation even if they are not the primary drivers of model predictions. Category, by contrast, has substantial SHAP weight (4th globally) but never appears in counterfactuals — correctly reflecting that site category is a structural covariate, not an optimisation target. From a practitioner's standpoint, a SHAP plot alone can therefore be misleading as an optimisation roadmap; counterfactual analysis provides a complementary, action-oriented perspective that specifically surfaces which features are most useful for changing a classification outcome.
+
+When Explanations Disagree. The weakest SHAP-LIME agreement occurs for the medium class (tau = 0.342), exactly where the model sits near the decision boundary. This is not a failure of the explanation methods; it reflects genuine uncertainty in the model itself. Flagging this boundary uncertainty and communicating it to practitioners is, we argue, more honest and more useful than reporting average-only agreement figures.
+
+Category-Specific Optimization. That 9 of 22 features show statistically significant importance differences across website categories strengthens the case for tailored, rather than generic, optimization strategies. A news site and an e-commerce site may both be slow, but the reasons are different.
+
+7.2  Practical Implications
+
+For practitioners, this framework offers three concrete benefits:
+
+Automated Decision Support. Instead of manually auditing waterfall charts---a process that van Riet et al. [8] documented as labor-intensive and error-prone---engineers can feed a URL through the pipeline and receive a prioritised list of specific changes (e.g., "Reduce LCP by 60.5 percent, priority: Critical").
+
+Deployment Risk Assessment. The predictive component can serve as a quality gate in CI/CD pipelines, estimating the performance class of a build before it reaches production [3].
+
+Evidence for Stakeholders. The XAI layer generates quantifiable evidence (SHAP plots, consensus rankings, counterfactual what-if scenarios) that engineers can present when requesting resources for refactoring or infrastructure investment [16].
+
+7.3  Threats to Validity
+
+Construct Validity. The primary dataset's labels are derived from composite metric thresholds, which may not perfectly align with user-perceived performance. The HA dataset uses Google's published thresholds, introducing a different labelling scheme; cross-dataset results should be interpreted with this distinction in mind.
+
+Internal Validity. Pipeline-based cross-validation guards against data leakage. All models share the same train-test split and random seed. The real-world experiment uses an external API as ground truth, but the controlled testbed (a simple static page) does not capture the full complexity of enterprise applications.
+
+External Validity. The primary dataset of 885 pages, while enriched, may not represent all web architectures (WebGL-heavy sites, single-page apps with client-side routing, legacy portals). The HTTP Archive study extends coverage to 8,000 pages from the Tranco top 200,000, but even this is a small fraction of the indexed web.
+
+7.4  Limitations
+
+Dataset Scale. Despite the HA validation, the primary dataset remains modestly sized. Training on the full HTTP Archive (millions of pages) is an obvious next step but requires engineering for scale.
+
+Abstraction Level. The prescriptive engine operates at the feature level (e.g., "reduce Page Size by 200 KB") rather than the code level (e.g., generating a minified JavaScript file). Closing this last-mile gap between feature recommendation and automated code refactoring is an open challenge.
+
+Single-Point-in-Time Snapshot. Both datasets represent snapshots. Longitudinal data capturing how performance degrades over successive code deployments would enable a continuous monitoring mode.
+
+API Dependency. Reliance on the Google PageSpeed Insights API introduces a dependency on external rate limits and evolving scoring algorithms. A self-hosted telemetry pipeline would improve long-term reproducibility.
+
+Counterfactual Sparsity. The mean counterfactual requires changes to 13.2 features, which is not particularly sparse. Incorporating sparsity penalties more aggressively, or using causal discovery to restrict the search to causally upstream features, could yield more targeted counterfactuals.
+
+
+8  CONCLUSION AND FUTURE WORK
+
+This paper has presented a unified, empirically validated framework for intelligent web performance optimization. By integrating predictive classification, prescriptive optimization, and multi-method explainable AI within a single pipeline, the system addresses a persistent disconnect in the field: the gap between detecting a performance problem and systematically resolving it.
+
+Summary of Contributions:
+
+1. Leak-Proof Prediction. A Pipeline-based XGBoost classifier achieves 90.60 percent test accuracy (pipeline CV: 90.96 +/- 1.40 percent), confirmed by Friedman, Wilcoxon, and McNemar tests. Wrapping scaling inside cross-validation folds eliminates a common methodological flaw.
+
+2. External Generalizability. Cross-dataset transfer at 97.54 percent accuracy, from 885 curated URLs to 8,000 HTTP Archive URLs labelled with Google's published thresholds, demonstrates that the learned representations capture genuine performance patterns.
+
+3. Domain-Compliant Prescription. Differential Evolution with direction-aware constraints achieves 100 percent success on batch optimization, with all recommendations passing domain compliance checks.
+
+4. Multi-Method Explainability Consensus. A fidelity-weighted ranking of SHAP, LIME, and Permutation Importance resolves inter-method disagreement and provides bootstrap confidence intervals for each feature's importance score.
+
+5. Stability, Category-Stratification, and Counterfactuals. LIME is quantifiably stable (Jaccard = 0.876); 9 of 22 features vary significantly in importance across website categories; and counterfactual explanations reveal a nuanced relationship between feature influence and actionability (SHAP-CF tau = 0.598): while moderate global agreement exists, specific features (tti, tbt, TBT_TTI_Ratio, total_byte_weight) are substantially more actionable than their SHAP rank implies, and structural features such as Category are influential but not directly optimisable.
+
+6. Real-World Validation. A controlled deployment experiment, audited by the external Google PageSpeed API, confirms that prescriptions reduce LCP by 97.3 percent and raise the PageSpeed score from 55 to 100, eliminating circular validation.
+
+8.1  Future Work
+
+Automated Code Refactoring. The current system prescribes feature-level changes; future work could use large language models to generate the specific code modifications (e.g., image compression scripts, JavaScript bundle splitting configurations) needed to implement those changes.
+
+Green Web Engineering. Extending the optimization objective to a multi-objective function balancing performance with energy efficiency would help organisations reduce the carbon footprint of their web infrastructure.
+
+Longitudinal Monitoring. Incorporating time-series data on successive deployments would enable detection of gradual performance regressions, shifting the framework from snapshot optimization to continuous assurance.
+
+Causal Counterfactuals. Replacing the current correlation-based counterfactual search with a causal discovery step (e.g., structure learning via the PC algorithm) would restrict counterfactual modifications to causally upstream features, improving both sparsity and interpretability.
+
+Scale. Training on the full HTTP Archive, which contains hundreds of millions of page records, is an engineering challenge that would further strengthen the generalizability claims made in this work.
+
+
+REFERENCES
+
+[1] Kaushik, N., Kumar, H. and Raj, V. Micro frontend based performance improvement and prediction for microservices using machine learning. J. Grid Comput. 22 (2024).
+
+[2] Xin, R., Liu, H., Chen, P. and Zhao, Z. Robust and accurate performance anomaly detection and prediction for cloud applications: a novel ensemble learning-based framework. J. Cloud Comput. 12 (2023).
+
+[3] Dakic, V., Djambic, G., Slovinac, J. and Redzepagic, J. Optimizing Kubernetes scheduling for web applications using machine learning. Electronics 14, 863 (2025).
+
+[4] Ghattas, M., Mora, A. M. and Odeh, S. A novel approach for evaluating web page performance based on machine learning algorithms and optimization algorithms. AI 6, 19 (2025).
+
+[5] Mathur, S., Hasan, Y., Bhargava, D., Bhattacharjee, S. and Rana, A. Artificial intelligence based predictive analytics for website performance optimization (2024).
+
+[6] Sehwag, A., Mishra, A. P., Kargeti, D., Pahadia, D. and Mangal, G. Applying predictive prefetching using deep learning and NLP to shorten web page loading times. Int. J. Multidiscip. Res. (IJFMR) 6 (2024).
+
+[7] Huang, D., Costero, L., Pahlevan, A., Zapater, M. and Alonso, D. Cloud Prophet: A machine learning-based performance prediction for public clouds. IEEE Trans. Sustain. Comput. (2023).
+
+[8] van Riet, J., Malavolta, I. and Ghaleb, T. A. Optimize along the way: An industrial case study on web performance. J. Syst. Softw. 198, 111593 (2023).
+
+[9] Notz, P. M. and Pibernik, R. Explainable subgradient tree boosting for prescriptive analytics in operations management. Eur. J. Oper. Res. 312, 1119--1133 (2024).
+
+[10] Surianarayanan, C., Lawrence, J. J., Chelliah, P. R., Prakash, E. and Hewage, C. A survey on optimization techniques for edge artificial intelligence (AI). Sensors 23, 1279 (2023).
+
+[11] Goscien, R. Explainable artificial intelligence-based framework for efficient content placement in elastic optical networks. Expert Systems with Applications 262, 125541 (2025).
+
+[12] Asha, M. M. and Ramya, G. Predator crow search optimization with explainable AI for cardiac vascular disease classification. Sci. Rep. 15 (2025).
+
+[13] Goyal, B. Explainable AI (XAI) for cloud-based enterprise applications: Building trust and transparency in AI-driven decisions. J. Int. Crisis Risk Commun. Res. 8, 63--71 (2025).
+
+[14] Salih, A. M. et al. A perspective on explainable artificial intelligence methods: SHAP and LIME (2024). Published in Adv. Intell. Syst. 2024.
+
+[15] Goldwasser, J. and Hooker, G. Provably stable feature rankings with SHAP and LIME (2024). Preprint arXiv:2401.15800.
+
+[16] Hassija, V. et al. Interpreting black-box models: A review on explainable artificial intelligence. Cogn. Comput. 16, 45--74 (2024).
+
+[17] Mersha, M., Lam, K. N., Wood, J., AlShami, A. and Kalita, J. Explainable artificial intelligence: A survey of needs, techniques, applications, and future direction. Neurocomputing 599 (2024).
+
+[18] Benleulmi, M., Gasmi, I., Azizi, N. and Dey, N. Explainable AI and deep learning models for recommender systems: State of the art and challenges. J. Univers. Comput. Sci. 31, 383--421 (2025).
+
+[19] Liu, B. et al. AI-DeMat: A web-based expert system platform for computationally expensive models in materials design. Adv. Eng. Softw. 176, 103361 (2023).
+
+[20] Ali, S. et al. Explainable artificial intelligence (XAI): What we know and what is left to attain trustworthy artificial intelligence. Inf. Fusion 99, 101805 (2023).
+
+[21] Ortigossa, E., Goncalves, T. and Nonato, L. Explainable artificial intelligence (XAI) - from theory to methods and applications. IEEE Access 12, 80799--80846 (2024).
+
+[22] Bennetot, A. et al. A practical tutorial on explainable AI techniques. ACM Comput. Surv. 57 (2024).
+
+[23] Alam, K., Kifayat, K., Sampedro, G. A., Karovic, V. and Naeem, T. SXAD: Shapely explainable AI-based anomaly detection using log data. IEEE Access 12, 95659--95672 (2024).
+
+[24] Rahim M, N. and Basheer K. P, M. A hybrid explainability framework for recommender systems using SHAP with natural language interpretations. Int. J. Innov. Res. Sci. Stud. 8, 687--703 (2025).
+
+[25] Mersha, M. et al. Explainable AI: XAI-guided context-aware data augmentation. Expert Syst. Appl. 289, 128364 (2025).
+
+[26] Hosain, M., Jim, J., Mridha, M. and Kabir, M. Explainable AI approaches in deep learning: Advancements, applications and challenges. Comput. Electr. Eng. 117, 109246 (2024).
+
+[27] Sharma, N. A., Chand, R. R., Buksh, Z., Ali, A. B. M. S., Hanif, A. and Beheshti, A. Explainable AI frameworks: Navigating the present challenges and unveiling innovative applications. Algorithms 17, 227 (2024).
+
+[28] Yang, X. et al. Machine learning-driven clinical decision support for low bone mineral density: A web-based prediction model with explainable AI integration. Bone 200, 117592 (2025).
+
+[29] Bhardwaj, T. and Sumangali, K. An explainable federated blockchain framework with privacy-preserving AI optimization for securing healthcare data. Sci. Rep. 15, 21799 (2025).

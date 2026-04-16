@@ -1,0 +1,24 @@
+{
+  "url": "https://baddummypage.onrender.com/",
+  "timestamp": "2026-01-08T11:33:20.784295",
+  "strategy": "mobile",
+  "performance_score": 55.00000000000001,
+  "fcp": 11167,
+  "lcp": 31616,
+  "tti": 31616.000000000004,
+  "tbt": 3,
+  "cls": 0,
+  "speed_index": 18353.266680121895,
+  "total_byte_weight": 6226328,
+  "num_requests": 2,
+  "unused_js": 0,
+  "Response Time(s)": 0.001,
+  "Page Size (KB)": 6080.3984375,
+  "Load Time(s)": 31.616,
+  "Throughput": 196935.98178137653,
+  "_raw_lighthouse": {
+    "fetchTime": "2026-01-08T06:02:59.516Z",
+    "finalUrl": "https://baddummypage.onrender.com/",
+    "lighthouseVersion": "13.0.1"
+  }
+}

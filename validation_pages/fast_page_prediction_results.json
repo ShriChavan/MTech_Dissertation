@@ -1,0 +1,35 @@
+{
+  "url": "https://gooddummypage.onrender.com/",
+  "timestamp": "2026-01-08T12:07:20.115158",
+  "prediction": {
+    "class": "fast",
+    "probabilities": {
+      "fast": 0.9973559379577637,
+      "medium": 0.002046364126726985,
+      "slow": 0.0005977552500553429
+    }
+  },
+  "metrics_used": {
+    "fcp": 854,
+    "lcp": 854,
+    "tti": 877.95,
+    "tbt": 0,
+    "cls": 0,
+    "speed_index": 1527.9979953956606,
+    "Response Time(s)": 0.001,
+    "Load Time(s)": 0.854,
+    "performance_score": 100,
+    "Page Size (KB)": 8.8466796875,
+    "total_byte_weight": 9059,
+    "num_requests": 2,
+    "Throughput": 10607.728337236535,
+    "unused_js": 0,
+    "Size_LoadTime_Ratio": 10.359109704332553,
+    "Total_Time": 0.855,
+    "Throughput_ResponseTime_Ratio": 10607728.337236535,
+    "Log_Page_Size": 2.2871343107937623,
+    "Log_Throughput": 9.269432369310461,
+    "Category": 0
+  },
+  "pagespeed_score": 100
+}

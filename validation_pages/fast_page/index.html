@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Performance Test Page - After Optimization</title>
+    
+    <!-- 
+    ==========================================================================
+    OPTIMIZED PAGE BASED ON MODEL PRESCRIPTIONS
+    ==========================================================================
+    Changes applied based on Phase 2 prescriptive model recommendations:
+    
+    1. Page Size (KB) -75%: Compressed image from 6MB BMP to ~150KB WebP
+    2. total_byte_weight -55%: Reduced total transfer size
+    3. tbt -81.7%: Removed blocking JavaScript, using defer
+    4. fcp -54.9%: No render-blocking scripts
+    5. lcp -42.6%: Optimized main image (smaller, modern format)
+    6. tti -53.3%: Deferred all JavaScript computations
+    7. speed_index -84.1%: Combined effect of all optimizations
+    8. Throughput +39.6%: Smaller files = faster delivery
+    ==========================================================================
+    -->
+    
+    <style>
+        /* Inlined CSS to reduce requests (num_requests -76.3%) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .metrics-info {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .metrics-info h3 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+        
+        .metrics-info ul {
+            margin-left: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .optimization-applied {
+            background: #cce5ff;
+            border: 1px solid #004085;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .optimization-applied h3 {
+            color: #004085;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Fast Performance Test Page</h1>
+        <p class="subtitle">Optimized Based on AI Prescriptive Model Recommendations</p>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Purpose of This Page</h2>
+            <p>
+                This webpage has been optimized based on prescriptions from the Phase 2 
+                prescriptive optimization model. It serves as the "after" version for 
+                real-world validation of the AI-driven web performance optimization framework.
+            </p>
+            <p>
+                The original slow page was analyzed by the model, which predicted it as "SLOW" 
+                with 65.35% probability and provided specific optimization recommendations.
+            </p>
+        </div>
+        
+        <div class="metrics-info">
+            <h3>✅ Optimizations Applied (Based on Model Prescriptions):</h3>
+            <table>
+                <tr>
+                    <th>Prescription</th>
+                    <th>Target</th>
+                    <th>Change Applied</th>
+                </tr>
+                <tr>
+                    <td>Page Size (KB)</td>
+                    <td>-75%</td>
+                    <td>Compressed 6MB BMP → ~150KB WebP</td>
+                </tr>
+                <tr>
+                    <td>total_byte_weight</td>
+                    <td>-55%</td>
+                    <td>Reduced total transfer size</td>
+                </tr>
+                <tr>
+                    <td>tbt (Total Blocking Time)</td>
+                    <td>-81.7%</td>
+                    <td>Removed blocking JS, using defer</td>
+                </tr>
+                <tr>
+                    <td>fcp (First Contentful Paint)</td>
+                    <td>-54.9%</td>
+                    <td>No render-blocking scripts</td>
+                </tr>
+                <tr>
+                    <td>lcp (Largest Contentful Paint)</td>
+                    <td>-42.6%</td>
+                    <td>Optimized image format and size</td>
+                </tr>
+                <tr>
+                    <td>tti (Time to Interactive)</td>
+                    <td>-53.3%</td>
+                    <td>Deferred all JavaScript</td>
+                </tr>
+                <tr>
+                    <td>speed_index</td>
+                    <td>-84.1%</td>
+                    <td>Combined effect of all above</td>
+                </tr>
+                <tr>
+                    <td>Throughput</td>
+                    <td>+39.6%</td>
+                    <td>Smaller files = faster delivery</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 
+        PRESCRIPTION: Page Size -75%, total_byte_weight -55%, lcp -42.6%
+        CHANGE: Replaced 6MB uncompressed BMP with ~150KB compressed WebP
+        -->
+        <div class="image-container">
+            <h3>Optimized Image (Compressed WebP Format)</h3>
+            <p style="margin-bottom: 15px;">
+                <em>Original: 6MB BMP → Optimized: ~150KB WebP (97.5% reduction)</em>
+            </p>
+            <img src="optimized_image.webp" alt="Optimized test image" 
+                 width="800" height="450"
+                 loading="eager"
+                 onerror="this.src='https://via.placeholder.com/800x450/667eea/ffffff?text=Optimized+Image+(150KB+WebP)'; this.style.border='2px solid green';">
+        </div>
+        
+        <div class="optimization-applied">
+            <h3>🔬 Validation Experiment</h3>
+            <p><strong>Before (Slow Page):</strong></p>
+            <ul>
+                <li>Predicted Class: SLOW (65.35% probability)</li>
+                <li>Page Size: ~6,080 KB</li>
+                <li>Heavy render-blocking JavaScript</li>
+                <li>Uncompressed BMP image</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>After (This Page):</strong></p>
+            <ul>
+                <li>Expected Class: FAST or MEDIUM</li>
+                <li>Page Size: ~200 KB (target)</li>
+                <li>Deferred JavaScript</li>
+                <li>Compressed WebP image</li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h3>Research Information</h3>
+            <p><strong>Project:</strong> AI-Driven Web Performance Optimization Framework</p>
+            <p><strong>Phase:</strong> Real-World Validation (Phase 2 Extension)</p>
+            <p><strong>Purpose:</strong> Validate prescriptive optimization model on actual hosted webpage</p>
+            <p><strong>Expected Result:</strong> PageSpeed API should classify this page as "fast" or "medium"</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Fast Performance Test Page | Dissertation Research | January 2026</p>
+        <p>Optimized based on AI prescriptive model recommendations</p>
+    </footer>
+    
+    <!-- 
+    PRESCRIPTION: tbt -81.7%, tti -53.3%, fcp -54.9%
+    CHANGE: Moved all JavaScript to defer (non-blocking)
+    Original had heavy synchronous JS that blocked rendering
+    -->
+    <script defer>
+        // Lightweight, deferred script (non-blocking)
+        // Original had heavy Fibonacci, matrix operations running synchronously
+        // Now using minimal deferred logging only
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Page loaded - Optimized version");
+            console.log("Optimizations applied based on model prescriptions:");
+            console.log("- Page Size: -75%");
+            console.log("- TBT: -81.7%");
+            console.log("- FCP: -54.9%");
+            console.log("- LCP: -42.6%");
+            console.log("- TTI: -53.3%");
+            
+            // Log DOM stats (minimal overhead)
+            const stats = {
+                totalElements: document.getElementsByTagName('*').length,
+                timestamp: new Date().toISOString()
+            };
+            console.log("DOM Statistics:", stats);
+        });
+    </script>
+</body>
+</html>

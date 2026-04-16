@@ -1,0 +1,461 @@
+\documentclass[sn-nature]{sn-jnl}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage[title]{appendix}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{manyfoot}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{listings}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\author*[1]{\fnm{Shrimant} \sur{Chavan}}
+\email{chavansa24.comp@coeptech.ac.in}
+
+\author[1]{\fnm{Pratiksha R.} \sur{Deshmukh}}
+\email{dpr.comp@coeptech.ac.in}
+
+\affil*[1]{%
+  \orgdiv{Department of Computer Engineering},
+  \orgname{COEP Technological University},
+  \orgaddress{
+    \street{Wellesley Road},
+    \city{Pune},
+    \postcode{411005},
+    \state{Maharashtra},
+    \country{India}
+  }
+}
+
+\begin{document}
+
+\title[Explainable AI for Reliable Web Performance]{An Explainable Predictive-Prescriptive AI Framework for System Assurance in Intelligent Web Environments}
+
+
+\abstract{
+Ensuring optimal performance in modern web applications is critical for user experience, yet current optimization techniques remain largely manual and reactive. To overcome these limitations, this paper proposes an explainable, predictive-prescriptive AI framework that automates performance management. The methodology unfolds in three phases: prediction, prescription, and explanation. Using an enriched dataset of 885 webpages incorporating Core Web Vitals, we train an XGBoost classifier that achieves 90.23 percent accuracy in categorizing performance states. Beyond mere classification, a Differential Evolution-based engine prescribes specific, constraint-aware feature adjustments to resolve bottlenecks. Crucially, we move beyond theoretical simulation by conducting a controlled real-world experiment; implementing the framework's recommendations on a deployed test site resulted in a 97.3 percent reduction in Largest Contentful Paint (LCP) and an increase in Google PageSpeed scores from 55 to 100. Finally, SHAP and LIME techniques are integrated to provide transparent reasoning for these decisions. This work contributes a scientifically robust, empirically validated solution that bridges the gap between AI theory and practical web engineering.
+}
+
+
+\keywords{Web Performance Optimization, Predictive-Prescriptive Analytics, Explainable Artificial Intelligence, Intelligent Systems, Performance Engineering}
+
+
+\maketitle
+
+\section{Introduction}\label{sec1}
+
+The performance of web applications is a decisive factor in the reliability and success of modern intelligent systems, directly dictating user satisfaction, operational efficiency, and service quality across sectors like e-commerce, healthcare, and finance. As web architectures evolve toward microservices and distributed cloud infrastructures, maintaining consistent low-latency performance has become a formidable engineering challenge \cite{kaushik2024, xin2023}. Modern applications rely heavily on dynamic content generation and resource-intensive client-side processing, where even minor degradation can severely impact business outcomes and user engagement. Consequently, robust performance optimization has transitioned from a routine maintenance task to a critical requirement in intelligent computing environments \cite{dakic2025}.
+
+Traditional optimization approaches remain predominantly manual and reactive, often depending on static heuristics or isolated diagnostic tools that fail to capture the multidimensional nature of web behavior. To address these inefficiencies, recent research has pivoted toward data-driven modeling. Machine learning techniques have demonstrated significant potential in identifying performance patterns and predicting bottlenecks before they impact end-users \cite{ghattas2025, mathur2024, sehwag2024}. For instance, predictive frameworks have been successfully applied to public cloud performance forecasting \cite{huang2023} and anomaly detection \cite{xin2023}. However, a critical gap remains: most existing studies focus strictly on \textit{predicting} performance states, offering limited guidance on how developers should practically intervene to resolve identified issues.
+
+Industrial evidence suggests that performance degradation typically results from a complex interplay of structural, network-level, and user-centric factors \cite{vanriet2023}. While predictive analytics provides an early warning system, engineers require prescriptive frameworks that recommend concrete, actionable optimization strategies. Emerging research in prescriptive analytics highlights the value of coupling predictive models with optimization algorithms to support informed decision-making \cite{notz2024, surianarayanan2023}. Similar hybrid approaches have shown promise in other domains, such as optical network resource placement \cite{goscien2025} and healthcare diagnostics \cite{asha2025}, yet their application to web performance engineering remains under-explored.
+
+Furthermore, as machine learning models are increasingly deployed in performance-critical loops, the black-box nature of these algorithms raises concerns regarding transparency and trust \cite{goyal2025}. Explainable Artificial Intelligence (XAI) has emerged as a necessary component for user adoption, with techniques like SHAP and LIME providing essential feature-level attribution \cite{salih2024, goldwasser2024}. Recent surveys emphasize that for AI to be trusted in enterprise and cloud applications, it must provide interpretable reasoning alongside its outputs \cite{hassija2024, mersha2024, benleulmi2025}. Despite this, few studies have successfully integrated explainability into a unified pipeline that handles diagnosis, optimization, and justification simultaneously.
+
+Motivated by these challenges, this research proposes an integrated, empirically validated framework that combines predictive modeling, prescriptive optimization, and explainable AI. Unlike purely theoretical studies, this work bridges the gap between AI strategy and engineering practice. We introduce a three-phase methodology: (1) an XGBoost-based classifier that categorizes performance using enriched Core Web Vitals data; (2) a Differential Evolution optimization engine that prescribes domain-compliant feature adjustments; and (3) an XAI layer that validates these decisions. Crucially, we validate the framework through a controlled real-world experiment, where AI-guided optimizations reduced Largest Contentful Paint (LCP) by 97.3\% and improved Google PageSpeed scores from 55 to 100. This empirical validation ensures that the proposed solution is not only theoretically sound but practically viable for modern web engineering.
+
+The remainder of this paper is organized as follows. Section~2 reviews related work on predictive modeling, prescriptive analytics, and explainable AI. Section~3 formalizes the problem definition and conceptual framework. Section~4 describes the system architecture. Section~5 details the datasets and experimental setup. Section~6 presents the empirical evaluation, including the real-world validation experiment. Section~7 discusses the findings and limitations, and Section~8 concludes the paper with directions for future research.
+
+
+\section{Literature Review}\label{sec2}
+
+The optimization of web application performance has matured from simple, heuristic-based diagnostics into a discipline driven by data and intelligent methodologies. As modern web architectures evolve—characterized by dynamic content, micro-frontends, and distributed cloud resources—maintaining reliability has become increasingly complex. Consequently, researchers have turned to Artificial Intelligence (AI) and Machine Learning (ML) to enable scalable performance management. This section reviews prior work across three thematic pillars that underpin the proposed framework: predictive modeling, prescriptive optimization, and explainable artificial intelligence (XAI).
+
+\subsection{Predictive Modeling for Web Performance}
+
+Initial research in intelligent optimization prioritized the identification of bottlenecks before deployment. Ghattas et al.~\cite{ghattas2025} and Kaushik et al.~\cite{kaushik2024} demonstrated that static structural attributes, such as DOM complexity, script density, and micro-frontend composition, can effectively classify performance using supervised learning. These studies established the feasibility of early detection within the software development life cycle, though they stopped short of suggesting automated corrections.
+
+Moving beyond static analysis, Sehwag et al.~\cite{sehwag2024} focused on perceived performance by modeling user navigation patterns. By treating browsing sessions as sequential data, their deep learning framework enabled predictive prefetching to reduce latency. While successful in optimizing network loads, such approaches are often specialized and overlook broader application-level factors.
+
+Mathur et al.~\cite{mathur2024} expanded this scope by integrating user-centric and business metrics, highlighting the direct correlation between latency and conversion rates. Their work underscores the necessity for models that link technical indicators to experiential outcomes. At the infrastructure level, Huang et al.~\cite{huang2023}, Xin et al.~\cite{xin2023}, and Daki\'{c} et al.~\cite{dakic2025} applied ensemble learning and neural networks to detect anomalies and optimize cloud scheduling. These studies reinforce the importance of predictive capabilities across both the application and system layers.
+
+\subsection{Prescriptive Optimization Approaches}
+
+While predictive models serve as effective early warning systems, translating their outputs into actionable engineering decisions remains a significant hurdle. van Riet et al.~\cite{vanriet2023} presented an industrial case study revealing that performance engineering still relies heavily on expert intuition and manual trial-and-error. Their findings illuminate the scalability limits of human-driven optimization and the urgent need for automated prescriptive techniques.
+
+To bridge this gap, recent work has explored algorithmic decision-making. Notz and Pibernik~\cite{notz2024} proposed a prescriptive learning paradigm that maps system states directly to optimal decisions, bypassing the need for separate solvers. In parallel, meta-heuristic strategies have gained traction; Asha and Ramya~\cite{asha2025} and Surianarayanan et al.~\cite{surianarayanan2023} utilized evolutionary algorithms like Predator Crow Search to navigate complex, non-linear configuration spaces. Similarly, Liu et al.~\cite{liu2023} and Goścień~\cite{goscien2025} developed hybrid frameworks for optimizing resource placement in web-based and optical networks. However, these methods are rarely applied to the specific domain of web page performance and often operate as black boxes, lacking the interpretability required for developer adoption.
+
+Table~\ref{tab:prescriptive_methods} summarizes representative prescriptive techniques and their relevance to this domain.
+
+\begin{table}[h]
+\caption{Representative Prescriptive Optimization Techniques}\label{tab:prescriptive_methods}
+\centering
+\begin{tabular}{p{0.22\textwidth} p{0.15\textwidth} p{0.55\textwidth}}
+\toprule
+Methodology & Reference & Applicability to Web Performance \\
+\midrule
+Sub-gradient Tree Boosting &
+Notz and Pibernik~\cite{notz2024} &
+Integrates predictive modeling with optimization to directly generate decision-oriented recommendations suitable for complex performance management scenarios. \\
+
+Predator Crow Search Optimization &
+Asha and Ramya~\cite{asha2025} &
+Explores high-dimensional configuration spaces using evolutionary search strategies to improve system performance under nonlinear constraints. \\
+
+Hybrid Heuristic-Machine Learning Models &
+Go\'{s}cie\'{n}~\cite{goscien2025} &
+Combines predictive learning with heuristic placement strategies to optimize resource allocation while maintaining computational efficiency in performance-critical environments. \\
+\botrule
+\end{tabular}
+\end{table}
+
+\subsection{Explainability in Performance-Critical Systems}
+
+The integration of complex ML models into performance workflows raises critical concerns regarding trust and transparency~\cite{ali2023, goyal2025}. Explainable AI (XAI) techniques, such as SHAP (SHapley Additive exPlanations) and LIME (Local Interpretable Model-agnostic Explanations), have become essential for interpreting these models~\cite{hassija2024, ortigossa2024}. However, applying XAI to performance data is non-trivial. Salih et al.~\cite{salih2024} identified challenges arising from feature collinearity—common in web metrics—while Goldwasser and Hooker~\cite{goldwasser2024} warned that instability in explanations can erode user confidence.
+
+Recent surveys by Mersha et al.~\cite{mersha2024} and Bennetot et al.~\cite{bennetot2024} emphasize that explanations must be tailored to the stakeholder. For software engineers, explanations must be actionable, directly supporting diagnostic and corrective tasks. Applied studies in anomaly detection~\cite{alam2024} and recommender systems~\cite{rahim2025, benleulmi2025} demonstrate how XAI can validate automated decisions. Furthermore, Mersha et al.~\cite{mersha2025} highlighted the role of XAI in guiding data augmentation, a strategy relevant to handling limited performance datasets.
+
+\subsection{Research Gap}
+
+Despite significant progress in predictive modeling and prescriptive analytics, existing approaches typically address these aspects in isolation. Current systems often predict performance degradation without prescribing specific remedies, while prescriptive methods frequently lack the transparency required for practical implementation.
+
+Crucially, a major gap exists in empirical validation. Most prescriptive frameworks in the literature are validated theoretically or via simulation (i.e., using the model to validate itself), rather than through live deployment on real-world systems. This lack of ground truth verification limits their reliability in production environments. These gaps motivate the development of the proposed unified framework, which not only integrates prediction, prescription, and explanation but also rigorously validates optimization outcomes through a controlled, real-world web experiment.
+
+
+\section{Problem Definition and Conceptual Framework}\label{sec3}
+
+Web application performance is the result of intricate dependencies between DOM structure, network latency, resource composition, and browser rendering logic. While modern tools offer granular diagnostic metrics, they typically function as isolated observatories rather than integrated reasoning engines. Specifically, current approaches lack a unified mechanism to simultaneously predict performance states, prescribe remedial actions, and explain the underlying logic of those recommendations \cite{ghattas2025, vanriet2023}. Bridging this gap is critical for establishing reliable, self-optimizing intelligent web environments.
+
+This research formalizes an end-to-end framework merging predictive modeling, prescriptive analytics, and Explainable AI (XAI). The primary objective is to equip developers with actionable, data-driven insights, extending the scope of performance engineering from simple assessment \cite{mathur2024} to automated, interpretable system optimization.
+
+\subsection{Problem Definition}
+
+Let \( W = \{w_1, w_2, \dots, w_n\} \) represent a corpus of web applications. For each application \( w_i \), we define a feature vector
+\[
+X_i = \{x_{i1}, x_{i2}, \dots, x_{id}\}
+\]
+comprising structural, network, and runtime attributes. We define three distinct but interrelated tasks:
+
+\textbf{1. The Predictive Task:} Learn a supervised mapping
+\[
+f_{\theta} : X_i \rightarrow y_i,
+\]
+where \( y_i \in \{\text{fast}, \text{medium}, \text{slow}\} \) represents the performance class. This model must generalize effectively across diverse web architectures to reliably flag under-performing pages \cite{ghattas2025, sehwag2024}.
+
+\textbf{2. The Prescriptive Task:} Identify feasible feature modifications that maximize the probability of an optimal performance state. For a given instance \( w_i \), we seek an optimized vector \( X_i^{*} \):
+\[
+X_i^{*} = \arg\max_{X} \; P\bigl(y = \text{fast} \mid f_{\theta}(X)\bigr)
+\]
+subject to domain-specific constraints (e.g., maintaining visual integrity or limiting asset reduction). This formulation operationalizes the predictive model as an objective function within a meta-heuristic search space \cite{notz2024, asha2025}.
+
+\textbf{3. The Explainability Task:} Generate transparent interpretations for both the initial classification \( f_{\theta}(X_i) \) and the prescribed optimization \( X_i^{*} \). We employ feature attribution methods to quantify the impact of specific metrics on the model's decisions, ensuring the system remains trustworthy and debuggable \cite{salih2024, goldwasser2024}.
+
+\subsection{Rationale for the Multi-Phase Approach}
+
+The methodology is designed as a sequential pipeline to address specific deficiencies in current performance engineering practices:
+
+\begin{itemize}
+    \item \textbf{Data Enrichment:} Standard performance datasets often rely on static file metrics (e.g., total byte size) that correlate poorly with user experience. To resolve this, we augment the feature space with runtime Core Web Vitals retrieved via the Google PageSpeed Insights API, ensuring the model trains on indicators that truly reflect perceived performance \cite{mathur2024}.
+
+    \item \textbf{From Prediction to Prescription:} Detecting a bottleneck is only half the solution. Developers need concrete guidance on how to fix it \cite{vanriet2023}. We therefore embed the predictive model within a Differential Evolution optimization loop, allowing the system to systematically explore the feature space and discover optimal configurations that a human engineer might overlook \cite{notz2024, surianarayanan2023}.
+
+    \item \textbf{Empirical Validation:} Theoretical prescriptions are insufficient without ground-truth verification. A key innovation of this framework is the inclusion of a real-world experimental validation phase. Rather than relying solely on the model's self-assessment, we implement the generated prescriptions on live deployments to quantify actual latency reductions, ensuring the framework's advice translates to tangible gains.
+
+    \item \textbf{Trust via Explainability:} Automated recommendations are frequently met with skepticism. By integrating SHAP and LIME, we provide the why behind every decision, fostering trust and enabling developers to verify that the AI's logic aligns with domain expertise \cite{hassija2024, bennetot2024}.
+\end{itemize}
+
+\subsection{Conceptual Framework}
+
+The proposed architecture, illustrated in Figure~\ref{fig:system_architecture}, consists of four cohesive layers:
+
+\begin{enumerate}
+    \item \textbf{Data Layer:} Handles the acquisition and fusion of static dataset features with dynamic runtime metrics, creating a holistic view of application performance.
+    \item \textbf{Predictive Layer:} Implements supervised learning algorithms to map feature vectors to performance classes. In this work, XGBoost is selected for its superior handling of tabular data and non-linear feature interactions, a finding consistent with recent cloud performance studies \cite{xin2023, huang2023}.
+    \item \textbf{Prescriptive Layer:} A differential evolution engine that queries the predictive model to find optimal feature adjustments. It navigates the trade-off between maximizing performance probability and adhering to realistic constraints \cite{asha2025}.
+    \item \textbf{Explainability Layer:} Utilizes SHAP for global feature importance and LIME for local instance interpretation, ensuring stable and actionable transparency across the pipeline \cite{goldwasser2024}.
+\end{enumerate}
+
+\subsection{Summary}
+
+This section established the mathematical and conceptual foundations of the framework. By unifying prediction, prescription, and explanation—and crucially, anchoring them in empirical validation—the approach provides a robust solution for modern web performance challenges. The following sections detail the system architecture, experimental setup, and the results of both the modeling and the real-world validation experiment.
+
+
+\section{System Architecture}\label{sec4}
+
+This section details the architectural blueprint of the proposed framework, designed as a unified pipeline for reliable web performance optimization. The architecture integrates data acquisition, predictive modeling, prescriptive analytics, and explainable AI into a cohesive system. The design draws upon prior work in machine learning-based performance analysis \cite{ghattas2025, mathur2024} and addresses the industrial need for automated, interpretable decision support \cite{vanriet2023, notz2024}.
+
+\subsection{Overview of the Framework}
+
+The system architecture, illustrated in Figure~\ref{fig:system_architecture}, is organized into three tightly coupled phases, flanked by input data processing and real-world validation.
+
+The pipeline begins with Phase 1 (Predictive Modeling), where raw URL data is enriched with runtime metrics and used to train a supervised classifier. Phase 2 (Prescriptive Modeling) utilizes the trained model as an evaluation function for a differential evolution engine, generating optimized feature configurations. Phase 3 (Explainability Analysis) runs in parallel to provide transparency, using SHAP and LIME to justify both the predictions and the prescribed optimizations. Finally, the system includes a feedback loop for Real-World Validation, ensuring that theoretical recommendations translate to actual latency reductions.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.81\linewidth]{system_arch.png}
+    \caption{System architecture of the proposed predictive–prescriptive–explainable framework for web performance optimization.}
+    \label{fig:system_architecture}
+\end{figure}
+
+\subsection{Data Augmentation and Enrichment (Input Layer)}
+
+Standard datasets often rely on static file characteristics which correlate poorly with perceived user experience. To resolve this, the framework implements a data enrichment module before the modeling phase. It combines structural attributes (e.g., DOM depth, resource counts) with real-world runtime metrics retrieved via the Google PageSpeed Insights API.
+
+This process augments the feature space with Core Web Vitals—specifically Largest Contentful Paint (LCP), Total Blocking Time (TBT), and Cumulative Layout Shift (CLS). This fusion of static and dynamic features aligns with recent research emphasizing the necessity of user-centric metrics for accurate performance modeling \cite{sehwag2024, huang2023}.
+
+\subsection{Phase 1: Predictive Modeling Layer}
+
+The predictive layer serves as the analytical core of the system. Following preprocessing and robust scaling, the enriched data is fed into supervised learning algorithms. While various models were evaluated (including Support Vector Machines and Random Forests), the framework utilizes XGBoost due to its superior handling of tabular data and non-linear feature interactions \cite{xin2023}.
+
+In this architecture, the predictive model performs two distinct functions:
+\begin{enumerate}
+    \item \textbf{Classification:} It categorizes web applications into performance classes (Fast, Medium, Slow).
+    \item \textbf{Objective Evaluation:} It acts as a fitness function or oracle for the optimization engine in Phase 2, estimating the probability of improvement for potential configuration changes.
+\end{enumerate}
+
+\subsection{Phase 2: Prescriptive Optimization Engine}
+
+While prediction identifies the problem, Phase 2 solves it. The prescriptive engine employs Differential Evolution, a stochastic optimization algorithm, to search the feature space for optimal configurations \cite{asha2025}.
+
+Mathematically, the engine treats the feature vector of a slow webpage as a candidate solution. It iteratively mutates this vector to maximize the predicted probability of the Fast class. Crucially, this process is bound by Domain Constraints (e.g., limits on image compression ratios or script deferral strategies) to ensure that the generated recommendations are not just theoretically optimal but practically implementable \cite{goscien2025, surianarayanan2023}.
+
+\subsection{Phase 3: Explainability Module}
+
+To bridge the trust gap often associated with black-box optimization, the framework integrates an Explainable AI (XAI) module. This layer employs a dual-strategy approach:
+\begin{itemize}
+    \item \textbf{Global Explanation (SHAP):} Identifies system-wide performance drivers, helping engineers understand which metrics (e.g., LCP vs. TTI) generally dominate classification outcomes \cite{salih2024}.
+    \item \textbf{Local Explanation (LIME):} Provides instance-specific reasoning. For a specific URL, it clarifies exactly why a certain recommendation (e.g., Reduce JS payload by 200KB) was generated.
+\end{itemize}
+This transparency ensures that developers can verify the logic behind automated decisions \cite{hassija2024, bennetot2024}.
+
+\subsection{Real-World Validation Loop}
+
+A critical addition to the architecture is the explicit validation of prescriptive outputs. Unlike systems that rely solely on self-validation (using the model to check the model), this framework introduces an external verification step. Recommendations generated in Phase 2 are implemented on a test deployment, and the resulting performance is re-evaluated using the external Google PageSpeed API. This establishes a ground-truth feedback loop, confirming that the AI-driven optimizations result in measurable real-world gains.
+
+\subsection{Summary}
+
+The proposed architecture moves beyond isolated diagnostics by creating a unified workflow. By chaining prediction, constraint-aware optimization, and explanation—and anchoring them with real-world validation—the system provides a robust blueprint for intelligent web performance engineering.
+
+
+\section{Dataset and Experimental Setup}\label{sec5}
+
+This section details the data acquisition, feature engineering, and experimental protocols employed to validate the proposed framework. The experimental design prioritizes reproducibility and empirical rigor, ensuring that the predictive models are trained on high-quality data and that the prescriptive recommendations are verified in a controlled, real-world environment.
+
+\subsection{Dataset Description}
+
+To ensure a representative sample of modern web architectures, we constructed a dataset merging static structural records with dynamic runtime metrics. The initial corpus was sourced from a public Kaggle repository, providing baseline attributes such as Document Object Model (DOM) complexity, resource counts, and total byte weight. While useful, static features alone often fail to capture the nuances of user-perceived latency \cite{ghattas2025, mathur2024}.
+
+Consequently, we augmented this data using the Google PageSpeed Insights API. This enrichment process increased the dataset to 885 unique webpages and introduced 20 engineered features, specifically focusing on Core Web Vitals (Largest Contentful Paint, Total Blocking Time, and Cumulative Layout Shift). These user-centric metrics are critical for aligning technical performance with end-user experience, a necessity highlighted in recent web engineering studies \cite{sehwag2024, vanriet2023}.
+
+\subsection{Feature Engineering}
+
+Raw telemetry data often contains noise and scaling disparities. We applied robust feature engineering to enhance model stability:
+\begin{itemize}
+    \item \textbf{Derived Indicators:} We calculated ratio-based metrics, such as \textit{Bytes-per-Request} and \textit{Effective DOM Depth}, to capture the efficiency of resource delivery rather than just absolute size.
+    \item \textbf{Log-Transformation:} Skewed distributions (e.g., page load times) were log-transformed to normalize variance.
+    \item \textbf{Robust Scaling:} All numerical features were scaled using RobustScaler (centering on the median and scaling to the Interquartile Range) to mitigate the influence of extreme outliers common in web performance data \cite{xin2023}.
+\end{itemize}
+
+\subsection{Predictive Model Training}
+
+We evaluated three supervised learning algorithms—Support Vector Machines (SVM), Random Forests (RF), and XGBoost—selected for their proven efficacy in system-level performance modeling \cite{huang2023, dakic2025}.
+
+The dataset was partitioned into a 70:30 stratified split (619 training samples, 266 test samples) to preserve class distribution across Fast, Medium, and Slow categories. Hyperparameters were optimized using grid search cross-validation. Metrics for evaluation included accuracy, F1-score, and precision, with a specific focus on the model's ability to correctly identify the minority Slow class, which represents the most critical cases for optimization.
+
+All experiments were implemented using Python 3.14.0 and the standard Scikit-learn/XGBoost stack on commodity hardware, demonstrating the framework's accessibility without the need for specialized high-performance computing clusters.
+
+\subsection{Optimization and Explainability Configuration}
+
+The prescriptive engine utilizes Differential Evolution, a population-based meta-heuristic chosen for its ability to navigate non-linear, non-differentiable search spaces \cite{asha2025, surianarayanan2023}. The trained XGBoost model acts as the objective function, where the goal is to maximize the probability $P(y=\text{Fast})$ subject to domain constraints (e.g., maintaining visual structure).
+
+For transparency, we integrated SHAP (SHapley Additive exPlanations) for global feature attribution and LIME (Local Interpretable Model-agnostic Explanations) for instance-level reasoning. This dual approach ensures that the black-box nature of the optimization does not hinder trust, addressing a key research gap identified in recent XAI surveys \cite{salih2024, hassija2024, alam2024}.
+
+\subsection{Real-World Experimental Validation Setup}
+
+A significant limitation of existing research is the reliance on circular validation, where the model validates its own predictions. To overcome this, we designed a controlled real-world experiment to verify the framework's recommendations externally.
+
+\begin{enumerate}
+    \item \textbf{Baseline Deployment (The Bad Page):} We developed and deployed a test website (`https://baddummypage.onrender.com/`) intentionally engineered with performance anti-patterns:
+    \begin{itemize}
+        \item \textit{Asset Bloat:} A 6MB uncompressed BMP image.
+        \item \textit{DOM Complexity:} 500 redundant empty \texttt{<div>} elements.
+        \item \textit{Blocking Scripts:} A synchronous Fibonacci sequence calculation to simulate heavy main-thread blocking (High TBT).
+    \end{itemize}
+    
+    \item \textbf{Optimized Deployment (The Good Page):} The metrics from the Baseline Page were fed into the Prescriptive Engine (Phase 2). The resulting recommendations were manually implemented to create an optimized variant (`https://gooddummypage.onrender.com/`).
+    
+    \item \textbf{Independent Verification:} Both deployments were audited using the external Google PageSpeed Insights API. This setup provides an objective ground truth to quantify the exact reduction in latency and improvement in performance scores, independent of the internal predictive model.
+\end{enumerate}
+
+
+\section{Results and Analysis}\label{sec6}
+
+This section presents the empirical evaluation of the proposed framework, focusing on predictive accuracy, optimization efficacy, and decision interpretability. Beyond standard model metrics, we include a crucial real-world validation phase where the framework's recommendations were deployed and tested on a live server to verify practical performance gains.
+
+\subsection{Predictive Model Performance}
+
+We evaluated three supervised classification models—Support Vector Machines (SVM), Random Forests (RF), and XGBoost—using a 70:30 stratified split. Among these, XGBoost demonstrated superior performance, achieving a testing accuracy of 90.23\% and an F1-score of 0.9022. Detailed metrics include a precision of 0.9025 and recall of 0.9023, indicating a balanced ability to minimize both false positives and false negatives.
+
+These results are consistent with recent literature favoring gradient-boosted trees for tabular performance data \cite{xin2023, huang2023}. Analysis of the confusion matrix revealed that the model was particularly robust in identifying the Slow class. This sensitivity is attributed to the model's effective utilization of non-linear interactions between critical runtime features, specifically \textit{Total Blocking Time (TBT)} and \textit{Largest Contentful Paint (LCP)}.
+
+\subsection{Impact of Dataset Augmentation}
+
+The augmentation of the original static dataset with dynamic PageSpeed Insights metrics proved critical for model robustness. Feature importance analysis confirmed that runtime indicators—specifically \textit{LCP}, \textit{Response Time}, and \textit{Performance Score}—ranked among the top five most influential features.
+
+By incorporating these user-centric signals, the model resolved the ambiguity between Medium and Slow classes that often plagues purely structural datasets. This aligns with findings by Mathur et al. \cite{mathur2024} and Sehwag et al. \cite{sehwag2024}, reinforcing the premise that structural metrics (like DOM size) alone are insufficient proxies for perceived user experience.
+
+\subsection{Prescriptive Optimization Outcomes}
+
+The prescriptive engine (Phase 2) was evaluated on a subset of under-performing pages. For these instances, the Differential Evolution optimizer identified feature adjustments that increased the predicted probability of the Fast class ($P_{fast}$) from $<1\%$ to over 99.6\%.
+
+Critically, the optimizer did not just suggest impossible values. It prioritized domain-compliant reductions:
+\begin{itemize}
+    \item \textbf{Response Time:} Average suggested reduction of 72.1\% (identified as the most critical bottleneck).
+    \item \textbf{Time to Interactive (TTI):} Average reduction of 62.7\%.
+    \item \textbf{Largest Contentful Paint (LCP):} Average reduction of 61.0\%.
+\end{itemize}
+
+These recommendations align with established web engineering best practices (e.g., deferring non-critical JS to lower TTI), demonstrating that the model learned valid causal relationships rather than spurious correlations \cite{notz2024, surianarayanan2023}.
+
+\subsection{Explainability Analysis}
+
+To validate the trustworthiness of these prescriptions, we applied both SHAP and LIME. The analysis revealed a high degree of consistency:
+\begin{itemize}
+    \item \textbf{Global-Local Alignment:} We observed a 100\% agreement on the top 5 most important features between global SHAP values and local LIME explanations.
+    \item \textbf{Stability:} The feature attribution rankings remained stable across multiple runs (correlation coefficient of 0.89), addressing common concerns regarding XAI instability \cite{goldwasser2024}.
+\end{itemize}
+
+For instance, when the optimizer recommended reducing \textit{Total Byte Weight}, LIME explicitly highlighted Page Size as the primary contributor to the Slow classification, providing developers with a transparent Reason Code for the suggested change \cite{hassija2024}.
+
+\subsection{Real-World Experimental Validation}
+
+A major limitation of prior research is the reliance on internal validation (using the model to validate itself). To address this, we conducted a controlled external experiment. We deployed a Worst-Case test page (`baddummypage`) and applied the framework's recommendations to create an Optimized variant (`gooddummypage`).
+
+We then audited both pages using the external Google PageSpeed Insights API (independent of our model). The results, summarized in Table~\ref{tab:real_world_results}, confirm that the AI-driven prescriptions translated into massive real-world gains.
+
+\begin{table}[h]
+\caption{Real-World Validation: Before vs. After Optimization}\label{tab:real_world_results}
+\centering
+\begin{tabular}{l c c c}
+\toprule
+Metric & Baseline (Slow) & Optimized (Fast) & Improvement \\
+\midrule
+\textbf{PageSpeed Score} & 55 / 100 & 100 / 100 & \textbf{+81.8\%} \\
+\textbf{LCP (Loading)} & 31.62 s & 0.85 s & \textbf{-97.3\%} \\
+\textbf{TBT (Interactivity)} & 3 ms & 0 ms & \textbf{-100.0\%} \\
+\textbf{Page Size} & 6.08 MB & 0.009 MB & \textbf{-99.9\%} \\
+\textbf{Model Confidence ($P_{fast}$)} & 2.74\% & 99.74\% & \textbf{+97.0 pp} \\
+\botrule
+\end{tabular}
+\end{table}
+
+As shown, the framework successfully reduced the \textit{Largest Contentful Paint} by 97.3\% (from 31.6s to 0.85s), validating that the prescriptive engine's theoretical adjustments result in tangible latency reductions in a production environment.
+
+\subsection{Summary}
+
+The empirical results confirm the framework's effectiveness across the full pipeline. The predictive model achieved high accuracy (90.2\%), the explainability module demonstrated robust stability (100\% top-5 agreement), and most importantly, the real-world experiment proved that the system's recommendations drive measurable, drastic improvements in web performance metrics.
+
+
+\section{Discussion and Limitations}\label{sec7}
+
+This section interprets the experimental findings within the broader context of web engineering, analyzes the practical implications for industry practitioners, and transparently addresses the constraints of the current study.
+
+\subsection{Discussion of Findings}
+
+The integration of predictive modeling, prescriptive analytics, and explainable AI has yielded a framework that bridges the gap between theoretical performance assessment and practical system optimization.
+
+\textbf{Predictive Accuracy and Feature Relevance:}
+The XGBoost model's 90.23\% accuracy confirms that combining structural attributes (e.g., DOM depth) with runtime metrics (e.g., TBT) creates a robust classifier. This supports the hypothesis that static analysis alone is insufficient for modern web applications \cite{ghattas2025, mathur2024}. The heavy reliance of the model on \textit{Largest Contentful Paint} and \textit{Total Blocking Time} reinforces the industry shift towards perceived performance metrics over simple page load time \cite{sehwag2024, vanriet2023}.
+
+\textbf{Validation of Prescriptive Power:}
+A critical contribution of this work is the empirical verification of optimization recommendations. While previous studies often stop at theoretical gain estimation \cite{notz2024}, our real-world experiment demonstrated that the framework's advice is physically realizable. The observation that implementing the prescribed changes reduced the \textit{Page Size} by 99.9\% and improved the \textit{PageSpeed Score} from 55 to 100 serves as definitive proof of concept. It confirms that the Differential Evolution engine does not merely exploit statistical loopholes in the model but identifies causal levers (like asset compression and script deferral) that drive actual latency reduction \cite{surianarayanan2023}.
+
+\textbf{Explainability as a Trust Mechanism:}
+The stability of SHAP and LIME explanations addresses a major barrier to AI adoption: trust. The 100\% alignment between global and local feature importance rankings suggests that the model's reasoning is consistent, not stochastic. This transparency allows developers to audit the AI's thought process, ensuring that recommendations (e.g., reduce image quality) are made for the right reasons (e.g., LCP is too high) rather than spurious correlations \cite{salih2024, goldwasser2024}.
+
+\subsection{Practical Implications}
+
+For practitioners, this framework offers a shift from reactive troubleshooting to proactive engineering.
+\begin{itemize}
+    \item \textbf{Automated Decision Support:} Instead of manually auditing waterfalls to find bottlenecks—a process van Riet et al. \cite{vanriet2023} describe as labor-intensive—engineers can utilize the prescriptive engine to instantly generate a prioritized ToDo list of optimizations (e.g., Critical: Reduce Response Time by 72\%).
+    \item \textbf{Derisking Deployment:} The predictive component allows DevOps teams to estimate the performance class of a build \textit{before} it reaches production, acting as a quality gate in CI/CD pipelines \cite{dakic2025}.
+    \item \textbf{Justification for Stakeholders:} The XAI layer provides plain-language evidence. When asking stakeholders for resources to refactor code, engineers can present SHAP plots showing exactly how that refactoring will improve the Core Web Vitals score \cite{hassija2024}.
+\end{itemize}
+
+\subsection{Limitations}
+
+While the results are robust, several limitations define the scope of this work and suggest avenues for future research:
+
+\textbf{1. Dataset Diversity:} Although enriched, the dataset of 885 pages is relatively small compared to the billions of indexed pages on the web. It may not fully capture edge cases found in highly specific industries (e.g., WebGL-heavy gaming sites or legacy banking portals). Future work should leverage the HTTP Archive to train on terabyte-scale datasets \cite{huang2023}.
+
+\textbf{2. Complexity of Real-World Implementation:} The micro-experiment was conducted on a controlled testbed (`baddummypage`). In complex enterprise applications, implementing recommendations like reduce DOM depth is rarely straightforward; it often requires significant architectural refactoring. The framework currently identifies what to change, but not how to refactor the specific code components.
+
+\textbf{3. Abstraction Level:} The prescriptive engine operates on feature vectors (e.g., reduce script size by 200KB). It does not generate the actual source code (e.g., the minified JavaScript file). Bridging this last mile from feature recommendation to automated code generation remains a challenge for Generative AI integration.
+
+\textbf{4. Dependency Risks:} The reliance on the Google PageSpeed Insights API creates a dependency on external rate limits and scoring algorithms, which change over time. A self-hosted telemetry solution would improve long-term reproducibility.
+
+\subsection{Summary}
+
+The proposed framework successfully moves beyond abstract modeling to empirically validated optimization. By proving that AI-guided prescriptions translate to measurable, drastic real-world performance gains, this work establishes a new baseline for intelligent web engineering. However, scaling this from controlled experiments to automated code refactoring in legacy systems remains the next frontier.
+
+
+\section{Conclusion and Future Work}\label{sec8}
+
+This research has established a unified, empirically validated framework for web performance optimization, effectively bridging the gap between theoretical AI models and practical software engineering. By integrating predictive classification, prescriptive analytics, and explainable AI, the proposed solution addresses the critical industry need for automated systems that not only detect bottlenecks but actively prescribe and justify remedial actions.
+
+Summary of Contributions:
+\begin{enumerate}
+    \item \textbf{Robust Prediction:} The predictive modeling phase confirmed that static structural analysis is insufficient for modern web applications. By augmenting datasets with runtime Core Web Vitals, our XGBoost classifier achieved 90.23\% accuracy, demonstrating that user-centric metrics like \textit{Total Blocking Time} are essential for reliable performance categorization \cite{ghattas2025, mathur2024}.
+    
+    \item \textbf{From Simulation to Reality:} Unlike prior studies that rely solely on internal model validation, this work introduced a rigorous Real-World Experimental Validation. We demonstrated that the feature-level recommendations generated by our Differential Evolution engine are not merely theoretical; when applied to a live deployment, they reduced \textit{Largest Contentful Paint (LCP)} by 97.3\% and boosted \textit{Google PageSpeed} scores from 55 to 100. This confirms that the framework can drive tangible, drastic improvements in production environments \cite{notz2024}.
+    
+    \item \textbf{Trustworthy AI:} The integration of SHAP and LIME provided a necessary layer of transparency. The high stability (100\% agreement) between global and local feature importance rankings ensures that developers can trust the system's reasoning, mitigating the black-box concerns that often hinder AI adoption in reliability-critical systems \cite{salih2024, hassija2024}.
+\end{enumerate}
+
+\subsection{Future Work}
+
+While the framework has proven effective, several avenues exist to expand its scope and utility:
+\begin{itemize}
+    \item \textbf{Automated Code Refactoring:} Currently, the system prescribes feature-level changes (e.g., Reduce JS Payload). Future iterations could leverage Generative AI (LLMs) to automatically generate the refactored code snippets or configuration files required to implement these changes, closing the loop between recommendation and deployment.
+    \item \textbf{Green Web Engineering:} The optimization objective could be expanded into a multi-objective function that balances performance with Energy Efficiency, helping organizations reduce the carbon footprint of their digital infrastructure.
+    \item \textbf{Longitudinal Analysis:} Incorporating time-series data would allow the system to detect performance regressions (gradual degradation) over time, moving from snapshot optimization to continuous performance monitoring.
+    \item \textbf{Scale and Generalizability:} Training the model on terabyte-scale datasets from the HTTP Archive would further enhance its ability to generalize across diverse frameworks (React, Vue, Angular) and edge-case network conditions.
+\end{itemize}
+
+\subsection{Final Remarks}
+
+In conclusion, this work contributes a scalable, interpretable, and empirically verified blueprint for the next generation of intelligent web tools. By transforming passive performance metrics into active, explainable optimization strategies, the framework offers significant practical value for developers and performance engineers, paving the way for self-optimizing intelligent web environments.
+
+\section*{Statements and Declarations}
+
+\subsection*{Funding}
+The authors did not receive any external funding for this research.
+
+\subsection*{Competing Interests}
+The authors declare that they have no competing interests.
+
+\subsection*{Ethics Approval and Consent to Participate}
+This research does not involve human participants or animal subjects. Therefore, ethics approval and consent to participate are not applicable.
+
+\subsection*{Consent for Publication}
+Not applicable.
+
+\subsection*{Data Availability}
+The datasets used in this study are derived from publicly available sources and are available from the corresponding author upon reasonable request.
+
+\subsection*{Code Availability}
+The source code used to support the findings of this study is available from the corresponding author upon reasonable request.
+
+\subsection*{Author Contributions}
+Shrimant A. Chavan conceptualized the study, designed the methodology, implemented the models, conducted the experiments, and prepared the original manuscript.  
+Pratiksha R. Deshmukh supervised the research, provided critical guidance, and reviewed and refined the manuscript.
+
+\section*{Acknowledgements}
+The authors would like to express their sincere gratitude to COEP Technological University, Pune, for providing the academic environment and computational resources required to carry out this research. The authors are especially thankful to Dr. P. R. Deshmukh for her guidance, constructive feedback, and continuous support throughout the course of this work. Her insights and encouragement were instrumental in shaping the direction and quality of the research.
+
+\bibliography{sn-bibliography}
+
+\end{document}

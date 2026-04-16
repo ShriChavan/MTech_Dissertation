@@ -1,0 +1,17 @@
+{
+  "fcp": 11167,
+  "lcp": 31616,
+  "tti": 31616.000000000004,
+  "tbt": 3,
+  "cls": 0,
+  "speed_index": 18353.266680121895,
+  "Response Time(s)": 0.001,
+  "Load Time(s)": 31.616,
+  "performance_score": 55.00000000000001,
+  "Page Size (KB)": 6080.3984375,
+  "total_byte_weight": 6226328,
+  "num_requests": 2,
+  "Throughput": 196935.98178137653,
+  "unused_js": 0,
+  "Category": "Test"
+}

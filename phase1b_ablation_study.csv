@@ -1,0 +1,3 @@
+Configuration,CV_Accuracy_Mean,CV_Accuracy_Std,Test_Accuracy,N_Features,Dataset
+7 base features,0.9964999999999999,0.0012247448713916173,0.9970833333333333,7,HA (8000)
+13 features (base+engineered),0.9971250000000002,0.0007500000000000283,0.9970833333333333,13,HA (8000)

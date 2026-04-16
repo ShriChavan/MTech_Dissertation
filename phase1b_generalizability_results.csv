@@ -1,0 +1,9 @@
+Experiment,CV_Accuracy,Test_Accuracy,Dataset_Size
+"Exp 1: XGBoost on HA (8000 URLs, 13 features)",0.9971 ± 0.0008,0.9971,N=8000
+"Exp 2: XGBoost on Primary (885 URLs, 13 features)",0.7172 ± 0.0318,0.7368,N=885
+Exp 3a: Transfer Primary→HA,N/A (transfer),0.9754,"Train=619, Test=2400"
+Exp 3b: Transfer HA→Primary,N/A (transfer),0.8836,"Train=5600, Test=266"
+Exp 4: Best model on HA (multi-model),See Friedman test above,See per-model results,N=8000
+Ablation: 7 base features only (HA),0.9965 ± 0.0012,0.9971,N=8000
+Ablation: 13 features (base+eng) (HA),0.9971 ± 0.0008,0.9971,N=8000
+Reference: Primary Pipeline (22 features),0.9096 ± 0.0226,0.9060,N=885

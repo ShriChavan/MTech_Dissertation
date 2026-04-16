@@ -1,0 +1,156 @@
+{
+  "url": "https://baddummypage.onrender.com/",
+  "timestamp": "2026-01-08T11:38:09.377652",
+  "current_prediction": {
+    "class": "slow",
+    "probabilities": {
+      "fast": 0.027354838326573372,
+      "medium": 0.31918618083000183,
+      "slow": 0.6534589529037476
+    }
+  },
+  "optimized_prediction": {
+    "class": "slow",
+    "probabilities": {
+      "fast": 0.04817163571715355,
+      "medium": 0.4359998106956482,
+      "slow": 0.515828549861908
+    }
+  },
+  "recommendations": [
+    {
+      "feature": "unused_js",
+      "before_scaled": 0.0,
+      "after_scaled": -0.0009370730718033837,
+      "change_pct": -937.0730718033836,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "performance_score",
+      "before_scaled": -0.34285714285714264,
+      "after_scaled": -0.030071403909824684,
+      "change_pct": 91.22917385963447,
+      "direction": "increase",
+      "domain_correct": true
+    },
+    {
+      "feature": "speed_index",
+      "before_scaled": 6.626899844933979,
+      "after_scaled": 1.0561847485087141,
+      "change_pct": -84.06215918117233,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "tbt",
+      "before_scaled": -0.3253433392469492,
+      "after_scaled": -0.5912059698677005,
+      "change_pct": -81.71755759196607,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "num_requests",
+      "before_scaled": -0.6600660066006601,
+      "after_scaled": -1.163947942483683,
+      "change_pct": -76.33811328627796,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "Page Size (KB)",
+      "before_scaled": 0.24112003982343697,
+      "after_scaled": 0.06021322287984916,
+      "change_pct": -75.02769868321977,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "total_byte_weight",
+      "before_scaled": 1300.8023550291032,
+      "after_scaled": 582.8794534864412,
+      "change_pct": -55.19077504488372,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "fcp",
+      "before_scaled": 20.62068279286361,
+      "after_scaled": 9.293932481949934,
+      "change_pct": -54.92907497143417,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "tti",
+      "before_scaled": 5.6426028791477005,
+      "after_scaled": 2.63304658417242,
+      "change_pct": -53.336312326659176,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "lcp",
+      "before_scaled": 16.209681747582817,
+      "after_scaled": 9.300146420578727,
+      "change_pct": -42.625977700237314,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "cls",
+      "before_scaled": -0.22222222222222224,
+      "after_scaled": -0.12773392167077824,
+      "change_pct": 42.5197352481498,
+      "direction": "increase",
+      "domain_correct": false
+    },
+    {
+      "feature": "Throughput",
+      "before_scaled": 199.88193225007393,
+      "after_scaled": 278.9448951975954,
+      "change_pct": 39.554832223957646,
+      "direction": "increase",
+      "domain_correct": true
+    },
+    {
+      "feature": "Response Time(s)",
+      "before_scaled": -0.9704142011834318,
+      "after_scaled": -1.267240043327735,
+      "change_pct": -30.58754105023614,
+      "direction": "decrease",
+      "domain_correct": true
+    },
+    {
+      "feature": "Load Time(s)",
+      "before_scaled": 13.432310469314077,
+      "after_scaled": 12.641211298886642,
+      "change_pct": -5.889524160677269,
+      "direction": "decrease",
+      "domain_correct": true
+    }
+  ],
+  "metrics_used": {
+    "fcp": 11167,
+    "lcp": 31616,
+    "tti": 31616.000000000004,
+    "tbt": 3,
+    "cls": 0,
+    "speed_index": 18353.266680121895,
+    "Response Time(s)": 0.001,
+    "Load Time(s)": 31.616,
+    "performance_score": 55.00000000000001,
+    "Page Size (KB)": 6080.3984375,
+    "total_byte_weight": 6226328,
+    "num_requests": 2,
+    "Throughput": 196935.98178137653,
+    "unused_js": 0,
+    "Size_LoadTime_Ratio": 192.3202947083755,
+    "Total_Time": 31.617,
+    "Throughput_ResponseTime_Ratio": 196935981.7813765,
+    "Log_Page_Size": 8.712989954680612,
+    "Log_Throughput": 12.190639067109949,
+    "Category": 0
+  }
+}

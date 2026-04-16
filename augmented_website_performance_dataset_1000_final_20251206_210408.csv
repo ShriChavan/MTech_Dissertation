@@ -1,0 +1,1000 @@
+Sr No,website_url,Category,Page Size (KB),Load Time(s),Response Time(s),Throughput,Performance_Label,User Response,performance_score,lcp,fcp,cls,tti,tbt,speed_index,total_byte_weight,num_requests,dom_size,uses_text_compression,render_blocking_resources,unused_js,uses_http2,modern_image_formats,extraction_successful,error_message,extraction_timestamp
+0,https://www.booking.com/index.html?aid=1743217,Travel,3400.0,4.19,0.523,622.58,medium,Medium,62.0,1102.01,602.0,0.0,4392.57,1366.5,2596.21,4069.93,163.0,,,,0.0,,,True,,2025-11-20 10:23:23
+1,https://travelsites.com/expedia/,Travel,1331.2,1.04,0.35,20.0,fast,Fast,92.0,1408.72,877.74,0.0,1756.27,24.0,1847.48,1937.27,54.0,,,,0.0,,,True,,2025-11-20 10:23:41
+2,https://travelsites.com/tripadvisor/,Travel,1945.6,0.833,0.392,331.29,fast,Medium,91.0,1948.47,736.73,0.0,1991.94,35.5,1049.88,1935.6,54.0,,,,0.0,,,True,,2025-11-20 10:24:00
+3,https://www.momondo.in/?ispredir=true,Travel,13926.4,0.049,0.297,1.21,fast,Fast,37.0,6153.09,787.24,0.03,6228.84,1460.0,3598.11,5733.1,127.0,,,,0.0,,,True,,2025-11-20 10:24:40
+4,https://www.ebookers.com/?AFFCID=EBOOKERS-UK.network.affiliatewindow.85386&awc=7904_1606029543_518c2af76500871f76cadec26f8eb055,Travel,4300.8,0.751,1.211,61.45,slow,Medium,51.0,2584.51,899.51,0.05,3870.06,659.25,3573.46,3058.21,111.0,,,,0.0,,,True,,2025-11-20 10:25:12
+5,https://book.priceline.com/?refid=8431&refclickid=d196c1c3cad4c6e474196ac6815f9652,Travel,809676.8,1.07,0.284,16.64,slow,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:10:43
+6,https://www.trip.com/index?locale=en_us&allianceid=21934&SID=455408&ouid=198c18a52c8911eb811b00ce0a18050d,Travel,1945.6,2.37,0.799,155.67,medium,Medium,48.0,2651.63,947.48,0.22,6257.46,387.0,3991.91,14511.16,242.0,,,,0.0,,,True,,2025-11-20 10:26:14
+7,https://www.orbitz.com/,Travel,48025.6,1.0,2.099,54.79,slow,Medium,64.0,842.0,722.0,0.08,5062.29,1897.5,1943.91,2648.7,126.0,,,,0.0,,,True,,2025-11-20 10:26:55
+8,https://www.travelocity.com/,Travel,0.0,0.0,1.22,97.47,slow,Fast,44.0,2333.79,2093.79,0.04,5381.92,1718.5,2649.8,2951.85,130.0,,,,0.0,,,True,,2025-11-20 10:27:38
+9,https://www.hotwire.com/,Travel,2764.8,4.46,0.379,773.87,fast,Medium,51.0,2581.18,609.9,0.0,4078.37,865.0,2941.94,3367.78,138.0,,,,0.0,,,True,,2025-11-20 10:28:08
+10,https://www.otel.com/,Travel,384204.8,0.531,1.135,88.36,slow,Medium,99.0,721.02,721.02,0.01,721.02,0.0,950.45,62.94,5.0,,,,1.0,,,True,,2025-11-20 10:28:20
+11,https://www.ebookers.com/?AFFCID=EBOOKERS-UK.network.affiliatewindow.85386&awc=7904_1606041576_a3c281bcb3eae0af35b22b076d1074ae,Travel,455680.0,0.495,0.495,87.16,slow,Medium,74.0,1071.0,891.0,0.04,3555.62,360.9,2979.27,3064.38,112.0,,,,0.0,,,True,,2025-11-20 10:28:55
+12,https://www.airbnb.co.in/?locale=en&_set_bev_on_new_domain=1606041642_YjI0OGQ3OWI5MDI2,Travel,1331.2,0.705,0.533,922.58,medium,Fast,57.0,3083.04,507.01,0.0,3256.44,403.5,3394.07,2803.32,137.0,,,,0.0,,,True,,2025-11-20 10:29:55
+13,https://in.lastminute.com/,Travel,1024.0,0.348,1.941,62.89,slow,Medium,63.0,858.91,691.99,0.17,3724.04,503.0,3125.44,2322.73,149.0,,,,0.0,,,True,,2025-11-20 10:30:26
+14,https://www.onthebeach.co.uk/?Adnetwork=aw&afid=85386&mv_pc=AW&awc=3655_1606041657_3771582e5a1d8da6c1b3321d83f9f0c4&utm_source=AWIN&utm_medium=affiliates&utm_campaign=85386,Travel,102809.6,0.612,0.846,996.06,medium,Medium,60.0,1531.51,348.0,0.0,4861.13,658.5,5652.19,3252.67,151.0,,,,0.0,,,True,,2025-11-20 10:31:07
+15,https://www.kayak.co.in/?ispredir=true,Travel,2457.6,0.725,2.146,118.69,slow,Medium,39.0,2881.01,2041.01,0.11,6799.63,740.5,3446.51,6220.75,895.0,,,,0.0,,,True,,2025-12-06 14:12:15
+16,https://www.marriott.com/default.mi?aff=MARWW&affname=10l1110&co=WW&nt=PH,Travel,0.0,0.0,1.025,92.05,slow,Fast,28.0,4572.52,924.0,0.19,9179.92,1730.0,6434.28,7804.46,382.0,,,,0.0,,,True,,2025-12-06 14:13:35
+17,https://www.costcotravel.com/,Travel,2867.2,2.24,0.998,38.44,medium,Fast,37.0,4782.25,2919.04,0.32,8078.27,193.0,8278.37,7530.67,141.0,,,,0.0,,,True,,2025-11-20 10:34:02
+18,https://hoteltravelclub.com/,Travel,2867.2,3.87,0.918,131.83,medium,Medium,54.0,253.01,253.01,0.001,3840.07,437.23,1624.75,2473.0,74.0,,,,0.0,,,True,,2025-11-20 10:34:28
+19,https://www.wyndhamhotels.com/en-uk/ramada,Travel,2355.2,4.5,0.448,239.67,fast,Fast,49.0,3073.03,961.0,0.06,9825.05,664.5,2707.67,7561.26,345.0,,,,0.0,,,True,,2025-11-20 10:35:11
+20,https://westin.marriott.com/,Travel,4812.8,1.46,0.315,284.6,fast,Medium,47.0,1761.02,1041.01,0.32,7030.87,693.0,1843.9,6244.73,226.0,,,,0.0,,,True,,2025-11-20 10:35:43
+21,https://www.capellahotels.com/en/capella-ubud,Travel,15974.4,0.122,0.349,309.52,fast,Slow,59.0,1085.15,771.31,0.0,5594.34,1456.08,4022.98,19602.31,136.0,,,,0.0,,,True,,2025-11-20 10:36:18
+22,https://fogoislandinn.ca/,Travel,4300.8,1.04,0.587,161.02,medium,Slow,62.0,2147.4,362.08,0.0,6609.36,767.47,1383.78,10388.17,181.0,,,,0.0,,,True,,2025-11-20 10:36:47
+23,https://www.ritzcarlton.com/en/hotels/indonesia/bali#Hotel,Travel,13107.2,6.5,1.383,29.38,slow,Slow,40.0,3832.85,706.82,0.01,8169.36,1610.5,6893.53,23848.13,222.0,,,,0.0,,,True,,2025-11-20 10:37:45
+24,https://secretbay.dm/,Travel,11571.2,2.08,0.094,63.23,fast,Slow,49.0,12555.07,805.21,0.0,14784.01,365.5,7953.33,23764.22,359.0,,,,0.0,,,True,,2025-12-06 14:14:57
+25,https://www.sunsetkeycottages.com/,Travel,18739.2,1.82,0.702,40.38,medium,Slow,60.0,1440.07,546.0,0.02,5842.09,2058.73,2385.22,6945.84,128.0,,,,0.0,,,True,,2025-11-20 10:39:19
+26,https://www.pueblobonito.com/resorts/emerald-bay,Travel,4505.6,2.37,0.598,92.26,medium,Slow,53.0,4946.69,973.89,0.01,4967.71,342.0,3419.14,5086.58,91.0,,,,0.0,,,True,,2025-11-20 10:39:49
+27,https://nihi.com/,Travel,5734.4,1.43,0.414,106.2,fast,Slow,54.0,3420.7,916.6,0.01,4113.02,397.0,3740.92,10303.63,272.0,,,,0.0,,,True,,2025-11-20 10:40:31
+28,https://www.viceroyhotelsandresorts.com/los-cabos,Travel,0.0,0.0,0.267,71.51,fast,Slow,32.0,5319.08,1161.04,0.11,7090.98,1977.5,3630.44,8379.64,189.0,,,,0.0,,,True,,2025-12-06 14:16:08
+29,https://www.mandarinoriental.com/munich/altstadt/luxury-hotel,Travel,2560.0,2.1,4.317,18.36,slow,Slow,44.0,3618.57,1928.68,0.0,3630.37,467.66,5186.67,2619.41,47.0,,,,0.0,,,True,,2025-11-20 10:42:02
+30,https://northblockhotel.com/,Travel,177152.0,0.5,1.292,125.17,slow,Slow,62.0,5305.86,1147.02,0.0,5490.39,158.0,3802.55,9274.27,182.0,,,,0.0,,,True,,2025-11-20 10:42:32
+31,https://www.milestonehotel.com/?cjevent=4ec1f2f92cc511eb834e01140a180510,Travel,20275.2,4.21,2.079,23.02,slow,Slow,50.0,2152.28,1923.67,0.0,4820.01,568.0,4025.42,5278.6,117.0,,,,0.0,,,True,,2025-11-20 10:43:02
+32,https://www.rockhouse.com/,Social Networking and Messaging,2764.8,0.884,0.347,214.51,fast,Slow,48.0,3782.42,852.2,0.41,3829.45,190.5,2883.4,6352.82,132.0,,,,0.0,,,True,,2025-11-20 10:43:25
+33,https://www.affordabletours.com/,Travel,2048.0,0.747,0.875,61.07,medium,Slow,97.0,1061.5,576.2,0.01,1065.5,0.0,1418.51,1437.06,90.0,,,,1.0,,,True,,2025-11-20 10:43:49
+34,https://www.totallyspain.com/,Travel,5734.4,1.65,1.775,118.44,slow,Slow,58.0,5190.69,798.02,0.03,5997.83,241.5,4483.85,6148.84,126.0,,,,0.0,,,True,,2025-11-20 10:44:13
+35,https://dreamworldtravel.co.uk/,Travel,1024.0,0.0,0.989,149.89,medium,Slow,94.0,726.32,726.32,0.0,1079.79,4.0,2328.84,3022.94,60.0,,,,1.0,,,True,,2025-11-20 10:44:38
+36,https://www.nepalspiritualtrekking.com/,Travel,0.0,0.0,0.405,233.91,fast,Slow,94.0,752.0,752.0,0.0,752.0,0.0,2280.49,1505.44,59.0,,,,1.0,,,True,,2025-11-20 10:45:04
+37,https://www.aandftour.com//,News,85401.6,0.196,0.275,58.32,medium,Slow,100.0,599.47,209.68,0.0,599.47,6.0,370.37,330.83,31.0,,,,1.0,,,True,,2025-11-20 10:45:18
+38,https://inkaexperience.com/,Travel,3379.2,4.44,3.062,29.39,slow,Slow,18.0,6075.33,322.21,0.52,6213.88,913.9,3913.66,7922.1,121.0,,,,0.0,,,True,,2025-12-06 14:16:46
+39,http://www.peru-travels.com/,Travel,4198.4,1.83,1.133,171.95,slow,Slow,73.0,3126.22,933.02,0.0,3130.22,76.0,3560.9,4631.28,80.0,,,,0.0,,,True,,2025-11-20 10:46:44
+40,https://www.shiptoshoretravelltd.com/,Travel,0.0,0.0,0.867,73.1,medium,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:17:07
+41,https://www.hnltravel.com/index.html,Travel,1006080.0,1.07,1.003,1.14,slow,Slow,94.0,1045.6,925.6,0.03,1858.7,116.5,1580.37,1139.34,30.0,,,,0.0,,,True,,2025-11-20 10:47:24
+42,https://islanddreamsworldtravel.com/,Travel,3174.4,2.89,0.467,174.41,fast,Slow,58.0,3362.39,819.08,0.27,3362.39,30.0,3939.41,14175.54,84.0,,,,0.0,,,True,,2025-11-20 10:47:47
+43,http://www.okeanostravel.com/,Travel,2355.2,3.47,0.4,199.97,fast,Slow,58.0,1095.74,1095.74,0.01,4280.54,995.84,6370.64,3193.37,81.0,,,,0.0,,,True,,2025-11-20 10:48:44
+44,https://www.discovermongolia.mn/,Travel,2662.4,2.0,0.555,127.44,medium,Slow,51.0,1141.51,301.01,0.001,2129.4,300.5,5576.84,2468.93,82.0,,,,0.0,,,True,,2025-11-20 10:49:24
+45,https://www.turansa.com/,Travel,814182.4,0.51,0.691,88.57,slow,Slow,86.0,1460.71,661.4,0.14,1460.71,102.0,1794.12,841.92,36.0,,,,0.0,,,True,,2025-11-20 10:49:42
+46,https://albatros-travel.com/,Travel,1126.4,0.5,1.242,250.15,slow,Slow,90.0,1303.78,591.27,0.01,1391.78,35.5,2840.75,1043.4,39.0,,,,0.0,,,True,,2025-11-20 10:50:03
+47,http://www.kenyadreamholidays.com/,Travel,2457.6,0.32,3.582,132.76,slow,Slow,66.0,9172.8,1597.27,0.0,9668.24,0.0,2166.83,11519.27,82.0,,,,1.0,,,True,,2025-11-20 10:50:28
+48,https://fts-travels.com/,Travel,3072.0,3.39,1.638,35.01,slow,Slow,52.0,1835.7,912.0,0.09,6629.99,792.0,7307.45,7351.81,207.0,,,,0.0,,,True,,2025-11-20 10:51:12
+49,http://www.aimadventures.com/,Travel,442163.2,1.41,0.418,393.97,slow,Slow,100.0,442.0,202.0,0.0,442.0,0.0,950.2,395.1,12.0,,,,1.0,,,True,,2025-11-20 10:51:27
+50,https://www.nbitravel.com/,Travel,18636.8,0.488,0.476,924.33,fast,Slow,67.0,871.34,725.71,0.92,2673.17,36.0,3321.29,6164.99,203.0,,,,0.0,,,True,,2025-11-20 10:51:59
+51,http://www.justcruisinplus.com/,Travel,2252.8,4.82,0.442,299.5,fast,Slow,80.0,1584.4,557.76,0.17,1817.18,8.5,2786.59,2765.79,62.0,,,,0.0,,,True,,2025-11-20 10:52:23
+52,https://www.dwwatsontravel.com/,Travel,4608.0,2.4,0.921,151.88,medium,Slow,87.0,1697.1,897.8,0.08,1697.1,51.5,2046.52,2035.47,44.0,,,,0.0,,,True,,2025-11-20 10:52:42
+53,http://essentialdownunder.com/,Travel,3276.8,1.88,0.268,2201.34,fast,Slow,72.0,3246.91,590.11,0.09,3298.53,27.0,3292.07,3731.84,38.0,,,,0.0,,,True,,2025-11-20 10:53:01
+54,https://www.phuket-trips.com/,Travel,0.0,0.0,0.263,3.56,fast,Slow,98.0,910.47,284.62,0.0,1080.96,31.0,1330.43,682.3,37.0,,,,0.0,,,True,,2025-11-20 10:53:18
+55,http://www.golfholidaysintl.com/,Travel,2969.6,2.45,5.439,15.41,slow,Slow,76.0,2508.98,1021.48,0.0,2530.8,110.97,3046.41,4333.5,99.0,,,,0.0,,,True,,2025-11-20 10:53:51
+56,http://www.zentravel.gr/,Travel,5222.4,3.53,5.524,57.8,slow,Slow,74.0,2776.0,702.02,0.01,3030.22,94.0,7600.64,4424.47,104.0,,,,0.0,,,True,,2025-11-20 10:54:21
+57,https://circuitosturquia.com/,Travel,0.0,0.0,1.698,63.33,slow,Slow,59.0,1782.53,812.6,0.01,4823.27,546.65,6508.36,3540.9,144.0,,,,0.0,,,True,,2025-11-20 10:55:02
+58,http://www.jjbtravel.com/,Travel,2764.8,3.61,0.65,190.16,medium,Slow,,,,0.05,,,,4438.8,92.0,,,,,,,True,,2025-11-20 10:55:25
+59,https://www.ethiousatour.com/,Travel,158822.4,4.5,0.806,885.13,slow,Slow,97.0,1162.0,767.0,0.0,1164.0,0.0,963.53,566.2,32.0,,,,1.0,,,True,,2025-11-20 10:55:41
+60,https://agavetravelcreative.com/,Travel,948121.6,0.7,1.46,59.84,slow,Slow,,,673.99,0.0,,,977.69,536.96,12.0,,,,,,,True,,2025-11-20 10:55:55
+61,https://www.oberoihotels.com/hotels-in-jaipur-rajvilas-resort/?utm_source=affred&utm_medium=aff&utm_campaign=gbl-affmkt&_affclk=ttuk:118609::0::118609::143859c9f626eb0724f38065d097d658::::1606071865:902jip,Travel,9830.4,4.53,2.725,166.44,slow,Medium,51.0,2907.51,770.02,0.0,5617.5,676.48,2794.95,13476.64,117.0,,,,0.0,,,True,,2025-11-20 10:56:33
+62,https://www.jumeirah.com/en/stay/dubai/burj-al-arab-jumeirah,Travel,0.0,0.0,0.78,127.69,medium,Medium,36.0,3230.82,1599.24,0.08,11131.48,1629.99,7168.52,19407.7,152.0,,,,0.0,,,True,,2025-11-20 10:57:28
+63,https://tierrahotels.com/patagonia/,Travel,433152.0,1.0,2.55,88.92,slow,Medium,77.0,2160.01,1222.0,0.02,2162.01,0.0,5077.56,2127.97,103.0,,,,0.0,,,True,,2025-11-20 10:58:00
+64,https://www.ritzparis.com/en-GB,Travel,5017.6,0.388,1.395,66.33,slow,Medium,41.0,6724.16,1259.69,0.0,6728.51,564.25,3789.53,22936.7,101.0,,,,0.0,,,True,,2025-11-20 10:58:20
+65,https://www.thehousecollective.com/en/the-middle-house/,Travel,0.0,0.0,4.387,606.05,slow,Medium,41.0,4427.32,1072.03,0.0,10690.25,738.5,3513.46,29305.02,227.0,,,,0.0,,,True,,2025-11-20 10:58:53
+66,https://www.grandhoteltremezzo.com/en/home/,Travel,0.0,0.0,1.354,109.24,slow,Medium,88.0,2067.81,545.22,0.02,2237.09,93.5,1468.71,1678.26,51.0,,,,0.0,,,True,,2025-11-20 10:59:14
+67,https://www.waldorfastorialoscabospedregal.com/,Travel,17510.4,3.37,4.738,173.47,slow,Medium,41.0,4897.03,482.01,0.0,9448.66,729.27,5039.09,18858.81,452.0,,,,0.0,,,True,,2025-12-06 14:18:20
+68,https://www.andbeyond.com/our-lodges/africa/south-africa/kruger-national-park/ngala-private-game-reserve/andbeyond-ngala-safari-lodge/,Travel,444928.0,0.286,3.421,58.05,slow,Medium,88.0,1252.61,717.66,0.01,2639.3,110.5,2948.93,12383.08,108.0,,,,0.0,,,True,,2025-11-20 11:00:45
+69,https://novotel.accor.com/gb/usa/index.shtml,Travel,0.0,0.0,2.896,65.45,slow,Medium,41.0,4254.92,1232.75,0.49,4903.48,181.0,4607.58,4175.55,99.0,,,,0.0,,,True,,2025-11-20 11:01:38
+70,https://www.delta.com/apac/en,Travel,0.0,0.0,0.36,137.72,fast,Medium,13.0,4008.23,1365.14,0.85,4497.52,1189.56,4201.58,3329.07,157.0,,,,0.0,,,True,,2025-12-06 14:18:58
+71,https://www.jal.co.jp/inl/en/,Travel,0.0,0.0,0.2,2042.14,fast,Medium,40.0,3884.21,819.69,0.0,11721.35,5487.5,3806.3,6582.3,266.0,,,,0.0,,,True,,2025-12-06 14:20:03
+72,https://www.spicejet.com/,Travel,3481.6,4.44,1.577,56.22,slow,Medium,30.0,4439.03,2405.89,0.03,5886.42,2111.5,7915.99,5086.95,106.0,,,,0.0,,,True,,2025-11-20 11:04:26
+73,https://www.airnewzealand.co.nz/homepage,Travel,1638.4,2.0,0.194,310.62,fast,Medium,2.0,9521.29,5667.8,0.68,11250.64,1767.43,5667.8,9133.01,239.0,,,,0.0,,,True,,2025-11-20 11:05:13
+74,https://www.finnair.com/,Travel,1126.4,0.975,0.492,87.45,fast,Medium,52.0,2829.01,540.51,0.0,2829.01,705.5,2712.09,1949.34,50.0,,,,0.0,,,True,,2025-11-20 11:05:34
+75,https://www.britishairways.com/travel/home/public/en_in/,Travel,855142.4,1.3,0.276,466.11,slow,Medium,61.0,1001.01,701.01,0.01,4491.65,994.99,3567.54,4019.12,82.0,,,,0.0,,,True,,2025-11-20 11:06:04
+76,https://www.airvistara.com/in/en,Travel,8294.4,0.05,4.62,307.99,slow,Medium,42.0,3082.04,903.01,0.03,5965.59,1706.0,6136.33,4101.95,132.0,,,,0.0,,,True,,2025-11-20 11:06:47
+77,https://www.singaporeair.com/en_UK/in/home#/book/bookflight,Travel,8192.0,0.08,2.014,213.24,slow,Medium,46.0,3367.95,614.02,0.0,3380.95,867.86,3010.17,2407.68,126.0,,,,0.0,,,True,,2025-11-20 11:07:17
+78,https://www.olacabs.com/,Travel,0.0,0.0,0.436,293.65,fast,Medium,75.0,3176.59,423.01,0.05,4319.73,21.5,2953.17,35088.97,317.0,,,,0.0,,,True,,2025-11-20 11:08:00
+79,https://www.meru.in/,Travel,24780.8,1.0,0.366,3200.47,fast,Medium,64.0,3890.52,1222.77,0.01,4375.17,158.5,4306.74,4842.29,149.0,,,,0.0,,,True,,2025-11-20 11:08:38
+80,https://www.carzonrent.com/,Travel,0.0,0.0,0.053,1591.51,fast,Medium,47.0,3119.09,846.71,0.15,3455.17,566.37,2359.1,4806.38,158.0,,,,0.0,,,True,,2025-11-20 11:09:13
+81,https://www.bharattaxi.com/,Travel,618803.2,1.56,3.709,34.73,slow,Medium,82.0,1731.2,714.71,0.0,2499.26,186.5,2439.74,2195.01,154.0,,,,0.0,,,True,,2025-11-20 11:09:54
+82,https://www.megacabs.com/,Travel,0.0,0.0,0.369,762.36,fast,Slow,38.0,4788.04,850.46,0.0,5030.5,1340.04,4219.82,34467.94,81.0,,,,0.0,,,True,,2025-11-20 11:10:22
+83,http://www.mytaxiindia.com/,Travel,0.0,0.0,1.082,113.28,slow,Slow,83.0,2014.55,738.01,0.0,2028.6,0.0,3143.69,1603.62,51.0,,,,0.0,,,True,,2025-11-20 11:10:46
+84,https://www.zoomcar.com/bangalore/,Travel,0.0,0.0,0.271,0.52,fast,Slow,49.0,3679.52,2075.5,0.03,6319.44,337.0,5792.69,40063.91,224.0,,,,0.0,,,True,,2025-11-20 11:11:28
+85,https://www.lyft.com/,Travel,0.0,0.0,3.083,29.03,slow,Medium,55.0,2692.14,990.23,0.0,4710.86,620.5,2186.32,2853.44,140.0,,,,0.0,,,True,,2025-11-20 11:11:52
+86,https://www.grab.com/sg/transport/taxi/,Travel,1536.0,1.5,1.508,47.21,slow,Medium,79.0,2147.62,979.92,0.05,2534.23,145.62,2420.16,2559.74,103.0,,,,0.0,,,True,,2025-11-20 11:12:16
+87,http://www.bitaksi.com/en/,Travel,3584.0,1.5,0.677,575.65,medium,Medium,57.0,2986.4,1956.1,0.0,3707.4,260.5,4266.48,4043.84,82.0,,,,0.0,,,True,,2025-11-20 11:12:41
+88,https://www.avaseakrabi.com/,Travel,0.0,0.0,0.692,67.5,medium,Medium,55.0,2248.15,1229.7,0.01,3728.33,673.5,2378.63,25624.69,157.0,,,,0.0,,,True,,2025-11-20 11:13:08
+89,https://www.fariyas.com/resort-in-lonavala/,Travel,0.0,0.0,0.342,659.23,fast,Slow,40.0,2196.0,1889.0,0.11,14324.24,1297.0,10367.14,4317.18,219.0,,,,0.0,,,True,,2025-12-06 14:21:27
+90,https://www.fernhotels.com/,Travel,22937.6,2.03,0.291,28.53,fast,Slow,78.0,931.82,413.13,0.0,1585.37,303.81,3787.71,2644.9,103.0,,,,0.0,,,True,,2025-11-20 11:14:03
+91,https://www.tajhotels.com/,Travel,7680.0,2.37,0.179,3768.63,fast,Medium,62.0,638.89,468.54,0.0,5892.55,1617.44,3442.38,2860.22,175.0,,,,0.0,,,True,,2025-11-20 11:14:36
+92,https://www.montriresort-bangkok.com/,Travel,2457.6,1.61,0.124,0.0,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:21:48
+93,https://www.tridenthotels.com/,Travel,5017.6,2.85,0.122,716.22,fast,Medium,94.0,1113.5,460.5,0.0,1315.45,33.5,1953.6,4210.52,93.0,,,,0.0,,,True,,2025-11-20 11:15:19
+94,https://www.tropicanaalibaug.com/,Travel,0.0,0.0,0.321,761.93,fast,Medium,88.0,1963.74,766.0,0.0,2765.79,41.5,1693.12,2320.31,73.0,,,,0.0,,,True,,2025-11-20 11:15:46
+95,https://www.anantara.com/en/riverside-bangkok,Travel,1433.6,1.84,0.552,176.57,medium,Medium,69.0,1023.04,601.02,0.15,3590.22,364.5,3096.51,2332.55,48.0,,,,0.0,,,True,,2025-11-20 11:16:18
+96,http://sunbeachresortgorai.com/,Travel,4403.2,4.5,0.422,302.57,fast,Medium,100.0,194.0,194.0,0.0,194.0,0.0,243.88,0.5,1.0,,,,1.0,,,True,,2025-11-20 11:16:30
+97,https://waterfrontshaw.com/,Travel,4608.0,6.25,0.259,2821.28,fast,Medium,51.0,2989.36,1201.87,0.01,3019.44,518.0,3542.11,4331.72,85.0,,,,0.0,,,True,,2025-11-20 11:17:02
+98,https://www.silenthillsresort.com/,Travel,4915.2,1.21,0.565,1.7,medium,Medium,69.0,3965.01,1020.43,0.02,3977.05,24.0,3512.8,9665.01,205.0,,,,0.0,,,True,,2025-11-20 11:17:40
+99,https://www.fubo.tv/lp/StreamTV/?irad=343747&irmp=398453&subId1=streamingservices&subId2=ckhgo1ujg00003r8zaneft7pl,Streaming Services,2048.0,0.652,0.982,53.11,medium,Medium,80.0,727.32,409.81,0.04,4558.98,346.5,2254.86,3076.72,93.0,,,,0.0,,,True,,2025-11-20 11:18:06
+100,https://www.hulu.com/,Streaming Services,11673.6,1.91,0.179,7520.54,fast,Slow,40.0,4559.73,958.5,0.0,7766.16,1170.0,3212.39,4886.57,272.0,,,,0.0,,,True,,2025-12-06 14:22:33
+101,https://tv.youtube.com/,Streaming Services,1024.0,1.52,0.268,2052.31,fast,Medium,74.0,991.37,991.37,0.05,2727.94,528.0,1430.34,10999.7,82.0,,,,0.0,,,True,,2025-11-20 11:19:07
+102,https://www.attwatchtv.com/,Streaming Services,3024.0,1.52,0.396,83.58,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:22:54
+103,https://www.klowdtv.com/,Streaming Services,826572.8,1.57,0.95,187.03,slow,Slow,58.0,4740.9,4405.8,0.0,6374.06,17.5,5178.99,5619.37,142.0,,,,0.0,,,True,,2025-11-20 11:20:07
+104,https://corporate.pluto.tv/,Streaming Services,1024.0,0.0,0.197,652.09,fast,Slow,77.0,2950.0,810.0,0.01,2972.0,184.0,1432.18,2108.99,30.0,,,,0.0,,,True,,2025-12-06 14:23:11
+105,https://www.xumo.tv/,Streaming Services,5632.0,4.0,0.237,296.76,fast,Slow,48.0,3315.11,954.19,0.02,16729.9,542.5,6777.31,2485.21,723.0,,,,0.0,,,True,,2025-12-06 14:24:43
+106,https://www.zee5.com/,Streaming Services,4632.0,4.0,0.495,197.37,fast,Slow,35.0,7160.07,721.0,0.0,12952.49,2436.5,8072.85,14130.06,489.0,,,,0.0,,,True,,2025-12-06 14:26:12
+107,https://www.netflix.com/in/,Streaming Services,3632.0,4.0,0.403,273.37,fast,Medium,62.0,1522.0,511.22,0.04,6097.43,1129.62,2001.71,4663.66,81.0,,,,0.0,,,True,,2025-11-20 11:23:00
+108,https://www.bravotv.com,Streaming Services,7632.0,4.0,1.312,2830.68,slow,Slow,67.0,1185.58,520.11,0.35,4091.27,167.5,3752.54,2634.44,179.0,,,,0.0,,,True,,2025-11-20 11:23:47
+109,https://watch.diynetwork.com/watch/diy,Streaming Services,688844.8,0.332,0.338,1262.97,slow,Slow,83.0,1985.93,741.15,0.0,2469.8,174.5,1708.88,1389.51,74.0,,,,0.0,,,True,,2025-11-20 11:24:06
+110,https://abc.com,Streaming Services,6041.6,4.41,0.064,1.05,fast,Slow,47.0,2105.02,1542.83,0.04,9151.69,1457.27,3637.61,11939.18,461.0,,,,0.0,,,True,,2025-11-20 11:24:58
+111,https://www.plex.tv,Streaming Services,2252.8,1.52,0.606,481.86,medium,Medium,82.0,2251.53,695.01,0.05,3859.9,74.0,2625.92,3827.42,107.0,,,,0.0,,,True,,2025-11-20 11:25:21
+112,https://www.popcornflix.com/pages/discover/d/movies,Streaming Services,4403.2,2.36,0.357,6.11,fast,Slow,100.0,462.0,462.0,0.0,462.0,0.0,966.43,0.64,2.0,,,,1.0,,,True,,2025-11-20 11:25:33
+114,https://www.aetv.com,Streaming Services,2764.8,1.04,0.567,757.33,medium,Medium,69.0,2580.62,401.0,0.0,2868.29,329.0,1875.74,2590.23,98.0,,,,0.0,,,True,,2025-11-20 11:25:56
+115,https://www.amebatv.com,Streaming Services,3891.2,1.37,0.578,255.73,medium,Slow,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 14:27:03
+116,https://www.ahctv.com,Streaming Services,1843.2,0.27,1.295,19.24,slow,Slow,48.0,3409.12,759.21,0.01,3409.12,742.0,2659.61,2066.94,60.0,,,,0.0,,,True,,2025-12-06 14:27:33
+117,https://www.amc.com,Streaming Services,2150.4,1.57,0.351,203.27,fast,Medium,72.0,2389.3,969.82,0.01,2551.53,246.93,2416.08,1229.52,42.0,,,,0.0,,,True,,2025-11-20 11:27:39
+118,https://www.cbs.com,Streaming Services,1433.6,0.381,0.633,58.1,medium,Medium,68.0,2086.71,808.9,0.09,3692.55,283.0,3494.91,79679.54,95.0,,,,0.0,,,True,,2025-11-20 11:28:13
+119,https://www.contv.com/browse-movie/,Streaming Services,3481.6,2.19,1.75,519.22,slow,Slow,48.0,3396.82,1423.55,0.04,3416.73,498.5,3267.82,1990.58,91.0,,,,0.0,,,True,,2025-11-20 11:28:39
+120,https://www.epix.com,Streaming Services,1331.2,1.71,1.171,1220.22,slow,Slow,22.0,4804.45,894.16,0.35,6052.06,931.37,4191.2,6680.39,179.0,,,,0.0,,,True,,2025-12-06 14:28:32
+121,https://www.freeform.com,Streaming Services,1536.0,0.188,0.352,218.98,fast,Slow,62.0,3443.42,1090.18,0.0,6419.47,264.0,3066.2,9550.05,387.0,,,,0.0,,,True,,2025-11-20 11:30:17
+122,https://www.hmnow.com,Streaming Services,2969.6,0.059,0.466,532.46,fast,Slow,46.0,3614.56,1235.01,0.03,4505.44,541.5,5593.5,2318.67,108.0,,,,0.0,,,True,,2025-11-20 11:30:47
+123,https://www.here.tv,Streaming Services,1945.6,1.34,0.801,96.58,medium,Medium,61.0,2714.17,2128.01,0.05,3491.47,197.0,7738.18,2323.15,115.0,,,,0.0,,,True,,2025-12-06 14:29:33
+124,https://www.criterionchannel.com,Streaming Services,3891.2,0.046,1.027,23.74,slow,Medium,65.0,3153.04,2193.03,0.01,3153.04,106.0,3532.87,21196.62,28.0,,,,0.0,,,True,,2025-11-20 11:32:11
+125,https://upfaithandfamily.com,Streaming Services,2457.6,0.657,0.739,280.81,medium,Medium,65.0,3781.1,761.02,0.01,3795.1,218.0,2970.13,7225.17,138.0,,,,0.0,,,True,,2025-11-20 11:32:47
+126,https://tubitv.com,Streaming Services,660787.2,1.67,0.631,135.84,slow,Medium,85.0,2039.0,694.0,0.0,2076.45,49.5,2217.09,3596.68,93.0,,,,0.0,,,True,,2025-11-20 11:33:11
+127,https://www.iflix.com,Streaming Services,2048.0,2.5,0.745,127.33,medium,Medium,39.0,3952.87,1271.0,0.0,3961.71,1114.0,3501.18,2466.74,97.0,,,,0.0,,,True,,2025-11-20 11:33:39
+128,https://www.vudu.com,Streaming Services,2355.2,1.12,0.277,10.04,fast,Medium,100.0,513.0,473.0,0.0,513.0,0.0,1027.28,48.13,5.0,,,,1.0,,,True,,2025-11-20 11:33:52
+129,https://123moviesfree.net/home,Streaming Services,0.0,0.0,0.804,68.57,medium,Medium,97.0,845.74,689.49,0.0,1185.5,8.0,1514.7,734.82,51.0,,,,0.0,,,True,,2025-11-20 11:34:11
+130,https://putlocker-is.org,Streaming Services,2355.2,2.19,0.421,754.53,fast,Slow,100.0,678.0,539.01,0.0,1160.0,15.5,551.31,542.47,22.0,,,,0.0,,,True,,2025-11-20 11:34:24
+131,https://www.kanopy.com,Streaming Services,3276.8,1.57,1.981,173.38,slow,Medium,62.0,7716.12,844.51,0.01,7716.12,244.0,2007.0,10862.19,94.0,,,,0.0,,,True,,2025-11-20 11:34:45
+132,https://www.apple.com/itunes/,Streaming Services,14643.2,1.35,1.622,90.46,slow,Medium,95.0,1424.0,524.0,0.06,1426.0,0.0,1122.47,1640.79,39.0,,,,0.0,,,True,,2025-11-20 11:35:00
+133,https://www.spotify.com/in/,Streaming Services,351027.2,3.72,0.825,73.81,slow,Medium,2.0,7125.06,3926.32,0.74,9562.17,3008.0,7525.6,5756.08,196.0,,,,0.0,,,True,,2025-11-20 11:35:50
+134,https://music.youtube.com,Streaming Services,437964.8,0.459,0.232,31.76,slow,Medium,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 14:29:38
+135,https://music.amazon.in,Streaming Services,4505.6,0.864,1.897,32.27,slow,Slow,39.0,5561.35,229.34,0.02,7363.35,892.0,5331.4,6030.95,150.0,,,,0.0,,,True,,2025-11-20 11:36:29
+136,https://www.hungama.com,Streaming Services,1228.8,1.55,0.495,180.26,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 14:30:00
+137,https://soundcloud.com,Streaming Services,3072.0,0.663,1.559,300.08,slow,Medium,37.0,3955.65,1180.3,0.1,8319.52,1014.0,3911.72,7164.19,196.0,,,,0.0,,,True,,2025-11-20 11:38:04
+138,https://www.jamendo.com/?language=en,Streaming Services,2969.6,1.97,0.288,256.26,fast,Slow,77.0,1690.7,455.72,0.0,1932.41,340.2,1640.75,1108.23,43.0,,,,0.0,,,True,,2025-11-20 11:38:21
+139,https://www.soundclick.com,Streaming Services,26419.2,0.208,0.696,642.86,medium,Medium,100.0,558.61,334.0,0.0,845.6,27.5,776.58,683.49,77.0,,,,0.0,,,True,,2025-11-20 11:38:39
+140,https://www.idagio.com,Streaming Services,4403.2,2.83,0.155,106.24,fast,Slow,66.0,4804.0,333.0,0.01,5212.76,207.5,2236.54,10371.98,83.0,,,,0.0,,,True,,2025-11-20 11:39:03
+141,https://tidal.com,Streaming Services,3788.8,0.544,0.726,185.09,medium,Slow,72.0,2555.44,1636.54,0.0,3071.79,132.5,2676.18,3182.38,109.0,,,,0.0,,,True,,2025-11-20 11:39:32
+142,https://gaana.com,Social Networking and Messaging,1024.0,0.602,0.322,70.98,fast,Slow,97.0,724.73,661.02,0.0,1566.0,65.0,1541.95,979.51,50.0,,,,0.0,,,True,,2025-11-20 11:39:56
+143,https://www.jiosaavn.com,Streaming Services,711475.2,0.518,1.498,14.52,slow,Slow,50.0,2408.7,1636.1,0.11,2505.05,509.91,2970.72,1164.03,83.0,,,,0.0,,,True,,2025-11-20 11:40:25
+144,https://www.apple.com/in/apple-music/,Streaming Services,7065.6,1.81,0.085,809.16,fast,Slow,88.0,1428.5,968.5,0.03,1430.5,39.0,2645.52,10196.17,41.0,,,,0.0,,,True,,2025-11-20 11:40:48
+145,https://www.livexlive.com,Streaming Services,94412.8,0.652,4.586,10.69,slow,Slow,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 14:32:18
+146,https://us.napster.com,Streaming Services,682700.8,1.44,0.487,17.72,slow,Medium,97.0,1202.46,634.97,0.0,1202.46,0.0,776.26,632.48,50.0,,,,0.0,,,True,,2025-11-20 11:42:06
+147,https://www.primephonic.com,Streaming Services,1126.4,3.54,0.499,106.77,fast,Medium,64.0,3826.78,1572.67,0.09,4913.03,2.5,3892.62,6597.13,31.0,,,,0.0,,,True,,2025-11-20 11:42:26
+148,https://groovesharks.org,Streaming Services,2048.0,0.853,0.339,382.26,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 14:32:42
+149,https://www.murfie.com,Streaming Services,91136.0,0.5,0.953,195.5,medium,Medium,96.0,525.97,471.96,0.0,525.97,0.0,2050.68,304.95,9.0,,,,1.0,,,True,,2025-11-20 11:43:02
+150,https://www.anghami.com,Streaming Services,7475.2,1.92,0.853,2.75,medium,Medium,91.0,1138.0,558.01,0.0,2513.02,83.5,2543.5,1667.47,57.0,,,,0.0,,,True,,2025-11-20 11:43:25
+151,https://www.epidemicsound.com,Streaming Services,7065.6,3.13,0.466,8.98,fast,Medium,94.0,936.02,321.01,0.05,2409.44,151.0,1298.25,2587.68,91.0,,,,0.0,,,True,,2025-11-20 11:43:54
+152,https://www.last.fm,Streaming Services,452812.8,1.17,0.424,6.89,slow,Medium,72.0,1441.02,834.72,0.0,5832.24,412.0,2399.34,4001.49,179.0,,,,0.0,,,True,,2025-11-20 11:44:20
+153,https://blip.fm,Streaming Services,1536.0,1.38,1.585,27.61,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 14:33:03
+154,https://www.jango.com,Streaming Services,1228.8,0.762,0.186,47.5,fast,Medium,69.0,1239.63,575.91,0.61,1475.59,191.0,1123.87,1956.46,76.0,,,,0.0,,,True,,2025-11-20 11:45:04
+155,https://www.iheart.com/podcast/,Streaming Services,672051.2,4.59,0.37,219.92,slow,Slow,82.0,887.02,667.01,0.0,5638.54,256.5,3017.55,4021.72,259.0,,,,0.0,,,True,,2025-12-06 14:34:04
+156,https://vimeo.com,Streaming Services,4198.4,2.35,2.864,326.32,slow,Medium,42.0,2943.0,1163.0,0.01,10462.73,3121.25,5570.22,30425.3,231.0,,,,0.0,,,True,,2025-12-06 14:35:19
+157,https://www.twitch.tv,Streaming Services,1331.2,1.04,0.35,20.0,fast,Medium,45.0,3437.05,316.0,0.03,4904.27,817.5,3613.7,4187.1,260.0,,,,0.0,,,True,,2025-11-20 11:47:34
+158,https://livestream.com,Streaming Services,1945.6,0.833,0.392,331.29,fast,Medium,51.0,3280.11,691.85,0.0,6010.4,892.35,1795.34,19341.67,65.0,,,,0.0,,,True,,2025-12-06 14:35:41
+159,https://www.periscope.tv,Streaming Services,13926.4,0.049,0.297,1.21,fast,Medium,94.0,500.17,500.17,0.0,1180.17,190.0,898.57,676.66,16.0,,,,0.0,,,True,,2025-11-20 11:48:51
+160,https://www.dacast.com,Streaming Services,4300.8,0.751,1.211,61.45,slow,Medium,83.0,1287.9,1195.1,0.01,4222.62,259.5,1338.42,3014.83,182.0,,,,0.0,,,True,,2025-11-20 11:49:22
+161,https://video.ibm.com,Streaming Services,1331.2,0.301,0.705,108.59,medium,Slow,46.0,4859.18,1508.06,0.0,6694.44,399.0,4073.14,20112.88,213.0,,,,0.0,,,True,,2025-11-20 11:50:19
+162,https://www.shoutcast.com,Streaming Services,0.0,0.0,0.294,100.48,fast,Slow,94.0,877.64,486.56,0.0,1235.04,114.79,1955.04,1795.76,456.0,,,,0.0,,,True,,2025-11-20 11:50:51
+163,https://www.panopto.com,Streaming Services,756633.6,0.589,1.364,57.33,slow,Slow,54.0,3079.53,681.02,0.0,9524.12,520.0,3037.85,12026.14,126.0,,,,0.0,,,True,,2025-11-20 11:51:18
+164,https://streamlabs.com,Streaming Services,2048.0,0.513,1.103,57.81,slow,Medium,17.0,5371.78,729.3,0.63,6279.36,1081.0,3138.92,35536.58,114.0,,,,0.0,,,True,,2025-11-20 11:51:48
+165,https://corp.kaltura.com,Streaming Services,3891.2,2.1,0.303,158.22,fast,Slow,67.0,1149.01,441.01,0.0,9415.85,3096.0,968.48,18893.39,132.0,,,,0.0,,,True,,2025-11-20 11:52:33
+166,https://www.vplayed.com,Streaming Services,953344.0,1.38,2.356,57.65,slow,Slow,82.0,1111.0,603.5,0.02,2437.6,363.0,927.04,2414.83,46.0,,,,0.0,,,True,,2025-11-20 11:53:10
+167,https://www.vmix.com,Streaming Services,0.0,0.0,0.915,31.74,medium,Slow,47.0,4312.54,1298.51,0.48,4330.54,0.0,3012.55,4715.21,141.0,,,,0.0,,,True,,2025-11-20 11:53:29
+168,https://www.facebook.com/formedia/solutions/facebook-live,Streaming Services,3481.6,0.614,0.776,55.86,medium,Slow,71.0,3054.47,1457.36,0.0,3112.92,18.5,3472.09,15073.88,100.0,,,,0.0,,,True,,2025-12-06 14:36:08
+169,https://clipbucket.com,Streaming Services,3891.2,1.97,0.741,33.5,medium,Slow,67.0,1322.25,730.36,0.05,3575.61,519.28,2832.83,2435.93,104.0,,,,0.0,,,True,,2025-11-20 11:54:16
+170,https://www.ventunotech.com,Streaming Services,2355.2,4.26,1.441,93.6,slow,Slow,71.0,2698.35,808.59,0.04,3648.71,242.0,2155.6,2246.17,100.0,,,,0.0,,,True,,2025-11-20 11:54:39
+171,https://www.shift72.com,Streaming Services,4096.0,1.5,1.008,37.44,slow,Slow,87.0,1167.01,946.0,0.17,1765.87,104.5,1245.9,1844.18,57.0,,,,0.0,,,True,,2025-11-20 11:55:04
+172,https://instagib.tv,Streaming Services,3788.8,2.47,0.575,2.22,medium,Slow,100.0,438.24,206.24,0.0,438.24,0.0,371.56,9.51,3.0,,,,1.0,,,True,,2025-11-20 11:55:14
+173,https://switchboard.live,Streaming Services,1331.2,4.5,0.244,150.43,fast,Slow,72.0,1724.04,964.72,0.01,4415.84,365.5,2087.5,4243.98,105.0,,,,0.0,,,True,,2025-11-20 11:55:36
+174,https://streamyard.com,Streaming Services,1638.4,3.81,0.426,586.78,fast,Medium,71.0,1052.92,443.0,0.01,4702.43,590.5,1829.13,12853.84,129.0,,,,0.0,,,True,,2025-11-20 11:56:03
+175,https://www.primevideo.com,Streaming Services,4710.4,2.3,0.922,62.21,medium,Slow,58.0,4092.2,3456.2,0.01,4096.2,139.0,3513.28,2298.49,67.0,,,,0.0,,,True,,2025-11-20 11:56:24
+176,https://mubi.com,Streaming Services,127795.2,1.83,0.43,513.63,medium,Slow,61.0,3065.11,1110.1,0.01,4840.83,276.5,4355.23,4528.57,93.0,,,,0.0,,,True,,2025-11-20 11:56:48
+177,https://www.sho.com/video/full-episodes,Streaming Services,3584.0,2.22,0.561,157.46,medium,Slow,69.0,1681.52,1011.51,0.03,6008.03,344.0,3481.95,4266.62,283.0,,,,0.0,,,True,,2025-11-20 11:57:24
+178,https://azm.to,Streaming Services,0.0,0.0,1.33,48.14,slow,Slow,97.0,1049.86,989.85,0.0,1354.29,19.0,1036.21,761.23,41.0,,,,0.0,,,True,,2025-11-20 11:57:43
+179,https://www.broadwayhd.com,Streaming Services,1740.8,0.805,3.226,6.86,slow,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_ABORTED),2025-12-06 14:36:29
+180,https://www.cameleon.live,Streaming Services,3174.4,1.05,0.323,475.33,fast,Slow,100.0,421.0,272.0,0.03,442.25,13.5,929.16,328.98,26.0,,,,1.0,,,True,,2025-11-20 11:58:23
+181,https://www.hidive.com,Streaming Services,2560.0,2.4,0.297,307.38,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_ABORTED),2025-12-06 14:37:16
+182,https://www.medici.tv/en/,Streaming Services,971673.6,0.512,0.688,343.98,slow,Medium,46.0,2234.05,1694.03,0.0,4796.16,1039.48,3719.9,10512.63,246.0,,,,0.0,,,True,,2025-11-20 11:59:19
+183,http://www.metacdn.com,Streaming Services,3891.2,3.43,0.791,76.39,medium,Medium,95.0,1286.57,942.79,0.0,1286.57,0.0,1140.06,392.32,35.0,,,,0.0,,,True,,2025-11-20 11:59:35
+184,https://www.shemarooent.com,Streaming Services,350412.8,0.931,3.166,14.99,slow,Slow,39.0,5361.72,834.73,0.0,5417.72,794.25,5623.14,5736.38,111.0,,,,0.0,,,True,,2025-11-20 12:00:12
+185,https://www.siriusxm.com,Streaming Services,2048.0,2.5,0.568,39.68,medium,Medium,62.0,924.03,473.7,0.03,7113.72,1204.5,3253.7,4773.39,264.0,,,,0.0,,,True,,2025-11-20 12:01:01
+186,https://www.att.com/tv/,Streaming Services,3584.0,3.4,0.304,5.88,fast,Medium,50.0,2262.52,911.5,0.0,5379.27,1411.5,3207.64,13742.38,212.0,,,,0.0,,,True,,2025-11-20 12:01:42
+187,https://tunein.com,Streaming Services,590438.4,1.29,0.488,69.79,slow,Medium,61.0,1144.53,689.2,0.0,8144.09,1313.42,2795.75,5826.1,361.0,,,,0.0,,,True,,2025-11-20 12:02:21
+188,https://www.purevolume.com/?safari=1,Streaming Services,0.0,0.0,1.603,92.96,slow,Slow,80.0,1102.02,301.0,0.0,2631.55,398.0,1252.93,1769.08,92.0,,,,0.0,,,True,,2025-11-20 12:02:46
+189,https://wynk.in/music,Streaming Services,3993.6,2.04,1.306,1032.61,slow,Medium,72.0,1847.76,473.7,0.0,2320.0,426.5,1406.09,1281.73,81.0,,,,0.0,,,True,,2025-11-20 12:03:09
+190,https://watch.mhzchoice.com,Streaming Services,7680.0,4.0,1.967,110.16,slow,Slow,36.0,6341.63,1627.66,0.05,7414.49,638.5,7703.57,11941.92,236.0,,,,0.0,,,True,,2025-12-06 14:38:24
+191,https://spuul.com,Streaming Services,3891.2,1.52,1.181,0.0,slow,Medium,92.0,1568.03,915.02,0.0,1568.03,68.0,1457.74,388.21,25.0,,,,0.0,,,True,,2025-11-20 12:04:31
+192,https://solarmovie.mom,Streaming Services,2764.8,0.926,0.776,35.51,medium,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:38:46
+193,https://gostreamsite.ga,Streaming Services,1638.4,1.25,3.5,1.19,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:39:06
+194,https://www.imdb.com/tv/,Streaming Services,16588.8,4.07,0.407,81.21,fast,Slow,100.0,303.0,303.0,0.0,303.0,0.0,660.12,1.5,2.0,,,,1.0,,,True,,2025-11-20 12:05:26
+195,https://moviestars.to,Streaming Services,382873.6,0.359,0.436,141.05,slow,Medium,92.0,1475.93,1207.62,0.0,1475.93,0.0,1207.62,196.23,20.0,,,,0.0,,,True,,2025-11-20 12:05:46
+196,https://www.stream4u.net,Streaming Services,37068.8,0.585,0.522,2410.89,medium,Slow,89.0,1558.8,1201.4,0.02,1558.8,0.0,1867.97,241.63,25.0,,,,0.0,,,True,,2025-11-20 12:06:03
+197,https://ww5.fmovie.sc,Streaming Services,4505.6,6.0,0.99,108.88,medium,Medium,75.0,1927.35,1820.15,0.0,2208.35,12.5,5095.89,317.87,15.0,,,,0.0,,,True,,2025-11-20 12:06:32
+198,http://www.streamlord.com/index.html,Streaming Services,3379.2,0.09,0.731,521.2,medium,Medium,66.0,2030.12,564.81,0.34,2052.42,32.0,3326.86,2235.95,92.0,,,,0.0,,,True,,2025-11-20 12:06:56
+199,https://flixtor.is/home,Streaming Services,4608.0,1.58,1.278,48.87,slow,Medium,88.0,1595.59,1214.94,0.02,1597.94,0.0,1896.26,241.5,24.0,,,,0.0,,,True,,2025-11-20 12:07:13
+200,https://www.yidio.com,Streaming Services,359424.0,0.214,3.085,24.44,slow,Slow,96.0,1289.43,232.43,0.04,1341.68,80.5,737.3,1835.63,98.0,,,,0.0,,,True,,2025-11-20 12:07:31
+201,https://sports.inquirer.net/,Streaming Services,483430.4,2.23,0.812,247.46,slow,Medium,100.0,572.0,498.1,0.0,572.0,0.0,498.1,634.92,48.0,,,,1.0,,,True,,2025-11-20 12:07:47
+202,https://wwos.nine.com.au/,Streaming Services,2457.6,2.99,0.836,43.31,medium,Medium,63.0,1041.5,604.0,0.0,7413.33,1212.38,2529.07,5200.41,412.0,,,,0.0,,,True,,2025-11-20 12:08:34
+203,https://www.essentiallysports.com/,Streaming Services,37376.0,0.333,2.19,61.09,slow,Slow,79.0,1169.01,379.0,0.0,4384.38,403.99,1319.99,9729.67,130.0,,,,0.0,,,True,,2025-11-20 12:09:02
+204,https://www.insidesport.co/,Streaming Services,1024.0,0.746,0.712,96.17,medium,Slow,79.0,1181.01,711.0,0.06,3496.09,353.0,1694.31,2593.1,188.0,,,,0.0,,,True,,2025-11-20 12:09:37
+205,https://www.sportsnet.ca/,Sports,1331.2,0.273,0.781,270.54,medium,Medium,36.0,3546.63,664.52,0.19,7157.48,726.5,7054.96,6541.86,373.0,,,,0.0,,,True,,2025-11-20 12:10:34
+206,https://www.theroar.com.au/,Sports,0.0,0.0,2.666,403.22,slow,Medium,61.0,945.92,569.59,0.15,6505.83,894.0,2073.49,4887.28,501.0,,,,0.0,,,True,,2025-11-20 12:11:20
+207,https://canoe.com/category/sports/,Sports,3584.0,1.75,0.602,155.52,medium,Fast,53.0,1409.14,1346.24,0.06,11618.63,1389.5,3937.73,5682.48,522.0,,,,0.0,,,True,,2025-11-20 12:12:14
+208,https://sportscafe.in/,Sports,2150.4,3.66,1.401,185.2,slow,Medium,67.0,1097.5,565.79,0.68,1963.75,16.5,3326.55,5986.11,61.0,,,,0.0,,,True,,2025-11-20 12:12:46
+209,https://www.footballcritic.com/,Sports,1536.0,1.18,0.348,27.28,fast,Fast,96.0,1156.68,709.26,0.0,1649.37,8.5,1335.31,1923.27,116.0,,,,0.0,,,True,,2025-11-20 12:13:15
+210,https://www.whatproswear.com/,Sports,5427.2,4.0,1.936,14.99,slow,Fast,86.0,1721.06,890.03,0.04,3731.31,185.5,1266.37,3070.73,140.0,,,,0.0,,,True,,2025-11-20 12:13:33
+211,https://www.sportscrunch.in/,Sports,1228.8,0.728,0.818,131.59,medium,Medium,100.0,390.5,390.5,0.0,390.5,0.0,481.72,100.87,2.0,,,,1.0,,,True,,2025-11-20 12:13:46
+212,https://arysports.tv/,Sports,4915.2,2.69,1.895,33.17,slow,Medium,71.0,1637.01,1274.31,0.22,3873.1,139.5,2708.1,3769.88,168.0,,,,0.0,,,True,,2025-11-20 12:14:14
+213,https://usatodayhss.com/,Sports,3072.0,1.28,0.505,157.45,medium,Slow,59.0,1028.01,836.48,0.0,9118.75,1414.5,4891.17,5776.12,608.0,,,,0.0,,,True,,2025-12-06 14:40:16
+214,https://www.thesportsnews.in/,Sports,2764.8,1.24,0.75,155.44,medium,Fast,82.0,2637.91,317.5,0.04,2671.61,129.5,1469.59,1185.55,73.0,,,,0.0,,,True,,2025-11-20 12:15:42
+215,https://unafraidshow.com/,Sports,2867.2,4.0,0.461,57.27,fast,Fast,63.0,2081.03,823.71,0.01,7912.79,411.0,3786.38,12033.09,168.0,,,,0.0,,,True,,2025-11-20 12:16:10
+216,https://worldinsport.com/,Sports,2355.2,4.0,2.077,13.97,slow,Medium,98.0,725.0,369.0,0.02,725.0,0.0,1386.6,427.58,15.0,,,,1.0,,,True,,2025-11-20 12:16:28
+217,http://www.indiansportsnews.com/,Sports,3379.2,1.46,0.604,63.95,medium,Fast,76.0,2162.49,1562.52,0.11,2588.09,20.5,2469.48,2513.01,64.0,,,,0.0,,,True,,2025-11-20 12:16:48
+218,https://www.sportsnewsireland.com/,Sports,950784.0,2.18,1.055,9.22,slow,Fast,83.0,1765.02,834.7,0.0,1773.02,0.0,4356.71,1196.06,60.0,,,,0.0,,,True,,2025-11-20 12:17:26
+219,https://westwoodonesports.com/,Sports,12697.6,2.51,0.733,90.49,medium,Medium,61.0,2347.14,1175.07,0.01,3695.41,346.0,3878.25,3042.45,105.0,,,,0.0,,,True,,2025-11-20 12:17:56
+220,https://xtratime.in/,Sports,450662.4,1.95,1.732,669.15,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:40:38
+221,https://www.sportelo.com.ng/,Sports,12697.6,0.5,0.699,119.66,medium,Fast,79.0,1132.45,822.71,0.3,1654.01,68.0,1891.8,2563.28,73.0,,,,0.0,,,True,,2025-11-20 12:18:49
+222,https://sportsrenegade.com/,Sports,2150.4,1.6,1.678,77.84,slow,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:41:00
+223,https://www.thesportsmirror.com/,Sports,397209.6,1.16,0.103,584.86,slow,Slow,64.0,3612.49,481.04,0.02,4183.82,271.5,2610.79,3489.49,122.0,,,,0.0,,,True,,2025-11-20 12:19:42
+224,https://franchisesports.co.uk/,Sports,6246.4,6.07,0.318,250.78,fast,Medium,96.0,443.0,339.0,0.0,447.0,0.0,1956.96,259.47,19.0,,,,1.0,,,True,,2025-11-20 12:20:03
+225,https://pacificnwsports.com/,Sports,3584.0,2.33,0.543,20.72,medium,Medium,71.0,815.2,795.2,0.77,1903.23,128.5,1511.5,1680.76,88.0,,,,0.0,,,True,,2025-11-20 12:20:26
+226,https://247sportsgist.com/,Sports,1024.0,0.0,0.266,650.14,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:41:22
+229,https://prosportsoutlook.com/,Sports,2252.8,2.72,0.184,129.7,fast,Slow,98.0,572.28,572.28,0.01,572.28,0.0,1451.74,51.37,5.0,,,,1.0,,,True,,2025-11-20 12:21:02
+230,https://www.sportskanazee.com/,Sports,1331.2,1.59,0.329,4748.25,fast,Fast,100.0,425.93,208.93,0.0,425.93,0.0,579.44,8.82,3.0,,,,1.0,,,True,,2025-11-20 12:21:14
+231,https://daenadsports.blogspot.com/,Sports,2560.0,3.24,0.382,1210.34,fast,Fast,92.0,1706.42,648.02,0.0,1706.42,32.0,1293.84,1115.36,31.0,,,,0.0,,,True,,2025-11-20 12:21:32
+232,https://sportsevolve.blogspot.com/,Sports,1024.0,0.0,0.99,50.27,medium,Fast,99.0,767.2,767.2,0.0,767.2,0.0,1072.77,250.25,16.0,,,,0.0,,,True,,2025-11-20 12:21:47
+233,https://www.sportspac12.com/,Sports,2252.8,0.134,0.751,68.31,medium,Fast,43.0,2891.35,695.01,0.08,12137.35,1946.5,5846.3,6409.5,1021.0,,,,0.0,,,True,,2025-12-06 14:42:37
+234,http://www.manunitedforever.net/,Sports,382771.2,0.29,0.473,42.96,slow,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:42:58
+235,https://sportsration.com/,Sports,2867.2,1.34,0.736,75.0,medium,Slow,82.0,2103.56,671.21,0.1,2111.56,60.0,2336.14,1367.93,47.0,,,,0.0,,,True,,2025-11-20 12:23:39
+236,https://www.footballaudit.com/,Sports,310272.0,0.458,1.406,74.88,slow,Slow,99.0,443.0,236.0,0.0,443.0,0.0,1286.92,15.67,6.0,,,,1.0,,,True,,2025-11-20 12:23:52
+237,https://www.csipacific.ca/,Sports,3481.6,2.34,2.553,237.99,slow,Medium,25.0,3435.19,938.03,0.46,5449.81,755.0,3465.48,4153.63,186.0,,,,0.0,,,True,,2025-11-20 12:24:25
+238,https://www.thebuzzsports.com/,Sports,347852.8,2.17,0.216,45.25,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:43:20
+240,https://www.sporttechie.com/,Sports,4252.8,0.464,0.125,4149.86,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_FAILED),2025-12-06 14:43:41
+241,https://globalmoneyworld.com/index.php/category/global-world-sports/,,3788.8,1.78,0.209,81.46,fast,Slow,92.0,842.05,729.29,0.0,842.05,0.0,2744.52,459.99,71.0,,,,1.0,,,True,,2025-11-20 12:25:26
+242,https://www.scout.com/,Sports,0.0,0.0,0.497,87.32,fast,Medium,59.0,1868.09,948.02,0.0,5372.94,804.5,2249.08,4009.21,177.0,,,,0.0,,,True,,2025-11-20 12:26:04
+244,https://seriouslysports.com/,Sports,17203.2,7.08,0.68,63.86,medium,Medium,100.0,304.0,304.0,0.0,304.0,0.0,649.38,1.49,2.0,,,,1.0,,,True,,2025-11-20 12:26:15
+245,https://sportstar.thehindu.com/,Sports,1638.4,1.56,0.276,146.25,fast,Medium,50.0,7064.68,725.21,0.09,7110.33,355.0,3387.92,7328.3,259.0,,,,0.0,,,True,,2025-11-20 12:26:47
+246,https://sportsinfonow.com/,Sports,6758.4,0.048,0.762,49.75,medium,Fast,89.0,1554.65,851.42,0.08,1556.31,34.0,1832.81,1614.11,44.0,,,,0.0,,,True,,2025-11-20 12:27:03
+247,https://www.sportsmanagement.co.uk/index.cfm,Sports,439500.8,0.294,0.652,28.06,slow,Medium,79.0,1860.21,539.02,0.18,1868.21,37.5,2203.7,4374.36,148.0,,,,0.0,,,True,,2025-11-20 12:27:30
+248,https://www.completesports.com/,Sports,5017.6,2.53,0.545,99.18,medium,Medium,60.0,590.0,353.0,0.05,14750.1,1774.0,6435.99,4332.57,1766.0,,,,0.0,,,True,,2025-12-06 14:45:40
+249,https://sportgrill.blog/,Sports,1945.6,1.76,0.323,25.97,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:46:01
+250,https://blog.betzcenter.com/,Sports,1228.8,3.78,0.718,4.73,medium,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:46:22
+251,https://www.sportsplatform.in/,Sports,8704.0,1.74,0.648,101.56,medium,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:46:43
+252,https://sportspages.in/blog/,Sports,44544.0,2.5,0.342,129.41,fast,Fast,89.0,1279.71,364.0,0.07,1279.81,58.0,2645.74,648.58,53.0,,,,0.0,,,True,,2025-11-20 12:29:56
+253,https://benwsportblog.wordpress.com/,Sports,2457.6,1.9,2.416,294.68,slow,Fast,97.0,1083.55,843.54,0.0,1091.55,0.0,1163.6,6617.36,65.0,,,,1.0,,,True,,2025-11-20 12:30:16
+254,https://www.sportshype.online/,Sports,4710.4,3.82,0.249,249.89,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:47:05
+255,http://kridangan.com/,Social Networking and Messaging,143257.6,0.877,0.399,6.73,slow,Medium,79.0,1887.47,442.5,0.22,1902.58,9.0,1459.71,1550.51,50.0,,,,0.0,,,True,,2025-11-20 12:30:52
+256,https://www.athletesanon.com/blog,Sports,1536.0,1.55,0.256,35.15,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:47:26
+257,https://sportsvilla.wordpress.com/,Sports,7884.8,2.71,0.684,61.08,medium,Fast,100.0,504.03,471.88,0.0,504.03,0.0,559.98,148.47,31.0,,,,1.0,,,True,,2025-11-20 12:31:25
+258,https://www.goal.com/en,Sports,1024.0,0.0,0.936,69.17,medium,Fast,70.0,939.52,625.01,0.01,2571.71,546.5,2818.68,1749.67,102.0,,,,0.0,,,True,,2025-11-20 12:31:55
+259,https://www.101greatgoals.com/,Sports,1740.8,1.76,0.274,36.54,fast,Fast,95.0,980.0,358.0,0.06,984.1,42.0,1742.75,806.12,63.0,,,,1.0,,,True,,2025-11-20 12:32:17
+260,https://www.thisisanfield.com/,Sports,1024.0,0.0,0.131,66.52,fast,Fast,38.0,1041.01,601.01,0.55,18485.18,1119.5,6109.55,6838.43,1834.0,,,,0.0,,,True,,2025-12-06 14:48:55
+261,https://sport360.com/,Sports,259891.2,0.449,0.265,161.27,slow,Medium,70.0,3242.4,760.9,0.04,10960.76,112.5,5500.0,27601.72,613.0,,,,0.0,,,True,,2025-11-20 12:33:52
+262,https://www.criclines.com/,Sports,2150.4,0.712,0.061,329.52,fast,Fast,49.0,4051.98,732.01,0.15,4215.95,331.0,4862.09,3509.6,127.0,,,,0.0,,,True,,2025-11-20 12:34:32
+263,https://www.cricadium.com/,Sports,1638.4,1.04,1.586,122.31,slow,Medium,68.0,1669.2,484.3,0.07,1775.2,548.5,1410.21,1054.71,95.0,,,,0.0,,,True,,2025-11-20 12:35:02
+264,https://cricblog.net/,Sports,2252.8,1.11,0.176,55.46,fast,Fast,83.0,2158.76,914.7,0.0,2160.75,150.0,1654.3,1405.01,88.0,,,,0.0,,,True,,2025-11-20 12:35:25
+265,https://www.beforeyoubet.com.au/,Sports,14540.8,6.26,0.158,134.57,fast,Slow,72.0,945.21,845.18,0.61,1521.4,22.5,2089.87,1781.26,125.0,,,,0.0,,,True,,2025-11-20 12:35:56
+266,https://www.zerocric.com/,Sports,2969.6,5.8,0.186,1.54,fast,Slow,94.0,634.5,572.5,0.0,634.5,0.0,2578.0,371.03,11.0,,,,1.0,,,True,,2025-11-20 12:36:12
+267,https://www.thefulltoss.com/,Sports,2048.0,0.466,3.968,22.44,slow,Fast,58.0,1203.1,687.71,0.0,6682.29,2203.73,4560.85,5725.02,144.0,,,,0.0,,,True,,2025-11-20 12:36:42
+268,https://www.sweepcricket.com/,Sports,1126.4,2.67,0.401,34.16,fast,Medium,81.0,2409.81,837.2,0.05,2437.23,1.0,2483.61,2306.65,127.0,,,,0.0,,,True,,2025-11-20 12:37:06
+269,https://caribbeancricket.com/news,Sports,1638.4,3.0,0.628,39.11,medium,Slow,75.0,1817.26,913.77,0.07,4702.73,271.0,2135.16,2009.82,272.0,,,,0.0,,,True,,2025-11-20 12:37:34
+270,https://cricket-cup.blogspot.com/,Sports,585420.8,2.08,1.175,21.72,slow,Fast,90.0,1593.12,616.01,0.02,1593.12,155.0,1336.5,1735.51,37.0,,,,0.0,,,True,,2025-11-20 12:37:52
+271,https://www.mycricket.ae/,News,5632.0,1.49,0.787,1461.16,medium,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_FAILED),2025-12-06 14:49:15
+272,https://caughtatpoint.com/,Sports,2048.0,3.02,1.101,410.57,slow,Fast,44.0,4213.26,1861.0,0.41,4475.33,7.0,3855.56,4390.05,89.0,,,,0.0,,,True,,2025-11-20 12:38:40
+273,https://www.qldcricket.com.au/,Sports,1536.0,1.35,0.028,880.07,fast,Fast,75.0,2561.35,495.03,0.1,2573.35,169.5,2280.95,2715.29,139.0,,,,0.0,,,True,,2025-11-20 12:39:09
+274,https://www.starsandstripesfc.com/,Sports,4300.8,2.61,0.934,50.08,medium,Medium,45.0,2929.57,911.52,0.01,7738.19,1117.87,3693.89,5441.21,292.0,,,,0.0,,,True,,2025-11-20 12:39:55
+275,https://www.yoursoccerdose.com/,Sports,0.0,0.0,1.065,276.84,slow,Slow,78.0,986.88,665.69,0.0,1328.09,450.0,1259.68,219.91,26.0,,,,0.0,,,True,,2025-11-20 12:40:11
+276,https://www.liverpoolecho.co.uk/,Sports,5734.4,2.98,0.362,21.89,fast,Medium,40.0,3413.37,874.71,0.13,4365.66,907.0,3317.62,2301.94,132.0,,,,0.0,,,True,,2025-11-20 12:40:56
+277,https://www.football.london/,Sports,1024.0,1.9,0.253,29.44,fast,Medium,26.0,4712.9,845.7,0.22,21599.59,5126.5,6384.24,12355.23,1749.0,,,,0.0,,,True,,2025-12-06 14:51:14
+278,http://www.avillafan.com/,Sports,4505.6,3.0,0.415,79.07,fast,Medium,55.0,1594.02,835.7,0.0,14907.71,1352.13,4159.53,3961.84,1624.0,,,,0.0,,,True,,2025-12-06 14:52:40
+279,http://www.just-football.com/,Sports,0.0,0.0,1.211,86.06,slow,Fast,70.0,2872.41,795.22,0.09,2885.01,122.0,4934.32,1630.08,119.0,,,,0.0,,,True,,2025-11-20 12:43:27
+280,https://onefootball.com/en/home,Sports,2764.8,3.45,0.087,1318.92,fast,Medium,53.0,2450.23,454.0,0.04,4019.14,659.5,3459.82,3353.97,122.0,,,,0.0,,,True,,2025-11-20 12:44:02
+281,https://www.nottinghampost.com/sport/football/,Sports,2560.0,2.31,5.448,2.37,slow,Fast,56.0,2788.75,845.7,0.17,3013.7,345.49,2589.64,2000.04,115.0,,,,0.0,,,True,,2025-11-20 12:44:35
+282,https://www.soccerstats.com/,Sports,1945.6,4.09,7.419,0.0,slow,Slow,94.0,1002.51,776.74,0.0,1756.56,132.0,1504.79,1220.14,106.0,,,,0.0,,,True,,2025-11-20 12:44:58
+283,https://www.diariogol.com/,Sports,13516.8,3.59,0.196,65.28,fast,Medium,91.0,1077.01,694.01,0.0,1204.01,34.0,2792.21,854.98,39.0,,,,0.0,,,True,,2025-11-20 12:45:24
+284,https://crickettimes.com/,Sports,439193.6,0.886,0.588,251.76,slow,Slow,61.0,721.51,562.51,0.03,10781.42,1974.99,4006.92,9155.65,214.0,,,,0.0,,,True,,2025-11-20 12:46:09
+285,http://www.legaseriea.it/en,Sports,2662.4,1.91,1.385,108.27,slow,Medium,67.0,1034.0,794.0,0.0,4611.46,552.5,3204.46,6502.67,262.0,,,,0.0,,,True,,2025-11-20 12:47:00
+286,https://arseblog.com/,Sports,1331.2,2.47,0.864,118.94,medium,Medium,61.0,3254.79,845.72,0.03,3577.28,290.0,3739.63,3445.73,97.0,,,,0.0,,,True,,2025-11-20 12:47:27
+287,https://sportslens.com/,Sports,949043.2,0.989,0.873,98.0,slow,Fast,87.0,1566.21,1254.01,0.0,1570.21,106.0,1829.41,1180.03,87.0,,,,0.0,,,True,,2025-11-20 12:47:53
+288,https://www.transfermarkt.com/,Sports,10547.2,5.76,6.289,10.77,slow,Fast,65.0,2642.0,1083.0,0.09,2670.0,270.5,2716.99,4599.15,220.0,,,,0.0,,,True,,2025-11-20 12:48:31
+289,https://nypost.com/baseball/,Sports,5017.6,2.19,0.52,801.22,medium,Medium,53.0,1581.23,1026.23,0.02,16029.36,2308.0,4525.21,7144.87,1243.0,,,,0.0,,,True,,2025-12-06 14:54:21
+290,https://d1baseball.com/,Sports,3072.0,1.51,0.337,195.52,fast,Medium,100.0,636.6,216.56,0.01,658.65,38.0,468.47,314.02,17.0,,,,1.0,,,True,,2025-11-20 12:49:45
+291,https://www.baseballamerica.com/,Sports,1433.6,0.881,1.172,264.02,slow,Fast,59.0,1082.02,761.52,0.0,18033.13,2759.0,4106.32,9965.27,1476.0,,,,0.0,,,True,,2025-12-06 14:56:00
+292,https://www.baseball-reference.com/,Sports,2867.2,0.966,0.553,168.78,medium,Fast,63.0,1050.0,916.0,0.01,5033.06,1695.0,2179.17,4580.98,79.0,,,,0.0,,,True,,2025-11-20 12:51:11
+293,http://www.badzine.net/,Sports,2867.2,0.915,0.534,312.14,medium,Fast,95.0,605.99,605.99,0.0,605.99,0.0,2193.05,135.81,20.0,,,,0.0,,,True,,2025-11-20 12:51:24
+294,https://www.badmintonengland.co.uk/,Sports,4198.4,1.81,1.287,29.39,slow,Fast,38.0,4093.88,1252.51,0.0,4917.18,1019.0,6984.14,4090.47,200.0,,,,0.0,,,True,,2025-11-20 12:52:04
+295,https://www.badmintonireland.com/,Sports,11161.6,1.77,0.211,49.05,fast,Fast,13.0,7646.72,981.72,0.76,7648.83,856.0,4196.66,20572.8,66.0,,,,0.0,,,True,,2025-11-20 12:52:59
+296,http://everything-badminton.com/,Sports,3174.4,1.78,2.567,126.39,slow,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 14:56:22
+297,https://shuttlesmash.com/,Sports,1331.2,3.85,0.443,222.36,fast,Medium,87.0,811.01,594.0,0.18,2490.24,35.0,2122.57,1698.77,169.0,,,,0.0,,,True,,2025-11-20 12:53:44
+298,https://tennisforfree.com/,Sports,11366.4,5.0,0.153,13.99,fast,Fast,90.0,1124.0,526.0,0.04,1124.0,0.0,3028.79,806.9,20.0,,,,0.0,,,True,,2025-11-20 12:54:05
+299,https://www.wtatennis.com/,Sports,796467.2,0.242,1.052,101.64,slow,Medium,32.0,5667.03,643.04,0.12,7871.24,2348.53,6681.63,38962.72,313.0,,,,0.0,,,True,,2025-12-06 14:57:35
+300,https://www.tennis.com/,Sports,258355.2,4.01,1.577,1.95,slow,Fast,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 15:01:40
+301,https://secondlife.com/,Sports,1945.6,2.8,-0.198,692.38,fast,Medium,87.0,1449.25,980.95,0.0,3003.02,164.0,1857.44,17004.98,69.0,,,,0.0,,,True,,2025-11-20 12:56:29
+302,https://www.paltalk.com/,Sports,1843.2,2.42,6.734,61.25,slow,Fast,69.0,1389.79,570.0,0.0,3721.65,484.2,2496.97,4133.16,115.0,,,,0.0,,,True,,2025-11-20 12:56:52
+303,https://secure.imvu.com/welcome/ftux/,Sports,0.0,0.0,0.204,545.63,fast,Medium,39.0,7051.83,1113.54,0.0,7059.83,612.5,5662.02,6088.12,155.0,,,,0.0,,,True,,2025-11-20 12:57:26
+304,https://enterchatroom.com/,Sports,0.0,0.0,0.7,44.97,medium,Fast,93.0,956.0,445.0,0.0,956.0,0.0,2443.45,287.97,34.0,,,,1.0,,,True,,2025-11-20 12:57:42
+305,https://www.antichat.me/,Social Networking and Messaging,2560.0,0.9,0.615,31.03,medium,Slow,94.0,1323.76,483.07,0.0,1323.76,45.0,1793.94,1345.39,32.0,,,,0.0,,,True,,2025-11-20 12:58:00
+306,https://chatroulette.com/,Social Networking and Messaging,4096.0,2.04,2.842,309.64,slow,Medium,82.0,524.64,244.6,0.0,8341.31,258.5,3586.62,15129.39,60.0,,,,0.0,,,True,,2025-11-20 12:58:17
+307,https://rockchat.net/,Social Networking and Messaging,760422.4,0.884,1.568,14.89,slow,Slow,95.0,980.4,730.2,0.0,980.4,0.0,2033.13,276.08,18.0,,,,0.0,,,True,,2025-11-20 12:58:33
+308,https://www.elitesingles.com/,Social Networking and Messaging,312627.2,0.936,0.302,173.34,slow,Fast,100.0,365.0,365.0,0.0,365.0,0.0,443.72,120.27,4.0,,,,1.0,,,True,,2025-11-20 12:58:43
+309,https://www.charmdate.com/,Social Networking and Messaging,971980.8,1.42,0.451,77.99,slow,Medium,72.0,1590.36,527.73,0.01,2534.69,455.5,1595.93,1658.27,74.0,,,,0.0,,,True,,2025-11-20 12:59:03
+310,https://www.321chat.com/,Social Networking and Messaging,3379.2,0.335,2.287,2.38,slow,Medium,97.0,1127.29,845.3,0.0,1127.29,0.0,1043.22,531.64,33.0,,,,0.0,,,True,,2025-11-20 12:59:18
+311,https://chat.icq.com/icqchat/,Social Networking and Messaging,958668.8,2.45,0.467,1018.03,slow,Medium,81.0,1837.65,884.13,0.0,1837.65,75.0,6716.68,1161.39,23.0,,,,0.0,,,True,,2025-11-20 12:59:49
+312,https://www.tendermeets.com/couple/chat-rooms.html,Social Networking and Messaging,3276.8,1.57,0.295,211.92,fast,Medium,100.0,208.5,208.5,0.0,208.5,0.0,1046.83,3.21,2.0,,,,1.0,,,True,,2025-11-20 13:00:01
+313,https://www.mocospace.com/,Social Networking and Messaging,1740.8,2.58,0.453,81.83,fast,Medium,63.0,2342.68,963.09,0.0,2876.83,349.5,3959.94,1839.95,31.0,,,,0.0,,,True,,2025-11-20 13:00:24
+314,https://tinychat.com/,Social Networking and Messaging,501145.6,0.495,0.385,0.0,slow,Medium,99.0,581.0,481.0,0.0,583.0,0.0,1320.27,281.43,35.0,,,,1.0,,,True,,2025-11-20 13:00:41
+315,https://www.justchat.co.uk/,Social Networking and Messaging,2048.0,1.36,0.114,118.95,fast,Slow,96.0,1292.02,688.5,0.0,1314.02,37.0,1192.76,509.15,76.0,,,,0.0,,,True,,2025-11-20 13:00:58
+316,https://p.badoo.com/l/2f23922d23e23c25722521422122120b21,Social Networking and Messaging,418201.6,2.74,1.5,0.6,slow,Slow,54.0,3334.4,1133.8,0.09,3515.58,324.0,4659.87,1878.09,84.0,,,,0.0,,,True,,2025-11-20 13:01:27
+317,https://www.elitemate.com/,Social Networking and Messaging,826572.8,0.541,1.392,128.23,slow,Medium,86.0,1343.37,912.01,0.0,2406.79,42.5,4575.66,1311.77,51.0,,,,0.0,,,True,,2025-11-20 13:01:57
+318,https://date.com/,Social Networking and Messaging,2355.2,0.675,1.358,122.87,slow,Medium,84.0,1946.66,711.14,0.0,1946.66,8.0,3042.94,1630.25,24.0,,,,0.0,,,True,,2025-11-20 13:02:13
+319,https://www.flirt.com/,Social Networking and Messaging,505548.8,1.64,0.399,297.26,slow,Medium,100.0,315.0,241.0,0.03,315.6,0.0,540.36,271.18,35.0,,,,1.0,,,True,,2025-11-20 13:02:29
+320,https://www.chatib.us/,Social Networking and Messaging,883814.4,2.39,0.272,169.64,slow,Medium,99.0,724.65,724.65,0.0,724.65,0.0,737.0,300.21,27.0,,,,0.0,,,True,,2025-11-20 13:02:43
+321,https://www.wireclub.com/,Social Networking and Messaging,1126.4,0.967,0.233,86.19,fast,Medium,99.0,943.4,495.4,0.0,943.9,0.0,949.97,686.1,24.0,,,,0.0,,,True,,2025-11-20 13:02:58
+322,https://www.match.com/,Social Networking and Messaging,79564.8,3.54,0.713,146.49,medium,Medium,80.0,481.0,275.0,0.01,2153.31,375.0,1973.63,1221.49,65.0,,,,0.0,,,True,,2025-11-20 13:03:17
+323,https://www.facebook.com/,Social Networking and Messaging,1536.0,0.523,1.709,47.99,slow,Fast,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 15:01:46
+324,https://www.youtube.com/,Social Networking and Messaging,219648.0,0.493,1.545,1.81,slow,Fast,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 15:01:52
+325,https://www.whatsapp.com/,Social Networking and Messaging,299417.6,0.425,0.41,54.95,slow,Fast,85.0,1910.01,810.83,0.01,1926.01,0.0,2490.1,6550.47,70.0,,,,0.0,,,True,,2025-11-20 13:03:56
+326,https://messenger.com/,Social Networking and Messaging,853811.2,0.81,0.914,0.04,slow,Fast,63.0,3402.66,1047.07,0.24,3402.66,68.0,2183.37,2583.61,49.0,,,,0.0,,,True,,2025-11-20 13:04:16
+327,https://www.instagram.com/,Social Networking and Messaging,325529.6,0.441,4.169,33.99,slow,Fast,48.0,6690.0,350.0,0.01,6712.0,620.5,1804.24,7415.47,44.0,,,,0.0,,,True,,2025-11-20 13:04:38
+328,https://www.tumblr.com/,Social Networking and Messaging,3891.2,1.92,0.478,112.95,fast,Slow,38.0,10140.65,567.01,0.04,10381.07,1179.0,2974.56,42791.61,511.0,,,,0.0,,,True,,2025-11-20 13:05:34
+329,https://www.linkedin.com/,Social Networking and Messaging,2560.0,0.771,3.038,162.9,slow,Fast,100.0,721.52,521.52,0.0,721.52,2.0,725.75,791.48,52.0,,,,0.0,,,True,,2025-11-20 13:05:50
+330,https://www.snapchat.com/,Social Networking and Messaging,2560.0,0.754,4.132,22.12,slow,Fast,36.0,12144.01,722.01,0.0,12228.51,1295.0,4095.97,16094.29,62.0,,,,0.0,,,True,,2025-11-20 13:06:16
+331,https://www.pinterest.com/,Social Networking and Messaging,2457.6,0.949,2.95,0.07,slow,Fast,32.0,5095.53,2012.55,0.0,5879.57,991.5,4763.31,9340.2,248.0,,,,0.0,,,True,,2025-11-20 13:06:55
+332,https://line.me/en/,Social Networking and Messaging,994406.4,0.488,0.548,206.98,slow,Fast,80.0,1737.75,731.31,0.16,1805.72,59.0,2608.93,42979.94,171.0,,,,0.0,,,True,,2025-11-20 13:07:23
+333,https://telegram.org/,Social Networking and Messaging,484044.8,0.736,1.891,42.11,slow,Slow,98.0,801.0,281.0,0.0,809.0,0.0,1385.5,2129.88,51.0,,,,1.0,,,True,,2025-11-20 13:07:39
+335,https://www.chat-avenue.com/,Social Networking and Messaging,16076.8,0.615,1.493,29.63,slow,Slow,99.0,743.0,655.69,0.04,798.0,28.0,774.95,242.16,13.0,,,,0.0,,,True,,2025-11-20 13:07:52
+337,http://www.paltalk.com/,Social Networking and Messaging,2355.2,0.243,0.535,76.83,medium,Fast,67.0,1499.79,687.0,0.0,3914.03,580.5,2270.98,4199.41,119.0,,,,0.0,,,True,,2025-11-20 13:08:16
+338,https://ukchat.com/,Social Networking and Messaging,501248.0,0.469,0.555,29.01,slow,Fast,99.0,599.03,464.73,0.0,1212.03,1.5,1195.84,595.73,49.0,,,,0.0,,,True,,2025-11-20 13:08:30
+339,https://www.kidschat.net/,Social Networking and Messaging,220672.0,0.22,0.666,102.0,slow,Medium,96.0,821.11,218.6,0.12,1029.11,37.0,774.39,641.34,28.0,,,,0.0,,,True,,2025-11-20 13:08:44
+340,https://www.teen-chat.org/,Social Networking and Messaging,298700.8,0.489,0.161,1404.04,slow,Slow,96.0,1268.87,680.56,0.0,1269.17,34.0,1031.84,771.32,15.0,,,,0.0,,,True,,2025-11-20 13:08:57
+341,https://www.tinychat.com/,Social Networking and Messaging,3993.6,1.55,0.097,2440.43,fast,Slow,95.0,811.0,671.0,0.0,813.0,0.0,2099.17,282.35,36.0,,,,1.0,,,True,,2025-11-20 13:09:14
+342,https://y99.in/,Social Networking and Messaging,1228.8,6.52,0.64,198.11,medium,Fast,70.0,894.52,262.02,0.0,3408.68,827.5,1552.16,3304.59,138.0,,,,0.0,,,True,,2025-11-20 13:09:45
+343,https://chat.tripsit.me/,Social Networking and Messaging,1228.8,2.14,0.916,348.52,medium,Medium,62.0,1550.96,692.09,0.0,3266.15,565.0,5879.3,2367.66,69.0,,,,0.0,,,True,,2025-11-20 13:10:13
+344,https://www.omegle.com/,Social Networking and Messaging,92057.6,0.137,0.682,301.53,medium,Slow,97.0,1328.5,221.5,0.0,1328.5,0.0,221.5,1375.94,2.0,,,,1.0,,,True,,2025-11-20 13:10:25
+345,https://allotalk.com/,Social Networking and Messaging,2048.0,1.34,1.202,101.99,slow,Medium,100.0,454.0,203.0,0.02,454.0,0.0,305.02,43.4,13.0,,,,1.0,,,True,,2025-11-20 13:10:37
+346,http://www.rphaven.com/,Social Networking and Messaging,533708.8,0.448,0.421,245.5,slow,Slow,66.0,2402.0,1465.0,0.03,2514.0,290.0,2491.71,1295.24,36.0,,,,0.0,,,True,,2025-11-20 13:10:52
+347,https://www.buzzen.com/,Social Networking and Messaging,785817.6,0.659,0.299,161.87,slow,Slow,79.0,1866.96,962.38,0.14,2452.94,82.5,2417.29,2006.05,102.0,,,,0.0,,,True,,2025-11-20 13:11:15
+348,https://www.chat27.co.za/,Social Networking and Messaging,1433.6,0.116,3.077,85.84,slow,Medium,100.0,208.0,208.0,0.0,208.0,0.0,264.81,2.31,1.0,,,,1.0,,,True,,2025-11-20 13:11:25
+349,http://b-gay.com/chat/,Social Networking and Messaging,251392.0,0.296,1.097,109.36,slow,Medium,85.0,1385.84,1181.59,0.0,2322.85,198.0,1696.31,1049.18,50.0,,,,0.0,,,True,,2025-11-20 13:11:44
+350,https://www.gaychat.zone/,Social Networking and Messaging,1126.4,1.2,0.604,79.92,medium,Slow,89.0,909.01,702.02,0.0,909.01,0.0,4321.08,153.95,22.0,,,,1.0,,,True,,2025-11-20 13:12:06
+351,https://www.buzz50.com/,Social Networking and Messaging,3276.8,2.31,3.807,33.95,slow,Slow,100.0,208.0,208.0,0.0,208.0,0.0,337.44,17.4,7.0,,,,1.0,,,True,,2025-11-20 13:12:16
+352,https://seniorchatters.co.uk/,Social Networking and Messaging,1024.0,2.55,0.392,424.86,fast,Slow,83.0,2041.07,1001.03,0.01,2049.07,29.0,2444.04,2792.2,181.0,,,,0.0,,,True,,2025-11-20 13:12:42
+353,https://www.chatogo.com/,Social Networking and Messaging,1433.6,1.24,1.734,71.28,slow,Medium,95.0,1164.82,791.2,0.0,1814.96,73.0,1631.22,1306.1,66.0,,,,0.0,,,True,,2025-11-20 13:13:03
+354,http://www.healthfulchat.org/all-chat-rooms.html,Social Networking and Messaging,283955.2,2.56,1.972,33.77,slow,Slow,66.0,5569.03,841.46,0.01,5571.08,0.0,4390.2,6029.7,52.0,,,,0.0,,,True,,2025-11-20 13:13:27
+355,http://www.chathour.com/,Social Networking and Messaging,813977.6,1.21,2.227,18.6,slow,Fast,98.0,918.03,714.07,0.03,1223.87,1.0,1242.83,558.96,40.0,,,,0.0,,,True,,2025-11-20 13:13:41
+356,https://www.spinchat.com/,Social Networking and Messaging,34611.2,5.5,0.843,117.76,medium,Fast,89.0,1021.0,997.0,0.0,1023.4,0.0,3322.16,146.43,26.0,,,,0.0,,,True,,2025-11-20 13:14:01
+357,https://xat.com/,Social Networking and Messaging,22528.0,0.126,0.892,53.44,medium,Medium,40.0,2044.43,527.73,0.21,10989.61,1701.0,7832.85,13930.94,1031.0,,,,0.0,,,True,,2025-11-20 13:14:55
+358,https://www.chatblink.com/chat-list,Social Networking and Messaging,770764.8,3.68,0.734,63.08,slow,Slow,98.0,862.6,630.89,0.01,1772.88,99.0,1098.38,1089.03,70.0,,,,0.0,,,True,,2025-11-20 13:15:12
+359,https://en.lycos.social/,Social Networking and Messaging,548966.4,0.494,0.826,75.07,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:02:14
+360,http://www.icq-chat.com/,Social Networking and Messaging,157491.2,0.177,0.261,201.49,slow,Slow,88.0,1423.64,842.02,0.04,2931.84,29.0,2944.76,4153.01,98.0,,,,0.0,,,True,,2025-11-20 13:16:04
+362,http://christianchat.com/,Social Networking and Messaging,1228.8,1.68,0.402,262.67,fast,Slow,93.0,779.91,323.65,0.01,1535.2,197.0,756.15,349.36,55.0,,,,1.0,,,True,,2025-11-20 13:16:30
+363,http://www.vpchat.com/,Social Networking and Messaging,8499.2,0.0,0.457,98.93,fast,Medium,96.0,597.97,538.44,0.0,597.97,0.0,2029.9,101.49,35.0,,,,1.0,,,True,,2025-11-20 13:16:46
+364,http://chattusa.com/,Social Networking and Messaging,4608.0,3.19,3.756,26.25,slow,Fast,87.0,1285.98,971.02,0.0,3014.48,193.45,1759.76,2374.33,82.0,,,,0.0,,,True,,2025-11-20 13:17:08
+365,https://www.camamba.com/,Social Networking and Messaging,2560.0,0.909,0.887,66.57,medium,Fast,95.0,562.0,522.0,0.0,562.0,0.0,2185.16,277.88,17.0,,,,1.0,,,True,,2025-11-20 13:17:26
+366,http://www.blackchat.co.uk/blackchatold/hangout/,Social Networking and Messaging,1228.8,1.07,0.439,38.69,fast,Fast,54.0,3672.0,3618.0,0.0,3926.0,208.0,6645.75,1646.96,20.0,,,,0.0,,,True,,2025-11-20 13:17:51
+367,http://www.kidzworld.com/chat,Social Networking and Messaging,117862.4,1.09,2.767,37.84,slow,Medium,74.0,1686.51,1223.0,0.04,3259.01,306.0,2148.08,1965.32,60.0,,,,0.0,,,True,,2025-11-20 13:18:15
+368,http://www.jesusrocksonirc.net/,Social Networking and Messaging,2048.0,1.2,2.124,24.87,slow,Slow,100.0,243.0,202.0,0.0,243.0,0.0,316.65,17.72,7.0,,,,1.0,,,True,,2025-12-06 15:02:25
+369,https://www.chatpit.com/,Social Networking and Messaging,298803.2,0.348,0.272,938.08,slow,Medium,85.0,866.97,551.79,0.19,1934.9,146.5,1630.25,1264.51,79.0,,,,0.0,,,True,,2025-11-20 13:19:01
+370,https://www.chatfamily.com/,Social Networking and Messaging,1843.2,2.91,0.553,237.1,medium,Medium,97.0,722.73,692.65,0.01,725.74,0.0,1822.28,264.01,24.0,,,,1.0,,,True,,2025-11-20 13:19:23
+371,https://www.diigo.com/,Social Networking and Messaging,2048.0,1.02,2.743,51.04,slow,Fast,97.0,666.41,454.91,0.0,666.41,0.0,1859.74,400.37,16.0,,,,0.0,,,True,,2025-11-20 13:19:38
+372,https://twitpic.com/,Social Networking and Messaging,1024.0,0.0,0.561,98.14,medium,Medium,100.0,210.0,210.0,0.0,210.0,0.0,210.0,7.12,2.0,,,,1.0,,,True,,2025-11-20 13:19:49
+373,https://hi5.com/,Social Networking and Messaging,1228.8,1.34,0.052,316.94,fast,Medium,98.0,756.97,574.28,0.0,1365.3,0.5,1280.41,531.22,35.0,,,,0.0,,,True,,2025-11-20 13:20:03
+374,http://xanga.com/,Social Networking and Messaging,318668.8,1.58,1.545,68.3,slow,Medium,89.0,780.32,258.64,0.21,780.32,0.0,722.42,100.18,11.0,,,,1.0,,,True,,2025-11-20 13:20:16
+375,https://www.care2.com/,Social Networking and Messaging,426905.6,1.74,0.036,24.14,slow,Medium,91.0,1533.9,867.44,0.0,1547.28,39.93,1702.32,5862.58,138.0,,,,0.0,,,True,,2025-11-20 13:20:37
+376,http://www.orkut.com/,Social Networking and Messaging,15257.6,0.066,1.157,85.08,slow,Medium,100.0,662.35,356.34,0.0,1109.6,28.83,623.86,203.98,11.0,,,,0.0,,,True,,2025-11-20 13:20:49
+377,https://getsatisfaction.com/,Social Networking and Messaging,696832.0,1.04,0.422,408.98,slow,Slow,100.0,233.0,233.0,0.0,233.0,0.0,469.97,0.67,1.0,,,,1.0,,,True,,2025-11-20 13:20:59
+378,https://www.digitalcameraworld.com,Social Networking and Messaging,110284.8,0.587,0.424,74.68,medium,Fast,58.0,1283.01,638.01,0.0,7788.09,1151.99,4336.56,5496.88,272.0,,,,0.0,,,True,,2025-11-20 13:21:51
+379,https://www.cambridgeincolour.com,Social Networking and Messaging,6041.6,2.05,0.67,49.9,medium,Medium,70.0,2387.24,1008.08,0.16,2433.92,13.5,4370.96,1376.67,40.0,,,,0.0,,,True,,2025-12-06 15:02:48
+380,https://photographylife.com,Social Networking and Messaging,157696.0,0.232,0.329,494.1,slow,Medium,99.0,921.4,280.7,0.0,973.4,43.0,374.46,338.13,33.0,,,,0.0,,,True,,2025-11-20 13:22:25
+381,https://fstoppers.com,Social Networking and Messaging,1536.0,0.401,1.682,61.42,slow,Slow,62.0,1094.51,762.89,0.0,8338.55,762.5,3615.0,6014.16,317.0,,,,0.0,,,True,,2025-11-20 13:23:24
+382,https://camerajabber.com,Photography,16281.6,1.17,1.156,32.72,slow,Medium,48.0,2992.83,1090.9,0.001,3322.55,156.5,2530.35,2025.85,79.0,,,,0.0,,,True,,2025-11-20 13:23:58
+383,https://www.diyphotography.net,Photography,1228.8,1.08,0.496,244.08,fast,Slow,48.0,2392.21,722.0,0.01,11411.6,4333.99,4720.48,9162.19,646.0,,,,0.0,,,True,,2025-12-06 15:04:06
+384,https://iphonephotographyschool.com,Photography,319078.4,0.205,0.367,153.58,slow,medium,84.0,1064.95,707.65,0.0,2205.38,291.04,1475.34,4640.19,66.0,,,,0.0,,,True,,2025-11-20 13:25:27
+385,https://www.dpreview.com,Photography,8089.6,1.26,0.808,11.23,medium,medium,50.0,2256.51,756.79,0.01,10885.57,1228.0,4075.46,5306.69,1221.0,,,,0.0,,,True,,2025-12-06 15:05:17
+386,https://www.thesprucecrafts.com/photography-4162939,Photography,1536.0,1.31,3.67,10.77,slow,medium,88.0,1953.02,622.01,0.0,3008.53,146.5,1071.99,1890.38,97.0,,,,0.0,,,True,,2025-11-20 13:26:51
+387,https://500px.com,Photography,3993.6,1.14,0.38,437.97,fast,medium,30.0,4646.96,2442.61,0.01,6791.49,1658.0,4580.0,7993.64,170.0,,,,0.0,,,True,,2025-11-20 13:27:29
+388,https://www.thephotoargus.com,Photography,19968.0,1.4,1.736,138.1,slow,medium,84.0,1770.01,471.2,0.01,2762.98,228.0,1349.05,1660.92,72.0,,,,0.0,,,True,,2025-11-20 13:27:54
+389,https://levonbiss.com,Photography,2457.6,1.78,0.754,978.04,medium,medium,56.0,3665.54,3065.53,0.0,4136.89,194.0,4215.1,3227.59,60.0,,,,0.0,,,True,,2025-11-20 13:28:29
+390,https://www.petermckinnon.com,Photography,1228.8,0.536,0.276,242.31,fast,medium,45.0,3678.78,1799.52,0.01,4256.93,489.0,3246.83,4458.51,84.0,,,,0.0,,,True,,2025-11-20 13:29:05
+391,https://www.mpkelley.com,Photography,7372.8,2.15,0.59,135.38,medium,medium,74.0,2749.34,571.53,0.0,2749.34,240.0,1656.52,3629.97,52.0,,,,0.0,,,True,,2025-11-20 13:29:24
+392,https://blazinphoto.com,Photography,2764.8,1.05,0.262,207.1,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:05:39
+393,http://www.harisnukem.com,Photography,10137.6,1.36,0.959,57.53,medium,medium,83.0,955.02,915.02,0.0,3697.93,265.0,2295.06,2994.88,34.0,,,,0.0,,,True,,2025-11-20 13:30:03
+394,https://www.lieben.no,Photography,11161.6,2.55,0.257,598.66,fast,medium,68.0,2811.52,1646.01,0.0,3264.33,98.0,10971.44,4556.38,71.0,,,,0.0,,,True,,2025-11-20 13:30:39
+395,https://www.branditoolephoto.com,Photography,3993.6,0.924,0.278,1296.17,fast,medium,47.0,3682.31,525.02,0.46,3685.96,231.0,2217.26,5801.66,45.0,,,,0.0,,,True,,2025-11-20 13:31:03
+396,http://www.sanzlena.com,Photography,776396.8,1.04,0.584,171.13,slow,medium,96.0,962.5,644.01,0.0,962.5,7.0,1684.55,1471.06,54.0,,,,0.0,,,True,,2025-11-20 13:31:26
+397,https://www.kaylafisherphotography.com,Photography,1843.2,1.15,3.671,0.0,slow,medium,66.0,9994.35,1209.71,0.0,9994.35,76.0,2559.38,18078.05,56.0,,,,0.0,,,True,,2025-11-20 13:31:49
+398,https://www.mathieustern.com,Photography,0.0,0.0,1.102,73.11,slow,medium,69.0,2283.09,1830.09,0.0,2319.94,217.5,2591.23,1666.52,33.0,,,,0.0,,,True,,2025-11-20 13:32:08
+399,https://cassandraladru.com,Photography,2355.2,1.12,0.996,59.48,medium,medium,69.0,1445.0,645.0,0.8,1453.0,0.0,1723.62,1535.85,31.0,,,,0.0,,,True,,2025-11-20 13:32:27
+400,https://www.danielkennedy.com,Photography,1228.8,3.04,4.309,0.8,slow,medium,7.0,6025.47,1700.52,0.67,12519.81,1698.13,6916.94,37070.48,562.0,,,,0.0,,,True,,2025-12-06 15:06:47
+401,https://daniloandsharon.com,Photography,554700.8,1.99,1.971,132.19,slow,medium,61.0,2194.03,1201.41,0.07,3916.89,490.0,1961.81,5790.66,124.0,,,,0.0,,,True,,2025-11-20 13:34:02
+402,https://www.adambirdphotography.com,Photography,2252.8,1.18,0.041,15227.28,fast,slow,95.0,819.01,595.51,0.0,819.01,0.0,2067.49,3026.86,50.0,,,,0.0,,,True,,2025-11-20 13:34:19
+403,https://www.moyo-studio.com,Photography,1843.2,2.09,0.438,178.78,fast,Slow,45.0,3596.31,1264.03,0.05,5373.73,544.0,4886.34,4575.22,169.0,,,,0.0,,,True,,2025-11-20 13:34:58
+404,https://alexisjuliaphoto.com,Photography,49971.2,2.52,0.184,1739.75,fast,Fast,100.0,229.23,229.23,0.0,229.23,0.0,807.84,50.21,8.0,,,,1.0,,,True,,2025-11-20 13:35:14
+405,https://www.davemorrowphotography.com/photography-fundamentals,Photography,50176.0,3.96,0.63,0.72,medium,Slow,92.0,703.07,485.61,0.12,703.07,0.0,2045.27,294.46,35.0,,,,0.0,,,True,,2025-11-20 13:35:36
+406,https://www.dodho.com,Photography,4096.0,3.36,5.174,490.63,slow,Medium,28.0,2049.78,1009.52,0.52,7835.95,4109.98,7868.62,5506.78,137.0,,,,0.0,,,True,,2025-11-20 13:36:25
+407,https://thefashioncamera.com,Photography,5222.4,2.26,2.027,104.38,slow,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:07:09
+408,https://www.featureshoot.com,Photography,3788.8,0.704,2.654,27.96,slow,Slow,91.0,1622.7,515.71,0.0,1791.98,84.98,1719.06,1870.45,66.0,,,,0.0,,,True,,2025-11-20 13:37:06
+409,http://intothenightphoto.blogspot.com,Photography,430284.8,1.46,1.731,590.78,slow,Slow,68.0,1698.0,528.01,0.0,3293.67,542.5,1735.79,3599.32,138.0,,,,0.0,,,True,,2025-11-20 13:37:43
+410,https://www.fionakellyphotography.com/blog/,Photography,2048.0,1.43,0.564,72.17,medium,Fast,86.0,1444.0,759.0,0.07,2329.4,54.0,3760.79,2771.16,54.0,,,,0.0,,,True,,2025-11-20 13:38:07
+411,https://www.behindtheshutter.com,Photography,1536.0,6.95,6.716,106.08,slow,Fast,62.0,5650.25,1574.07,0.0,5756.26,0.0,4028.81,7946.2,110.0,,,,0.0,,,True,,2025-11-20 13:38:37
+412,https://petapixel.com,Photography,11571.2,3.49,0.636,97.3,medium,Fast,60.0,1054.53,444.93,0.0,8046.46,1172.54,4075.55,4207.82,747.0,,,,0.0,,,True,,2025-11-20 13:39:32
+413,https://www.lightstalking.com,Photography,4608.0,1.64,1.201,61.14,slow,Fast,72.0,3848.79,528.6,0.01,3956.05,154.0,2261.35,4769.92,130.0,,,,0.0,,,True,,2025-11-20 13:39:57
+414,https://www.photo.net,Photography,2764.8,0.599,3.222,40.47,slow,Fast,78.0,2606.32,946.52,0.0,2621.94,56.0,2772.43,3557.54,91.0,,,,0.0,,,True,,2025-11-20 13:40:24
+415,https://www.picturecorrect.com,Photography,8396.8,2.72,2.999,31.7,slow,Medium,100.0,488.34,261.0,0.0,491.61,0.0,778.35,192.04,27.0,,,,1.0,,,True,,2025-11-20 13:40:39
+416,https://www.slrlounge.com,Photography,2457.6,1.31,1.627,186.71,slow,Medium,58.0,4260.06,725.7,0.0,4260.06,399.0,1741.39,16902.61,110.0,,,,0.0,,,True,,2025-11-20 13:41:02
+417,https://www.popphoto.com,Photography,4608.0,0.836,0.242,7.96,fast,Medium,61.0,1002.05,755.74,0.01,10243.43,1119.5,3306.53,5495.0,807.0,,,,0.0,,,True,,2025-11-20 13:42:03
+418,https://photography.tutsplus.com,Photography,20889.6,3.54,0.247,3359.27,fast,Medium,49.0,2989.41,828.01,0.16,3029.32,450.0,3322.49,2907.63,85.0,,,,0.0,,,True,,2025-11-20 13:42:29
+419,https://www.creativelive.com/photography?via=hero-freeform_1,Photography,27443.2,0.548,1.519,43.21,slow,Fast,9.0,4588.88,2889.74,0.54,5815.05,992.5,3968.82,4446.81,67.0,,,,0.0,,,True,,2025-11-20 13:42:58
+420,https://www.whatsthebest.co.uk/tech/photography/,Photography,8499.2,2.89,0.922,169.77,medium,Fast,70.0,1752.57,730.57,0.02,5577.12,335.0,3367.54,3652.65,161.0,,,,0.0,,,True,,2025-11-20 13:43:33
+421,https://tomhull.co.uk,Photography,2048.0,1.1,0.37,2487.54,fast,Fast,83.0,1473.0,337.0,0.0,2346.87,203.01,2614.8,6440.02,79.0,,,,0.0,,,True,,2025-11-20 13:44:00
+422,https://www.linnimages.com,Photography,2252.8,2.93,0.771,37.3,medium,Slow,91.0,1457.21,704.76,0.0,1960.28,138.5,1429.31,2430.79,42.0,,,,0.0,,,True,,2025-11-20 13:44:18
+423,https://www.amitmehra.com,Photography,8704.0,2.8,3.296,36.12,slow,Slow,64.0,3441.35,2168.91,0.0,3442.82,122.0,3118.99,2519.12,74.0,,,,0.0,,,True,,2025-12-06 15:07:33
+424,https://www.jillgreenberg.com,Photography,2969.6,1.26,2.215,42.6,slow,Slow,77.0,2077.52,1677.26,0.0,2077.52,0.0,3072.17,1850.86,33.0,,,,0.0,,,True,,2025-11-20 13:44:57
+425,https://www.jonathanglynnsmith.com,Photography,4812.8,2.43,0.559,170.09,medium,Fast,39.0,3854.11,2655.41,0.01,5186.01,553.0,4269.48,34908.51,56.0,,,,0.0,,,True,,2025-11-20 13:45:25
+426,https://www.nateluebbe.com,Photography,3686.4,1.02,0.515,64.67,medium,Medium,48.0,3201.55,1050.77,0.0,3235.42,650.01,3299.71,3384.42,49.0,,,,0.0,,,True,,2025-11-20 13:45:56
+427,http://www.brentstirton.com,Photography,11878.4,1.4,1.202,64.22,slow,Medium,76.0,2292.71,884.01,0.03,2352.09,198.5,2303.38,1833.09,31.0,,,,0.0,,,True,,2025-11-20 13:46:15
+428,http://www.dollyave.com,Photography,2150.4,1.62,0.542,155.2,medium,Medium,67.0,2377.02,1134.8,0.18,2389.17,184.5,2291.97,1722.79,41.0,,,,0.0,,,True,,2025-11-20 13:46:40
+429,https://east.co,Photography,140492.8,1.19,0.613,104.53,slow,Medium,86.0,1591.75,654.0,0.0,1593.98,82.0,3064.91,3427.81,24.0,,,,0.0,,,True,,2025-11-20 13:47:00
+430,https://www.360cities.net/,Photography,3788.8,1.38,0.203,86.74,fast,Medium,28.0,3121.14,925.04,0.36,6915.51,1768.48,2582.6,7460.2,172.0,,,,0.0,,,True,,2025-11-20 13:47:30
+431,https://www.bbc.com/news/in_pictures,Photography,2355.2,1.05,0.27,257.13,fast,Medium,50.0,2012.72,797.72,0.01,8554.55,1779.5,5651.33,5229.92,361.0,,,,0.0,,,True,,2025-11-20 13:48:20
+432,https://www.blipfoto.com/,Photography,3174.4,1.45,0.204,299.4,fast,Fast,83.0,1976.77,586.01,0.0,2008.1,69.0,2933.73,2723.48,23.0,,,,0.0,,,True,,2025-11-20 13:48:38
+433,https://c4fap.org/,Photography,610611.2,1.09,0.226,249.98,slow,Fast,64.0,4966.05,1711.05,0.09,4966.05,109.0,2059.07,4876.88,30.0,,,,0.0,,,True,,2025-12-06 15:07:51
+434,https://www.deviantart.com/,Photography,7475.2,3.12,0.317,25.48,fast,Fast,100.0,237.0,237.0,0.0,237.0,0.0,238.04,1.21,1.0,,,,1.0,,,True,,2025-11-20 13:49:49
+435,https://www.coolphotoideas.com/,Photography,2560.0,1.54,0.449,28.6,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:08:13
+436,https://www.digitalphotopro.com/technique/,Photography,2764.8,1.45,0.611,499.06,medium,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:08:35
+437,https://www.dpreview.com/,Photography,4300.8,1.6,0.253,2.05,fast,Fast,48.0,2376.53,790.39,0.01,13064.2,2161.0,4181.04,5422.9,1355.0,,,,0.0,,,True,,2025-12-06 15:09:51
+438,https://digital-photography-school.com/,Social Networking and Messaging,2252.8,2.85,1.088,31.82,slow,slow,62.0,1029.01,783.72,0.0,10927.03,822.5,3959.51,5258.31,790.0,,,,0.0,,,True,,2025-11-20 13:52:19
+439,http://www.ephotozine.com/,Photography,2355.2,1.31,0.35,114.87,fast,slow,68.0,1151.14,791.09,0.05,4319.68,523.5,2869.67,4231.35,202.0,,,,0.0,,,True,,2025-11-20 13:52:55
+440,https://filemagazine.com/,Photography,1024.0,0.0,0.163,271.07,fast,slow,84.0,1422.06,597.02,0.14,1424.06,93.0,2425.2,2015.31,71.0,,,,0.0,,,True,,2025-11-20 13:53:22
+441,https://www.ippawards.com/,Photography,2457.6,2.42,0.194,7.03,fast,slow,43.0,7669.53,3246.13,0.0,8234.86,337.5,3246.13,15366.72,458.0,,,,0.0,,,True,,2025-11-20 13:54:08
+442,https://morguefile.com/,Photography,1536.0,1.33,1.688,451.1,slow,slow,64.0,2043.44,1184.08,0.42,2047.44,78.0,2040.27,3954.66,56.0,,,,0.0,,,True,,2025-11-20 13:54:35
+443,https://www.capture-life.de/,Photography,2048.0,1.41,1.132,152.2,slow,medium,67.0,1944.02,823.01,0.03,4523.08,408.0,2586.88,3882.25,83.0,,,,0.0,,,True,,2025-11-20 13:55:00
+444,https://www.morganleephotographer.com/,Photography,6656.0,0.441,0.244,427.4,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:10:12
+445,https://www.bulbcreative.co/,Photography,7680.0,2.52,0.702,205.51,medium,medium,53.0,3126.72,762.51,0.18,3127.37,380.0,2179.63,2934.74,45.0,,,,0.0,,,True,,2025-11-20 13:55:41
+446,https://josephhardin.com/,Photography,1433.6,2.22,0.614,599.75,medium,medium,63.0,3285.67,1312.68,0.0,3336.48,221.01,3228.74,3837.77,67.0,,,,0.0,,,True,,2025-11-20 13:56:06
+447,https://rmweddingfilms.co.uk/,Photography,3993.6,2.14,2.545,7.22,slow,medium,77.0,2665.5,1087.32,0.01,2679.5,36.0,2907.8,2351.98,31.0,,,,0.0,,,True,,2025-11-20 13:56:23
+448,https://mlphotofilm.com/,Photography,1024.0,0.0,1.993,121.56,slow,medium,79.0,2436.11,822.74,0.0,2516.42,62.5,2920.24,11718.06,66.0,,,,0.0,,,True,,2025-11-20 13:56:43
+449,https://www.velare.co/,Photography,1945.6,1.61,0.825,110.14,medium,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:10:33
+450,https://www.roseyredphotography.com/,Photography,11878.4,2.74,0.979,70.83,medium,medium,83.0,2364.65,1119.71,0.01,2364.65,39.0,1719.5,26574.51,35.0,,,,0.0,,,True,,2025-11-20 13:57:23
+451,https://www.outdoorphotographer.com/,Photography,3584.0,2.29,0.463,555.5,fast,medium,66.0,5062.14,735.02,0.0,5184.25,124.0,3982.84,5589.68,186.0,,,,0.0,,,True,,2025-11-20 13:57:53
+452,https://www.naturephotographers.network/,Photography,5939.2,1.44,1.397,105.79,slow,Fast,93.0,1261.46,662.55,0.0,1261.46,0.0,1949.85,799.86,21.0,,,,1.0,,,True,,2025-11-20 13:58:12
+453,http://www.pawspetphotography.co.uk/galleries/,Photography,1228.8,1.02,1.987,10.47,slow,Slow,,,1836.97,0.0,,,6785.82,1813.86,41.0,,,,,,,True,,2025-11-20 13:58:37
+454,https://www.photo.net/,Photography,13619.2,3.03,0.39,177.21,fast,Medium,74.0,2244.01,643.51,0.13,2263.96,171.0,2551.54,3555.17,88.0,,,,0.0,,,True,,2025-11-20 13:59:04
+455,https://psa-photo.org/,Photography,1024.0,0.0,2.961,79.82,slow,Fast,100.0,232.0,232.0,0.0,232.0,0.0,592.88,0.6,1.0,,,,1.0,,,True,,2025-11-20 13:59:15
+456,https://www.photographytalk.com/2,Photography,5324.8,1.95,0.169,1252.93,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: NOT_HTML. The page provided is not HTML (served as MIME type image/jpeg).,2025-12-06 15:10:44
+457,http://markhancock.blogspot.com/,Photography,1945.6,3.46,0.4,297.56,fast,Fast,58.0,976.21,713.51,0.01,21501.65,4888.5,9010.31,15220.4,304.0,,,,0.0,,,True,,2025-11-20 14:00:27
+458,http://www.photopreneur.com/,Photography,2355.2,2.37,1.769,27.05,slow,Slow,99.0,617.0,431.0,0.0,617.0,0.0,1058.89,42.07,8.0,,,,1.0,,,True,,2025-11-20 14:00:40
+459,http://pimpyourcam.com/,Photography,2355.2,2.37,5.722,5.5,slow,Slow,72.0,747.5,663.5,0.36,747.5,0.0,5333.26,527.78,39.0,,,,1.0,,,True,,2025-11-20 14:01:11
+460,https://www.pixyblog.com/,Photography,8601.6,3.35,0.12,486.06,fast,Slow,100.0,501.0,241.0,0.0,501.0,0.0,1015.14,98.59,10.0,,,,1.0,,,True,,2025-11-20 14:01:23
+461,https://rps.org/,Photography,8601.6,3.35,0.843,9.27,medium,Slow,66.0,4991.24,618.36,0.03,7499.57,109.5,4644.02,19369.66,40.0,,,,0.0,,,True,,2025-11-20 14:01:46
+462,https://www.jillgreenberg.com/,Photography,38707.2,1.08,0.612,84.0,medium,Slow,73.0,2392.32,1919.0,0.0,2392.32,40.0,3308.44,1846.8,33.0,,,,0.0,,,True,,2025-11-20 14:02:05
+463,https://strobist.blogspot.com/,Photography,442163.2,0.451,0.275,26.05,slow,Slow,99.0,735.53,695.53,0.0,1192.53,3.5,1003.63,605.8,22.0,,,,0.0,,,True,,2025-11-20 14:02:20
+464,https://theonlinephotographer.typepad.com/the_online_photographer/,Photography,170496.0,5.88,0.369,61.09,slow,Medium,55.0,2795.01,1336.39,0.0,5559.73,460.0,2593.18,3557.16,184.0,,,,0.0,,,True,,2025-11-20 14:02:49
+465,https://www.jonathanglynnsmith.com/,Photography,37171.2,1.55,0.182,340.57,fast,Medium,30.0,5091.23,3702.1,0.01,5431.81,920.89,4588.51,45024.83,68.0,,,,0.0,,,True,,2025-11-20 14:03:25
+466,http://www.weatherscapes.com/,Photography,2150.4,1.26,0.212,848.39,fast,Fast,100.0,524.0,202.0,0.03,524.0,0.0,828.85,163.09,23.0,,,,1.0,,,True,,2025-11-20 14:03:40
+468,https://www.jasonbellphoto.com/#/home/,Photography,80896.0,0.089,0.203,413.71,medium,Fast,85.0,1376.32,870.8,0.0,1376.47,41.0,6945.32,593.54,35.0,,,,0.0,,,True,,2025-11-20 14:04:03
+469,https://www.danielkennedy.com/,Photography,135577.6,0.485,0.228,0.5,slow,Fast,10.0,5494.41,1495.51,0.67,12532.21,1059.5,6736.71,37081.2,562.0,,,,0.0,,,True,,2025-11-20 14:05:03
+470,https://news.google.com/,Photography,177561.6,0.754,1.087,9.45,slow,Fast,89.0,1568.49,829.62,0.0,2124.27,132.5,1695.64,1281.89,123.0,,,,0.0,,,True,,2025-11-20 14:05:30
+471,https://news.yahoo.com/,Photography,177459.2,0.354,0.265,355.37,slow,Fast,89.0,1420.7,1378.12,0.0,1420.7,0.0,1816.27,1140.14,86.0,,,,1.0,,,True,,2025-11-20 14:05:47
+472,https://edition.cnn.com/,Photography,604262.4,0.892,0.652,11.58,slow,Fast,50.0,2110.4,1207.75,0.0,24278.89,806.0,6158.53,17948.96,1905.0,,,,0.0,,,True,,2025-12-06 15:12:20
+473,https://www.bbc.com/news,Photography,49868.8,2.65,0.41,41.93,fast,Fast,50.0,2076.55,819.91,0.01,9186.03,1439.5,5028.19,4400.78,311.0,,,,0.0,,,True,,2025-11-20 14:07:29
+474,https://www.nytimes.com/,News,389734.4,0.482,0.209,17.76,slow,Fast,33.0,7806.48,1055.44,0.05,15501.09,5398.06,9043.12,9143.24,573.0,,,,0.0,,,True,,2025-12-06 15:13:48
+475,https://www.theguardian.com/international,News,3072.0,1.21,0.431,111.61,fast,Fast,69.0,1016.5,648.4,0.06,5202.6,522.5,2856.22,3469.3,538.0,,,,0.0,,,True,,2025-11-20 14:09:24
+476,https://www.washingtonpost.com/,News,4608.0,1.29,0.838,42.81,medium,slow,62.0,881.0,601.0,0.03,7302.45,3237.0,3092.49,4013.15,181.0,,,,0.0,,,True,,2025-12-06 15:14:37
+477,https://www.indiatimes.com/,News,1331.2,1.43,0.145,35.67,fast,slow,59.0,1498.01,876.0,0.0,7537.52,743.5,3824.29,3323.52,404.0,,,,0.0,,,True,,2025-11-20 14:11:01
+478,https://www.foxnews.com/,News,2867.2,1.21,0.195,21.48,fast,slow,57.0,1183.01,856.0,0.0,17597.6,2513.0,4266.16,11913.6,959.0,,,,0.0,,,True,,2025-12-06 15:16:02
+479,https://www.usatoday.com/,News,3379.2,2.2,0.131,73.97,fast,slow,61.0,558.51,558.51,0.04,9031.76,1251.0,4560.88,4760.67,649.0,,,,0.0,,,True,,2025-11-20 14:12:51
+480,https://www.wsj.com/,News,2560.0,0.979,0.314,38.69,fast,slow,,,,0.68,,,,383.26,15.0,,,,,,,True,,2025-11-20 14:13:07
+481,https://www.nbcnews.com/,News,2662.4,1.97,0.21,32.0,fast,slow,58.0,916.67,746.12,0.1,11178.68,1171.0,4343.38,7450.87,553.0,,,,0.0,,,True,,2025-11-20 14:14:08
+482,http://timesofindia.indiatimes.com/,News,4198.4,3.86,0.646,54.54,medium,slow,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 15:20:07
+483,https://abcnews.go.com/,News,48230.4,0.059,1.764,17.39,slow,slow,52.0,1777.66,887.01,0.0,11060.63,1785.0,5574.86,8271.34,318.0,,,,0.0,,,True,,2025-11-20 14:16:02
+484,https://sputniknews.com/,News,193945.6,0.255,0.527,47.87,slow,slow,53.0,1982.88,1149.65,0.01,4272.47,702.33,6828.41,2300.4,111.0,,,,0.0,,,True,,2025-11-20 14:16:32
+485,https://www.abc.net.au/news/,News,3584.0,1.23,0.051,1.81,fast,Fast,47.0,3402.48,655.11,0.03,4497.42,1565.48,2075.17,3905.06,168.0,,,,0.0,,,True,,2025-11-20 14:17:11
+486,https://www.independent.co.uk/,News,3686.4,3.43,0.38,253.16,fast,Fast,55.0,1611.46,579.47,0.06,10521.8,1356.0,4218.62,4525.15,627.0,,,,0.0,,,True,,2025-11-20 14:18:06
+487,https://www.cbc.ca/news/,News,11264.0,0.938,1.175,66.21,slow,Fast,56.0,1946.71,1335.62,0.02,6369.44,632.5,3075.19,3630.36,383.0,,,,0.0,,,True,,2025-11-20 14:18:52
+488,https://www.thesun.co.uk/news/,News,3993.6,1.89,0.421,20.16,fast,Fast,90.0,889.7,849.7,0.01,3812.91,177.5,1929.72,4253.48,132.0,,,,0.0,,,True,,2025-11-20 14:19:22
+489,https://time.com/,News,8396.8,2.24,0.137,163.15,fast,Fast,67.0,907.0,428.0,0.0,6967.18,1466.0,1618.63,4137.53,318.0,,,,0.0,,,True,,2025-11-20 14:20:10
+490,https://www.latimes.com/,News,11264.0,0.938,0.334,20.57,fast,Fast,62.0,1389.51,390.5,0.01,4490.1,909.46,2687.96,3089.84,145.0,,,,0.0,,,True,,2025-11-20 14:20:46
+491,https://www.mirror.co.uk/https://news.sky.com/,News,3993.6,1.89,0.87,8.48,medium,Fast,56.0,2585.61,1425.61,0.02,4699.11,436.5,2932.38,3636.94,155.0,,,,0.0,,,True,,2025-11-20 14:21:25
+492,https://www.vox.com/,News,1024.0,1.0,0.29,51.73,fast,medium,26.0,2510.55,1216.0,0.87,8733.2,966.5,2613.87,6255.37,359.0,,,,0.0,,,True,,2025-12-06 15:21:26
+493,https://www.smh.com.au/,News,7168.0,2.02,0.159,149.71,fast,medium,50.0,2839.92,672.02,0.0,7259.55,834.5,2859.6,13128.13,298.0,,,,0.0,,,True,,2025-11-20 14:23:10
+494,https://www.scmp.com/,News,5222.4,0.97,0.361,12.31,fast,medium,34.0,4195.15,1644.22,0.0,11951.3,3055.5,5849.8,9670.55,859.0,,,,0.0,,,True,,2025-12-06 15:22:34
+495,https://www.ctvnews.ca/,News,3686.4,2.62,0.379,37.85,fast,medium,48.0,1259.01,773.01,0.21,19360.68,3088.0,4111.07,7703.58,1251.0,,,,0.0,,,True,,2025-12-06 15:24:07
+496,https://www.france24.com/en/,News,5836.8,4.95,0.125,1290.13,fast,slow,81.0,1440.51,362.5,0.0,1622.51,240.0,2609.5,1086.41,54.0,,,,0.0,,,True,,2025-11-20 14:25:36
+497,https://news24online.com/,News,5529.6,3.5,0.265,0.0,fast,fast,64.0,1158.85,709.5,0.15,4902.49,674.0,1781.75,4728.93,202.0,,,,0.0,,,True,,2025-11-20 14:26:13
+498,https://globalnews.ca/,News,3993.6,0.775,3.296,36.06,slow,Fast,40.0,4381.07,1590.47,0.02,9539.86,635.0,3474.03,6748.96,462.0,,,,0.0,,,True,,2025-11-20 14:27:04
+499,https://www.channelnewsasia.com/,News,13209.6,2.31,0.718,36.03,medium,Fast,21.0,8700.25,1858.02,0.17,13563.81,2238.36,5861.52,12685.24,641.0,,,,0.0,,,True,,2025-12-06 15:25:44
+500,https://www.dkoding.in/,News,2252.8,0.537,1.431,26.12,slow,Fast,88.0,1559.38,1195.49,0.02,1559.38,0.0,2094.51,325.79,22.0,,,,0.0,,,True,,2025-11-20 14:28:22
+501,https://www.thestar.com/,News,5529.6,3.5,0.302,5.16,fast,Slow,50.0,1812.0,1159.0,0.0,12589.86,1800.51,5232.24,11826.59,541.0,,,,0.0,,,True,,2025-11-20 14:29:16
+502,https://www.washingtontimes.com/,News,3993.6,0.775,0.282,50.74,fast,Slow,53.0,1165.71,885.71,0.12,15222.26,2346.0,6312.03,16967.36,1121.0,,,,0.0,,,True,,2025-12-06 15:29:46
+503,https://www.todayonline.com/,News,9216.0,3.99,0.83,214.31,medium,Slow,52.0,1818.6,997.01,0.05,7693.08,1639.45,3492.24,5931.26,409.0,,,,0.0,,,True,,2025-11-20 14:31:16
+504,https://www.telegraphindia.com/,News,3891.2,1.73,0.264,17.13,fast,Slow,61.0,920.01,469.99,0.04,7010.41,1207.0,3932.92,6923.04,263.0,,,,0.0,,,True,,2025-11-20 14:31:58
+505,https://www.newsnow.co.uk/h/World+News,News,4812.8,3.42,1.129,242.4,slow,Slow,63.0,795.11,795.11,0.04,3482.3,783.0,3815.23,1681.78,116.0,,,,0.0,,,True,,2025-11-20 14:32:32
+506,https://www.csmonitor.com/,News,1126.4,1.5,0.18,17.44,fast,Slow,80.0,1774.55,914.7,0.02,3401.54,252.67,1579.04,3004.91,132.0,,,,0.0,,,True,,2025-11-20 14:32:59
+507,https://www.easternherald.com/,News,2150.4,2.86,1.354,5.12,slow,Fast,57.0,2016.72,1126.49,0.0,5600.14,571.3,3377.29,8219.83,166.0,,,,0.0,,,True,,2025-11-20 14:33:36
+508,https://world.wng.org/,News,877772.8,0.786,0.431,1.46,slow,Fast,44.0,3232.97,1045.68,0.02,6549.54,802.0,4497.55,8120.66,266.0,,,,0.0,,,True,,2025-11-20 14:34:12
+509,https://newsblaze.com/,News,3174.4,2.81,0.275,23.4,fast,Fast,43.0,3900.84,885.7,0.18,5320.38,621.5,1806.41,4112.37,133.0,,,,0.0,,,True,,2025-11-20 14:34:43
+510,https://www.neweurope.eu/,News,72192.0,0.107,0.389,27.69,medium,Medium,91.0,1152.5,512.5,0.0,1168.5,0.0,2964.3,1518.66,23.0,,,,0.0,,,True,,2025-11-20 14:35:06
+511,https://www.watchdoguganda.com/,News,1126.4,1.47,0.049,10958.81,fast,Medium,60.0,1710.36,775.66,0.61,1724.36,64.65,6116.98,3845.14,73.0,,,,0.0,,,True,,2025-12-06 15:30:27
+512,https://headlinecode.com/,News,8192.0,3.34,0.257,1.21,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: NO_FCP. The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP),2025-12-06 15:30:48
+513,https://warritatafo.com/,News,225689.6,0.5,1.181,2.48,slow,Medium,94.0,1494.55,725.7,0.0,1494.55,0.0,1078.79,1756.89,45.0,,,,1.0,,,True,,2025-11-20 14:36:06
+514,https://www.newsrust.com/,News,1024.0,0.0,0.199,209.66,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:31:10
+515,https://globalpressjournal.com/,News,236236.8,0.465,0.366,84.7,slow,Medium,79.0,2265.0,834.7,0.0,5116.72,19.5,3707.82,8169.0,58.0,,,,0.0,,,True,,2025-11-20 14:36:42
+516,https://newslanes.com/,News,72192.0,0.107,0.377,61.8,medium,Fast,96.0,1111.01,980.91,0.04,1367.46,11.5,980.91,767.59,57.0,,,,0.0,,,True,,2025-11-20 14:36:57
+517,https://www.thenexthint.com/,News,1126.4,1.47,0.317,329.23,fast,Fast,97.0,532.0,352.0,0.0,534.0,9.0,1773.95,384.11,16.0,,,,1.0,,,True,,2025-11-20 14:37:16
+518,https://digitalive.world/,News,15667.2,0.097,0.289,129.69,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:31:31
+519,https://www.newyorker.com/,News,1740.8,5.63,0.323,216.23,fast,Fast,36.0,6166.57,561.0,0.04,17014.16,3425.0,5563.41,19908.15,711.0,,,,0.0,,,True,,2025-12-06 15:32:51
+520,https://www.bbc.com/,News,385331.2,0.645,0.381,166.87,slow,Fast,50.0,2014.39,938.87,0.01,9907.52,3669.63,5277.97,5538.82,421.0,,,,0.0,,,True,,2025-11-20 14:39:36
+521,https://newszetu.com/,News,1024.0,0.0,0.454,134.26,fast,Fast,87.0,1702.2,686.72,0.0,1716.2,0.0,2436.07,2320.2,122.0,,,,1.0,,,True,,2025-11-20 14:40:02
+522,https://weeklyworldnews.com/,News,275456.0,0.072,0.114,5.41,slow,Fast,93.0,1746.23,726.7,0.02,1748.24,0.0,726.7,1550.06,36.0,,,,1.0,,,True,,2025-11-20 14:40:18
+523,https://newsblenda.com/,News,23142.4,2.74,0.922,42.89,medium,medium,75.0,1582.56,727.22,0.2,2021.14,173.5,2240.5,3910.75,329.0,,,,0.0,,,True,,2025-11-20 14:40:51
+524,https://www.chron.com/,News,1638.4,1.48,0.537,46.27,medium,medium,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 15:36:58
+525,https://www.news.com.au/,News,2150.4,1.22,1.413,102.55,slow,medium,61.0,563.06,482.01,0.0,11052.97,1585.0,4031.02,5716.66,885.0,,,,0.0,,,True,,2025-12-06 15:38:22
+526,https://www.nzherald.co.nz/,News,1433.6,6.09,0.599,67.45,medium,Fast,43.0,2764.01,1061.51,0.01,9453.22,2484.12,5220.64,8081.35,432.0,,,,0.0,,,True,,2025-12-06 15:39:40
+529,https://www.theguardian.com/,News,1843.2,0.61,0.331,70.62,fast,Fast,64.0,881.68,743.6,0.06,6054.16,937.5,2636.02,3436.1,557.0,,,,0.0,,,True,,2025-11-20 14:44:50
+530,http://www.bbc.com/,News,956108.8,0.397,0.642,112.07,slow,medium,55.0,1379.32,952.24,0.01,9633.61,3671.46,5072.64,5448.67,421.0,,,,0.0,,,True,,2025-11-20 14:45:48
+531,https://www.huffpost.com/,News,2252.8,3.33,0.205,92.32,fast,medium,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 15:43:46
+532,https://www.bloomberg.com/,News,647782.4,0.713,0.207,48.41,slow,slow,40.0,3508.0,922.0,0.03,10239.71,2928.5,7822.87,7209.67,529.0,,,,0.0,,,True,,2025-12-06 15:45:19
+533,https://www.thedailybeast.com/,News,3276.8,4.66,0.945,90.31,medium,medium,37.0,4799.81,886.01,0.02,19067.13,3847.0,4793.88,18936.86,1563.0,,,,0.0,,,True,,2025-12-06 15:47:01
+534,https://publictv.in/,News,5120.0,1.2,0.415,170.29,fast,medium,49.0,1527.01,1291.21,0.12,22088.18,1204.5,7349.38,23650.82,1309.0,,,,0.0,,,True,,2025-12-06 15:48:42
+535,http://www.neduwealth.com/,News,2252.8,1.96,0.583,38.8,medium,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:49:03
+536,https://yerozo.com/,News,3174.4,1.39,0.166,200.28,fast,slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:49:25
+537,https://zemocity.com/,News,4096.0,0.849,1.124,12.05,slow,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:49:46
+538,https://newsobservatory.com/,News,5120.0,2.26,0.305,1861.54,fast,medium,89.0,1560.23,1184.25,0.02,1562.52,0.0,1894.4,241.68,24.0,,,,0.0,,,True,,2025-11-20 14:50:28
+539,https://lionnetnews.com/,News,2662.4,1.2,0.421,294.54,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:50:09
+540,https://richardsnewsonline.com/,News,1945.6,1.68,0.132,26.73,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:50:31
+541,https://balticword.eu/,News,3584.0,1.18,0.07,4.07,fast,medium,89.0,1463.1,590.45,0.0,2412.79,14.0,2718.78,1486.9,43.0,,,,0.0,,,True,,2025-12-06 15:50:54
+542,https://www.thelifecart.com/,News,891904.0,0.821,0.408,95.7,slow,slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:51:15
+543,https://rightnowtimes.com/,News,6860.8,4.72,0.262,239.19,fast,medium,90.0,1498.15,878.64,0.05,1498.15,43.5,2080.88,548.74,36.0,,,,0.0,,,True,,2025-11-20 14:52:06
+544,https://amnews247.com/,News,18227.2,3.33,0.064,1060.83,fast,medium,92.0,1459.17,854.66,0.05,1459.17,23.0,1666.92,548.71,36.0,,,,0.0,,,True,,2025-11-20 14:52:21
+545,https://thedetrend.com/,Photography,37478.4,0.836,0.225,348.66,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:51:36
+546,https://breakingnewscentral.com/,News,1024.0,0.0,0.975,86.91,medium,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:51:58
+547,https://timespek.com/,News,1024.0,0.0,1.759,9.29,slow,Medium,64.0,3606.84,813.0,0.16,3989.17,162.0,2332.37,3836.64,125.0,,,,0.0,,,True,,2025-11-20 14:53:24
+548,https://www.igorbnews.com/,News,142131.2,1.02,0.773,303.47,slow,Slow,59.0,976.63,721.13,0.0,11235.02,3161.0,5011.26,7867.48,162.0,,,,0.0,,,True,,2025-11-20 14:54:01
+549,https://globalvisionuk.com/,News,1024.0,0.0,0.167,110.35,fast,Slow,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:52:19
+550,http://theweeklytide.com/,News,225792.0,7.41,0.556,153.68,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:52:41
+551,http://www.justworldnews.com/,News,779161.6,0.919,0.706,49.3,slow,Medium,95.0,1006.71,866.71,0.01,1006.71,0.0,1871.37,723.99,37.0,,,,0.0,,,True,,2025-11-20 14:55:00
+552,https://www.avjnews.com/,News,1024.0,0.0,0.744,112.43,medium,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:53:04
+553,https://dainikviral.com/,News,1024.0,0.0,1.619,196.79,slow,Fast,92.0,1042.7,1002.7,0.0,1046.7,0.0,2400.05,418.41,36.0,,,,1.0,,,True,,2025-12-06 15:53:24
+554,https://awkwardvibes.com/,News,145920.0,1.63,0.341,315.85,slow,Medium,72.0,1443.34,1383.34,0.35,2334.28,104.5,1431.02,1075.12,74.0,,,,0.0,,,True,,2025-11-20 14:56:04
+555,https://www.theworldwomennews.com/,News,5632.0,4.62,0.622,116.02,medium,Medium,99.0,686.0,506.12,0.04,920.0,44.0,1256.01,528.5,52.0,,,,0.0,,,True,,2025-11-20 14:56:58
+556,https://quicktrendnews.wordpress.com/,News,144384.0,0.58,0.571,480.13,slow,Medium,90.0,1534.22,551.61,0.03,2594.38,179.6,730.62,1555.85,97.0,,,,0.0,,,True,,2025-11-20 14:57:19
+557,https://thedailycanvas.com/,Travel,368947.2,1.0,0.137,6145.83,slow,Medium,58.0,3072.25,995.7,0.0,3424.03,317.0,5624.01,2499.27,68.0,,,,0.0,,,True,,2025-11-20 14:57:48
+558,https://www.excite-news.site/,News,9523.2,4.5,1.284,278.21,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:53:46
+559,https://www.worldpresslive.com/,News,1024.0,0.0,0.847,127.27,medium,Fast,75.0,3421.1,805.71,0.01,3463.1,54.0,2389.61,3896.02,61.0,,,,0.0,,,True,,2025-11-20 14:58:35
+560,https://reporterfox.com/,News,1024.0,0.0,0.153,674.04,fast,Medium,100.0,630.48,257.0,0.02,630.48,0.0,364.97,107.12,6.0,,,,0.0,,,True,,2025-11-20 14:58:47
+561,http://moef.gov.in,News,1024.0,3.77,1.038,436.58,slow,Medium,57.0,2000.02,1060.01,0.56,3498.64,19.5,5842.17,17740.52,83.0,,,,0.0,,,True,,2025-11-20 14:59:20
+562,http://goidirectory.nic.in/index.php,News,1024.0,0.0,2.742,276.79,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:54:08
+563,https://pensionersportal.gov.in,News,497152.0,3.73,3.197,69.63,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 15:54:30
+564,https://www.mea.gov.in,News,385331.2,0.488,0.812,131.26,slow,Fast,63.0,2162.01,602.0,0.48,2206.01,37.0,2334.08,6118.73,123.0,,,,0.0,,,True,,2025-11-20 15:00:30
+565,https://www.finmin.nic.in,News,384102.4,0.759,1.472,57.97,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:54:52
+566,http://socialjustice.nic.in,News,1228.8,1.36,2.608,119.14,slow,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:55:13
+567,http://www.nmdfc.org,News,146022.4,0.797,0.128,173.69,slow,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: NO_FCP. The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP),2025-12-06 15:55:35
+568,https://mib.gov.in,News,1024.0,0.0,2.27,340.04,slow,medium,8.0,7047.07,1407.02,0.87,25443.23,5759.0,11862.59,27595.83,388.0,,,,0.0,,,True,,2025-12-06 15:56:51
+569,https://bombayhighcourt.nic.in,News,2867.2,1.66,0.419,175.52,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: NO_FCP. The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP),2025-12-06 15:57:29
+570,https://lawmin.gov.in,News,0.0,0.0,0.698,88.99,medium,medium,66.0,1975.27,1010.13,0.27,2011.88,5.0,11580.12,1947.62,101.0,,,,0.0,,,True,,2025-11-20 15:03:44
+571,https://mumbaipolice.co.in,Law and Government,22937.6,6.35,2.062,291.44,slow,Fast,87.0,2140.6,512.0,0.0,2140.6,0.0,1624.84,1218.25,10.0,,,,1.0,,,True,,2025-11-20 15:03:59
+572,http://narcoticsindia.nic.in,Law and Government,1843.2,5.85,0.559,213.7,medium,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 15:57:51
+573,https://www.upsc.gov.in,Law and Government,13004.8,4.05,0.428,267.54,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 15:58:13
+574,https://www.indianarmy.nic.in/home,Law and Government,3686.4,1.98,3.355,29.52,slow,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:58:34
+575,http://www.ncbc.nic.in/Home.aspx,Law and Government,1024.0,0.0,0.342,246.37,fast,medium,90.0,591.0,541.0,0.0,591.0,0.0,5667.61,309.25,53.0,,,,1.0,,,True,,2025-11-20 15:05:35
+576,http://ifs.nic.in,Law and Government,1024.0,0.0,0.251,143.57,fast,medium,100.0,166.0,166.0,0.0,166.0,0.0,341.64,1.66,1.0,,,,1.0,,,True,,2025-12-06 15:58:47
+577,https://ips.gov.in,Law and Government,15257.6,5.25,0.574,225.79,medium,medium,87.0,1498.0,1178.0,0.0,1506.0,0.0,2479.61,3202.73,25.0,,,,0.0,,,True,,2025-11-20 15:06:20
+578,https://www.mha.gov.in,Law and Government,0.0,0.0,0.449,155.65,fast,Fast,52.0,3095.27,1276.3,0.42,3162.99,0.0,3654.06,9067.97,205.0,,,,1.0,,,True,,2025-11-20 15:06:47
+579,https://www.nia.gov.in,Law and Government,1433.6,4.32,0.747,118.94,medium,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 15:59:08
+580,https://crpf.gov.in,Law and Government,2355.2,5.18,0.434,208.98,fast,medium,62.0,5014.52,1723.01,0.01,5281.52,62.5,4965.98,13197.16,175.0,,,,0.0,,,True,,2025-12-06 15:59:48
+581,https://polisen.se/en/,Law and Government,519782.4,1.44,1.426,54.69,slow,Fast,69.0,3857.0,1001.0,0.0,3913.0,0.0,4144.75,3894.81,14.0,,,,0.0,,,True,,2025-11-20 15:07:47
+582,https://www.rcmp-grc.gc.ca,Law and Government,5529.6,3.27,1.162,128.82,slow,medium,57.0,2340.82,1240.82,0.0,2418.92,484.5,3065.44,1494.04,68.0,,,,0.0,,,True,,2025-11-20 15:08:11
+583,https://www.canada.ca/en/security-intelligence-service.html,Law and Government,0.0,0.0,0.271,470.86,fast,Fast,38.0,4833.34,2098.55,0.0,5469.54,517.15,4462.57,7322.25,59.0,,,,0.0,,,True,,2025-11-20 15:08:42
+584,https://www.fbi.gov,Law and Government,1024.0,0.0,6.389,4.29,slow,medium,61.0,8288.82,2536.92,0.01,8658.39,46.0,2536.92,15204.64,57.0,,,,0.0,,,True,,2025-11-20 15:09:01
+585,https://www.cia.gov/index.html,Law and Government,991232.0,7.27,0.628,60.17,slow,Fast,97.0,915.0,374.0,0.04,919.0,7.0,1505.54,1552.37,47.0,,,,0.0,,,True,,2025-11-20 15:09:20
+586,https://www.interpol.int/en,Law and Government,2662.4,6.71,1.459,120.66,slow,medium,49.0,3845.96,853.58,0.0,3848.3,682.66,2189.49,5940.42,38.0,,,,0.0,,,True,,2025-11-20 15:09:56
+587,http://government.ru/en/structure/,Law and Government,1024.0,0.0,0.815,98.15,medium,medium,91.0,885.01,837.01,0.0,1275.02,46.5,3168.32,863.13,27.0,,,,0.0,,,True,,2025-11-20 15:10:19
+588,https://www.asis.gov.au,Law and Government,13619.2,1.29,0.291,99.32,fast,medium,78.0,1030.75,793.05,0.0,2564.76,265.0,4519.94,2955.49,31.0,,,,0.0,,,True,,2025-12-06 16:00:13
+589,https://www.dea.gov,Law and Government,1024.0,0.0,0.051,9429.1,fast,Fast,100.0,233.0,233.0,0.0,233.0,0.0,233.0,0.6,1.0,,,,1.0,,,True,,2025-11-20 15:11:30
+590,https://www.ice.gov,Law and Government,0.0,0.0,2.984,47.35,slow,Fast,67.0,5102.13,1106.02,0.02,5144.13,101.0,2806.74,17475.74,100.0,,,,0.0,,,True,,2025-11-20 15:11:59
+591,https://www.cbic.gov.in,Law and Government,463462.4,2.14,0.712,318.4,slow,medium,27.0,8727.0,7293.0,0.53,8835.35,211.0,11129.37,16487.33,100.0,,,,0.0,,,True,,2025-11-20 15:12:40
+592,https://www.prisonministryindia.org,Law and Government,1126.4,1.68,0.226,7085.32,fast,Fast,55.0,2679.56,802.07,0.14,2680.26,450.0,2213.11,1940.05,63.0,,,,0.0,,,True,,2025-11-20 15:13:03
+593,https://www.bjs.gov,Law and Government,1945.6,0.944,0.159,5426.7,fast,Fast,84.0,1612.35,646.83,0.04,3776.54,106.0,3232.15,4003.26,133.0,,,,0.0,,,True,,2025-11-20 15:13:33
+594,https://www.ncjrs.gov,Law and Government,1843.2,1.08,1.005,194.69,slow,medium,78.0,2250.95,743.16,0.0,3160.96,163.0,2759.84,2415.72,90.0,,,,0.0,,,True,,2025-11-20 15:14:00
+595,https://www.justice.gov,Law and Government,1638.4,0.279,1.7,269.8,slow,medium,21.0,7222.14,1242.12,0.23,23737.35,2872.48,10201.65,21465.4,378.0,,,,0.0,,,True,,2025-12-06 16:01:23
+596,https://doj.gov.in,Law and Government,2969.6,0.447,3.607,41.11,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 16:01:44
+597,https://nij.ojp.gov,Law and Government,893849.6,1.93,1.265,30.97,slow,Fast,47.0,3233.23,1407.9,0.0,5695.0,694.0,2424.42,4178.33,129.0,,,,0.0,,,True,,2025-11-20 15:15:54
+598,https://www.indianembassyusa.gov.in,Law and Government,0.0,0.0,0.331,116.8,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:02:06
+599,https://www.gst.gov.in,Law and Government,19968.0,1.46,0.763,92.98,medium,Fast,63.0,1193.83,901.83,0.001,1193.83,52.0,4060.54,657.62,16.0,,,,0.0,,,True,,2025-11-20 15:16:42
+600,https://www.incometaxindia.gov.in/Pages/default.aspx,Law and Government,8601.6,1.69,0.314,314.78,fast,Fast,59.0,3919.01,1709.0,0.02,3979.01,183.0,4685.42,4422.7,60.0,,,,0.0,,,True,,2025-11-20 15:17:15
+601,https://in.usembassy.gov,Law and Government,0.0,0.0,5.52,9.51,slow,Fast,74.0,2802.19,963.03,0.0,4890.25,76.5,4571.87,5906.82,112.0,,,,0.0,,,True,,2025-11-20 15:17:41
+602,https://portal2.passportindia.gov.in/AppOnlineProject/welcomeLink,Law and Government,12492.8,5.5,3.627,5.74,slow,Fast,93.0,666.0,477.0,0.0,668.0,0.0,2799.71,2149.7,53.0,,,,1.0,,,True,,2025-11-20 15:18:02
+603,https://www.dof.gov.ph,Law and Government,903168.0,1.5,0.776,42.92,slow,Medium,37.0,3162.0,1159.0,0.51,3695.01,335.0,3005.36,7576.47,189.0,,,,0.0,,,True,,2025-11-20 15:18:38
+604,https://www.gov.scot,Law and Government,1536.0,0.75,0.361,93.62,fast,Fast,88.0,831.66,700.1,0.19,831.66,0.0,1596.26,240.42,21.0,,,,0.0,,,True,,2025-11-20 15:18:53
+605,http://www.police-foundation.org.uk,Law and Government,15462.4,3.5,3.83,112.97,slow,Fast,66.0,2148.39,1029.79,0.3,2385.86,114.24,2490.78,1812.67,65.0,,,,0.0,,,True,,2025-11-20 15:19:15
+606,https://bja.ojp.gov,Law and Government,11059.2,7.94,1.57,136.18,slow,Fast,87.0,1615.61,419.42,0.0,3151.44,88.0,2790.47,2652.05,98.0,,,,0.0,,,True,,2025-11-20 15:19:40
+607,https://www.ojp.gov,Law and Government,1740.8,1.0,0.731,26.06,medium,Fast,92.0,941.21,416.69,0.0,2843.17,208.5,940.54,2117.77,89.0,,,,0.0,,,True,,2025-11-20 15:20:05
+608,https://nicic.gov,Law and Government,10649.6,4.65,1.096,315.9,slow,Fast,42.0,3248.84,1654.03,1.0,3280.92,90.0,5864.04,2226.99,102.0,,,,0.0,,,True,,2025-11-20 15:20:39
+609,https://ovc.ojp.gov,Law and Government,836608.0,1.05,1.162,62.61,slow,Fast,54.0,1916.28,731.05,0.01,7548.97,1235.5,3399.51,7735.09,165.0,,,,0.0,,,True,,2025-11-20 15:21:16
+610,https://www.atf.gov,Law and Government,2764.8,5.5,0.468,196.88,fast,Medium,87.0,766.21,766.21,0.13,2120.01,18.0,3124.98,1577.26,63.0,,,,0.0,,,True,,2025-11-20 15:21:36
+611,https://www.policefoundationindia.org,Law and Government,7475.2,3.94,1.389,29.58,slow,Fast,86.0,1740.88,407.5,0.11,1754.78,96.0,1777.5,3001.24,48.0,,,,0.0,,,True,,2025-11-20 15:22:00
+612,https://cops.usdoj.gov,Law and Government,1228.8,4.5,1.173,98.44,slow,Fast,46.0,6090.13,1370.71,0.27,6535.38,156.0,4625.33,6938.0,121.0,,,,0.0,,,True,,2025-11-20 15:22:27
+613,https://www.bop.gov,Law and Government,15257.6,3.24,0.716,178.14,medium,Fast,92.0,755.2,755.2,0.15,755.2,0.0,1340.71,1214.17,37.0,,,,0.0,,,True,,2025-11-20 15:22:44
+614,https://cabsec.gov.in/index.php,Law and Government,474316.8,0.252,0.561,76.11,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 16:02:28
+615,http://ncdrc.nic.in,Law and Government,1536.0,0.787,2.148,127.72,slow,Medium,85.0,2071.0,406.0,0.0,2183.0,0.0,2256.18,3562.19,36.0,,,,1.0,,,True,,2025-11-20 15:23:22
+616,https://www.legislation.gov.uk,Law and Government,3788.8,1.2,2.746,33.18,slow,medium,88.0,953.99,953.99,0.11,953.99,0.0,2832.6,440.6,28.0,,,,1.0,,,True,,2025-11-20 15:23:40
+617,https://www.indiacode.nic.in,Law and Government,2355.2,1.24,0.948,150.18,medium,medium,82.0,2038.12,974.13,0.0,2104.12,43.5,3059.26,1774.26,40.0,,,,0.0,,,True,,2025-11-20 15:23:59
+618,https://legalaffairs.gov.in,Law and Government,2457.6,4.69,0.322,2589.06,fast,medium,43.0,4411.05,867.0,0.87,4627.05,70.0,6584.53,6153.81,94.0,,,,0.0,,,True,,2025-11-20 15:24:36
+619,https://www.congress.gov,Law and Government,6348.8,1.9,4.875,342.06,slow,medium,64.0,1882.01,882.0,0.01,3316.36,611.5,1766.21,3626.3,120.0,,,,0.0,,,True,,2025-11-20 15:25:07
+620,https://leginfo.legislature.ca.gov,Law and Government,5836.8,2.95,0.739,134.48,medium,Fast,99.0,573.0,533.0,0.0,573.0,0.0,1421.65,355.67,20.0,,,,0.0,,,True,,2025-11-20 15:25:20
+621,https://www.pmindia.gov.in/en/,Law and Government,1331.2,1.61,0.389,105.6,fast,Fast,71.0,4267.09,522.54,0.0,4425.28,71.0,2872.19,8752.31,96.0,,,,0.0,,,True,,2025-11-20 15:25:51
+622,https://persmin.gov.in,Law and Government,3481.6,3.53,0.171,326.23,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 16:02:50
+623,http://www.legislation.govt.nz,Law and Government,4096.0,4.61,0.194,0.0,fast,medium,98.0,953.05,673.03,0.0,953.05,22.0,1065.32,666.18,34.0,,,,0.0,,,True,,2025-11-20 15:26:27
+624,https://eci.gov.in,Law and Government,299417.6,0.69,3.859,168.66,slow,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:03:10
+625,https://www.fec.gov,Law and Government,63897.6,1.5,0.509,211.92,medium,medium,90.0,1291.76,966.56,0.0,1782.41,163.0,1434.06,1205.97,62.0,,,,0.0,,,True,,2025-11-20 15:27:08
+626,https://rti.gov.in,Law and Government,84684.8,1.5,0.153,80.85,medium,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 16:03:32
+627,https://www.legislation.sa.gov.au/index.aspx,Law and Government,10035.2,4.5,0.391,388.83,fast,medium,72.0,1585.19,1420.2,0.0,2410.29,264.5,3538.78,1453.82,35.0,,,,0.0,,,True,,2025-11-20 15:27:53
+628,https://vote.gov,Law and Government,3481.6,2.68,0.957,228.49,medium,Fast,94.0,1210.43,577.93,0.1,1210.43,59.0,1089.57,788.85,42.0,,,,0.0,,,True,,2025-11-20 15:28:12
+629,https://www.eac.gov,Law and Government,374988.8,2.43,0.227,183.79,slow,medium,87.0,1721.24,464.05,0.11,2649.87,61.5,1806.14,2453.2,133.0,,,,0.0,,,True,,2025-11-20 15:28:34
+630,https://www.electoralcommission.org.uk,Law and Government,10035.2,4.5,1.739,44.22,slow,medium,92.0,1444.21,489.02,0.06,1725.71,133.5,1128.87,978.44,21.0,,,,0.0,,,True,,2025-11-20 15:29:03
+631,https://loksabha.nic.in,Law and Government,3481.6,2.68,2.28,12.56,slow,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:03:53
+632,https://www.lawcom.gov.uk,Law and Government,3686.4,0.054,1.15,132.24,slow,medium,70.0,2114.04,1199.31,0.17,2496.85,103.5,3698.96,1455.61,41.0,,,,0.0,,,True,,2025-11-20 15:29:48
+633,https://www.parliament.uk,Law and Government,1024.0,0.0,0.277,69.23,fast,Fast,83.0,1521.05,921.03,0.19,3371.92,90.5,1506.64,3950.88,67.0,,,,0.0,,,True,,2025-11-20 15:30:10
+634,https://www.legis.state.pa.us,Law and Government,1024.0,0.0,1.599,0.01,slow,Fast,83.0,1794.75,1202.76,0.02,2240.79,55.5,3047.54,2488.99,76.0,,,,0.0,,,True,,2025-11-20 15:30:35
+635,https://www.legislation.wa.gov.au,Law and Government,2150.4,1.17,0.198,151.56,fast,Fast,94.0,966.19,741.49,0.03,966.19,0.0,2210.52,222.31,10.0,,,,0.0,,,True,,2025-12-06 16:04:09
+636,https://eparlib.nic.in,Law and Government,2764.8,6.16,0.597,101.57,medium,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:04:30
+637,https://www.ipu.org,Law and Government,1331.2,3.44,4.341,69.56,slow,Fast,49.0,2404.52,2164.52,0.03,7206.56,505.0,4533.2,12523.65,112.0,,,,0.0,,,True,,2025-11-20 15:31:45
+638,https://www.legis.iowa.gov,Law and Government,807014.4,0.553,1.115,23.43,slow,medium,95.0,820.63,489.69,0.0,870.63,8.0,2106.37,343.66,25.0,,,,0.0,,,True,,2025-12-06 16:05:00
+639,https://www.army.mod.uk,Law and Government,2662.4,1.45,1.754,121.56,slow,medium,38.0,834.35,834.35,0.002,2937.92,870.02,3567.03,1605.88,53.0,,,,0.0,,,True,,2025-11-20 15:32:38
+640,http://www.stmaryskids.org/,Law and Government,890368.0,0.637,0.208,38.5,slow,medium,57.0,2840.38,501.01,0.03,5843.63,512.5,2511.23,3753.14,137.0,,,,0.0,,,True,,2025-11-20 15:33:09
+641,http://www.kidswithfoodallergies.org/,Law and Government,8601.6,4.63,0.586,280.19,medium,medium,68.0,4546.0,756.5,0.03,4658.5,124.0,3318.23,5251.11,136.0,,,,0.0,,,True,,2025-11-20 15:33:35
+642,http://www.malecare.org/,Law and Government,2560.0,0.701,0.5,658.27,fast,medium,80.0,1776.0,1259.0,0.0,1800.0,0.0,4833.19,3146.03,38.0,,,,1.0,,,True,,2025-11-20 15:34:02
+643,http://www.degosdisease.com/,Law and Government,85094.4,0.199,0.626,946.37,medium,medium,83.0,1710.65,1710.65,0.0,1710.65,0.0,2145.93,1084.42,14.0,,,,0.0,,,True,,2025-11-20 15:34:19
+644,http://www.freedomhealthrecovery.com/,Law and Government,2048.0,0.472,0.267,40.89,fast,medium,60.0,3136.81,806.72,0.09,7719.54,272.5,4075.3,10563.23,342.0,,,,0.0,,,True,,2025-11-20 15:34:55
+646,http://www.cancer.org/research/cancerfactsstatistics/index,Law and Government,2457.6,4.04,2.721,18.54,slow,Fast,64.0,1329.04,995.14,0.25,3643.95,329.78,2320.59,2908.43,79.0,,,,0.0,,,True,,2025-11-20 15:35:20
+647,http://www.nymemory.org/,Law and Government,1024.0,0.0,0.37,74.51,fast,Medium,100.0,194.0,194.0,0.0,194.0,0.0,457.84,0.75,1.0,,,,1.0,,,True,,2025-11-20 15:35:33
+648,http://www.yunkeracupuncture.com/,Law and Government,1740.8,2.23,2.414,161.22,slow,Medium,97.0,1179.78,648.1,0.01,1179.78,0.0,962.36,1259.16,124.0,,,,0.0,,,True,,2025-11-20 15:35:51
+649,http://www.curavet.com/,Law and Government,16588.8,2.38,0.318,71.86,fast,Fast,94.0,1598.0,672.0,0.0,1876.85,1.5,1103.57,1908.08,164.0,,,,0.0,,,True,,2025-11-20 15:36:16
+650,http://www.wrlfmd.org/,Health and Fitness,3686.4,3.27,0.256,61.62,fast,Medium,90.0,1201.13,807.68,0.05,1203.37,0.0,2587.88,1251.91,37.0,,,,1.0,,,True,,2025-11-20 15:36:36
+651,http://www.learnayurveda.com/research.html,Health and Fitness,7065.6,1.8,1.115,20.39,slow,Medium,95.0,793.0,748.0,0.0,793.0,0.0,2087.1,1514.54,92.0,,,,0.0,,,True,,2025-11-20 15:36:53
+652,http://www.securethefuture.com/,Health and Fitness,672870.4,4.34,0.297,109.99,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:05:23
+653,http://www.pocaan.org/,Health and Fitness,6348.8,3.72,1.563,36.02,slow,Medium,52.0,2294.11,914.02,0.02,6099.56,753.96,3746.86,5713.14,288.0,,,,0.0,,,True,,2025-11-20 15:37:55
+654,http://www.idsociety.org/,Health and Fitness,10547.2,4.5,0.189,16.0,fast,Medium,41.0,2991.23,2314.67,0.15,5858.42,553.99,2616.44,6074.27,104.0,,,,0.0,,,True,,2025-11-20 15:38:27
+655,http://www.chikungunya.in/,Health and Fitness,12083.2,3.55,0.229,130.59,fast,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:05:45
+656,http://www.asthmastory.com/,Health and Fitness,3174.4,2.39,0.383,7.82,fast,Medium,68.0,497.08,497.08,0.0,5246.14,833.0,2263.85,3345.08,81.0,,,,0.0,,,True,,2025-11-20 15:39:13
+657,http://brokenjawtips.com/,Health and Fitness,1228.8,2.97,0.31,70.62,fast,Medium,98.0,868.0,868.0,0.0,868.0,0.0,1038.43,537.52,8.0,,,,1.0,,,True,,2025-11-20 15:39:26
+658,http://patient.info/,Health and Fitness,511180.8,1.08,0.989,14.84,slow,Fast,79.0,1607.52,633.27,0.0,3378.0,346.0,1044.79,2312.62,151.0,,,,0.0,,,True,,2025-11-20 15:39:52
+659,https://www.mayoclinic.org/,Health and Fitness,443392.0,0.455,0.646,4.87,slow,Fast,81.0,1831.5,481.0,0.0,2668.28,189.5,2439.34,2521.37,87.0,,,,0.0,,,True,,2025-11-20 15:40:14
+660,http://www.en.usz.ch/Pages/default.aspx,Health and Fitness,2048.0,0.366,0.481,398.9,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:06:06
+661,https://www.nm.org/,Health and Fitness,1536.0,2.08,0.133,15.81,fast,Medium,64.0,1784.9,1664.9,0.04,8542.06,321.5,4824.27,20287.01,85.0,,,,0.0,,,True,,2025-11-20 15:41:17
+662,https://www.mountsinai.org/,Health and Fitness,1024.0,0.0,0.177,153.73,fast,Medium,32.0,3151.19,1024.74,0.22,7998.12,1435.51,3788.97,8084.61,187.0,,,,0.0,,,True,,2025-11-20 15:42:19
+663,https://www.hamad.qa/EN/Pages/default.aspx,Health and Fitness,723456.0,1.01,0.384,22.8,slow,Fast,5.0,11592.11,1521.53,0.001,11682.11,2509.0,12076.65,16214.22,205.0,,,,0.0,,,True,,2025-11-20 15:43:12
+664,https://www.saintfrancis.com/,Health and Fitness,5222.4,2.37,0.424,8.07,fast,Medium,86.0,1881.1,1241.06,0.0,1881.1,20.98,1774.44,2244.54,56.0,,,,0.0,,,True,,2025-11-20 15:43:34
+665,http://www.baylorhealth.com/Pages/Default.aspx,Health and Fitness,1024.0,0.0,0.578,70.76,medium,Fast,55.0,3684.5,791.0,0.04,4175.1,341.0,4758.01,41924.62,136.0,,,,0.0,,,True,,2025-11-20 15:44:19
+666,https://www.luriechildrens.org/,Health and Fitness,1638.4,1.57,0.848,36.0,medium,medium,75.0,2461.09,801.03,0.02,2641.48,172.0,2782.47,2615.59,75.0,,,,0.0,,,True,,2025-11-20 15:44:51
+667,http://www.rivalfitnessseattle.com/,Health and Fitness,568422.4,0.857,0.333,13.39,slow,Fast,70.0,1644.53,1504.53,0.0,3070.71,298.5,2727.17,2073.3,101.0,,,,0.0,,,True,,2025-11-20 15:45:17
+668,https://www.orangetheory.com/en-in/,Health and Fitness,1638.4,1.01,0.53,35.45,medium,medium,37.0,4811.67,2628.24,0.01,7317.31,513.0,4943.22,5383.51,309.0,,,,0.0,,,True,,2025-11-20 15:45:59
+669,https://charlestonkettlebellclub.com/,Health and Fitness,2867.2,1.39,0.28,1.6,fast,medium,87.0,1681.11,726.71,0.0,1681.11,2.0,2563.41,2084.82,90.0,,,,0.0,,,True,,2025-11-20 15:46:22
+670,https://www.joyoushealth.com/,Health and Fitness,1638.4,0.051,0.773,0.36,medium,medium,91.0,1482.02,521.01,0.0,1482.12,6.0,2180.99,10920.55,140.0,,,,0.0,,,True,,2025-11-20 15:46:53
+671,http://www.thegymla.com/,Health and Fitness,7065.6,2.8,0.812,238.65,medium,Fast,89.0,1752.02,992.01,0.01,3103.33,58.5,1610.9,2995.51,240.0,,,,0.0,,,True,,2025-11-20 15:47:20
+672,https://republicbos.com/,Health and Fitness,8294.4,4.0,0.351,12.45,fast,medium,65.0,2844.02,328.07,0.0,3310.05,406.5,1542.46,10135.87,71.0,,,,0.0,,,True,,2025-11-20 15:47:43
+673,https://www.ironbridgecrossfit.com/,Health and Fitness,1843.2,3.0,0.192,734.23,fast,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:06:29
+674,https://crosstownfitness.com/,Health and Fitness,6041.6,1.29,0.149,148.21,fast,medium,55.0,3329.14,802.03,0.0,5687.06,528.0,1960.68,5694.85,156.0,,,,0.0,,,True,,2025-11-20 15:48:37
+675,http://www.prevailboxing.com/,Health and Fitness,3788.8,2.84,0.394,33.81,fast,medium,49.0,2961.23,871.51,0.08,4942.22,685.0,2811.01,4576.46,78.0,,,,0.0,,,True,,2025-11-20 15:49:06
+676,http://portlandteamfitness.com/,Health and Fitness,14745.6,0.108,0.558,17.34,medium,medium,66.0,4453.4,1293.93,0.0,4457.4,0.0,4463.57,8279.77,37.0,,,,0.0,,,True,,2025-11-20 15:49:33
+677,https://firebrandsports.com/,Health and Fitness,5222.4,2.53,0.874,162.59,medium,medium,44.0,4565.37,1085.01,0.02,4684.31,608.0,3144.69,4149.68,72.0,,,,0.0,,,True,,2025-11-20 15:50:03
+678,https://pulsepdx.net/,Health and Fitness,1331.2,2.08,1.163,17.67,slow,Fast,92.0,1442.02,726.71,0.02,1442.02,3.0,1814.78,1296.23,62.0,,,,0.0,,,True,,2025-11-20 15:50:57
+679,https://www.push511.com/,Health and Fitness,2150.4,4.87,0.198,2.87,fast,medium,37.0,16976.28,298.0,0.02,18557.3,955.0,8276.98,31265.35,380.0,,,,0.0,,,True,,2025-12-06 16:07:15
+680,https://www.fulcrumfitness.com/,Health and Fitness,3584.0,3.54,0.417,403.19,fast,medium,72.0,1173.0,916.0,0.04,3574.31,468.5,2199.54,4114.15,90.0,,,,0.0,,,True,,2025-11-20 15:52:25
+681,https://www.castlehillfitness.com/,Health and Fitness,843673.6,0.576,1.353,17.79,slow,medium,52.0,2469.39,749.01,0.15,6928.54,441.48,4728.45,12684.08,127.0,,,,0.0,,,True,,2025-11-20 15:52:55
+682,https://www.apollohospitals.com/,Health and Fitness,2764.8,2.33,1.008,63.25,slow,medium,56.0,1766.37,1416.3,0.06,4807.55,638.5,3308.91,29176.39,289.0,,,,0.0,,,True,,2025-11-20 15:53:42
+683,https://www.fortishealthcare.com/,Health and Fitness,21094.4,5.0,0.432,12.14,fast,Fast,69.0,765.23,725.23,0.04,2119.1,1171.99,1291.4,1789.41,156.0,,,,0.0,,,True,,2025-11-20 15:54:10
+684,https://www.maxhealthcare.in/,Health and Fitness,5222.4,2.5,0.389,159.03,fast,medium,100.0,232.0,232.0,0.0,232.0,0.0,528.63,0.8,1.0,,,,1.0,,,True,,2025-11-20 15:54:22
+685,https://www.narayanahealth.org/,Health and Fitness,19046.4,3.11,0.245,452.94,fast,medium,43.0,2892.98,464.51,0.15,2907.14,683.5,3984.89,1974.3,101.0,,,,0.0,,,True,,2025-11-20 15:54:47
+686,https://sgrh.com/,Health and Fitness,8601.6,0.3,1.317,31.14,slow,medium,73.0,2364.73,1377.76,0.06,3222.84,133.5,3166.1,3071.75,86.0,,,,0.0,,,True,,2025-11-20 15:55:19
+687,https://www.ilbs.in/,Health and Fitness,2764.8,1.64,1.88,83.94,slow,medium,35.0,5869.37,665.06,0.27,8167.47,390.8,6550.36,13014.4,201.0,,,,0.0,,,True,,2025-11-20 15:56:02
+688,https://www.medanta.org/,Health and Fitness,1843.2,2.38,0.352,57.67,fast,medium,84.0,1886.31,766.72,0.0,2306.11,37.0,2856.88,1948.73,67.0,,,,0.0,,,True,,2025-11-20 15:56:33
+689,https://www.sankaranethralaya.org/,Health and Fitness,13824.0,1.71,0.261,277.57,fast,Fast,46.0,6889.04,3965.74,0.21,6981.04,0.0,3965.74,13543.58,96.0,,,,0.0,,,True,,2025-11-20 15:56:59
+690,https://carehospitals.com/,Health and Fitness,4608.0,2.18,0.551,57.15,medium,medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 16:07:36
+695,https://safety.blr.com/,Health and Fitness,0.0,0.0,0.391,102.14,fast,Medium,90.0,1151.37,1053.44,0.0,1151.37,0.0,2537.73,464.05,34.0,,,,0.0,,,True,,2025-11-20 15:57:36
+696,http://www.rphworld.com/,Health and Fitness,2048.0,1.22,0.878,138.19,medium,Medium,95.0,365.28,365.28,0.0,365.28,0.0,2376.67,189.56,20.0,,,,1.0,,,True,,2025-11-20 15:58:02
+697,http://medlibrary.org/,Health and Fitness,2457.6,4.31,0.194,3.21,fast,Medium,99.0,758.49,387.49,0.0,845.49,48.5,1004.53,192.32,18.0,,,,0.0,,,True,,2025-11-20 15:58:18
+698,http://cshp-nb.ca/,Health and Fitness,3481.6,5.92,0.17,411.82,fast,Fast,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:07:58
+699,http://www.oilofpisces.com/,Health and Fitness,3481.6,5.38,0.379,773.87,fast,Medium,73.0,9901.53,909.5,0.01,9920.34,0.0,1376.75,11162.58,99.0,,,,1.0,,,True,,2025-11-20 15:59:01
+700,http://www.aafp.org/,Health and Fitness,0.0,0.0,0.284,16.64,fast,Medium,33.0,4632.88,783.14,0.46,4808.4,349.0,3731.03,2985.22,177.0,,,,0.0,,,True,,2025-11-20 15:59:24
+702,http://www.stmarymercy.org/,Health and Fitness,2457.6,3.89,2.099,54.79,slow,Medium,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 16:08:21
+703,http://aathermography.com/,Health and Fitness,3481.6,6.83,1.22,97.47,slow,Medium,100.0,253.0,253.0,0.0,253.0,0.0,760.47,46.84,13.0,,,,1.0,,,True,,2025-11-20 15:59:56
+704,http://www.asma.org/,Health and Fitness,3481.6,4.74,0.379,773.87,fast,Fast,60.0,1341.04,1025.71,0.002,2715.19,35.5,4792.71,2323.46,91.0,,,,0.0,,,True,,2025-11-20 16:00:25
+705,http://ecps.md/,Health and Fitness,1331.2,2.02,1.135,88.36,slow,Medium,93.0,796.74,796.74,0.0,796.74,0.0,2544.67,1322.85,10.0,,,,1.0,,,True,,2025-11-20 16:00:41
+706,http://www.poh.org/,Health and Fitness,31846.4,7.0,0.495,87.16,fast,Medium,98.0,545.0,545.0,0.0,545.0,0.0,1590.39,1.09,3.0,,,,1.0,,,True,,2025-11-20 16:00:55
+707,http://drpoulter.com/,Health and Fitness,147763.2,0.522,0.533,922.58,slow,Medium,98.0,612.0,414.0,0.02,612.0,0.0,1612.57,495.32,49.0,,,,1.0,,,True,,2025-11-20 16:01:14
+708,http://youngerfaces.com/,Health and Fitness,1024.0,0.0,1.941,62.89,slow,Fast,77.0,2276.21,1235.5,0.02,2280.21,72.5,3196.57,1451.1,46.0,,,,0.0,,,True,,2025-12-06 16:08:48
+709,http://www.renewman.com/,Health and Fitness,303206.4,0.338,0.846,996.06,slow,Medium,28.0,5196.58,2959.19,0.0,6610.11,1428.0,5812.22,4566.38,121.0,,,,0.0,,,True,,2025-11-20 16:02:05
+710,http://www.badyogi.com/blog/,Health and Fitness,1843.2,1.97,2.146,118.69,slow,Medium,79.0,1676.6,1306.19,0.09,1676.6,0.0,4366.38,1770.06,58.0,,,,1.0,,,True,,2025-11-20 16:02:28
+711,https://yogawithadriene.com/blog/,Health and Fitness,303206.4,0.292,1.025,92.05,slow,Medium,88.0,1918.92,768.72,0.0,1918.92,75.0,1704.09,2441.75,58.0,,,,0.0,,,True,,2025-11-20 16:02:45
+712,https://www.yogagirl.com/read,Health and Fitness,0.0,0.0,0.998,38.44,medium,Fast,95.0,421.0,331.0,0.01,423.0,0.0,2291.11,205.42,19.0,,,,0.0,,,True,,2025-11-20 16:03:03
+713,https://www.yogajournal.com/,Health and Fitness,53555.2,0.194,0.918,131.83,medium,Medium,58.0,1883.61,1058.75,0.0,6131.91,639.5,3196.35,2792.84,483.0,,,,0.0,,,True,,2025-11-20 16:03:55
+714,https://yogajanda.com/blog/,Health and Fitness,1126.4,2.99,0.448,239.67,fast,Medium,74.0,1127.02,807.01,0.01,4248.68,338.98,3340.45,3279.18,115.0,,,,0.0,,,True,,2025-11-20 16:04:24
+715,https://blog.spiritvoyage.com/,Health and Fitness,1433.6,2.76,0.315,284.6,fast,medium,,,808.54,0.0,,,1650.43,266.42,3.0,,,,,,,True,,2025-11-20 16:04:38
+716,https://www.yogabasics.com/practice/,Health and Fitness,1228.8,1.02,0.349,309.52,fast,Fast,85.0,1913.66,377.0,0.0,4060.67,81.0,2716.66,1945.87,285.0,,,,0.0,,,True,,2025-11-20 16:05:38
+717,https://www.mindbodygreen.com/,Health and Fitness,4710.4,1.3,0.587,161.02,medium,medium,50.0,1264.03,352.01,0.16,9037.88,2918.0,5727.46,6560.05,328.0,,,,0.0,,,True,,2025-11-20 16:06:40
+718,https://www.yogiapproved.com/,Health and Fitness,2048.0,0.747,1.383,29.38,slow,medium,70.0,3094.03,831.01,0.02,3694.58,190.5,2869.14,13860.99,154.0,,,,0.0,,,True,,2025-11-20 16:07:14
+719,https://blog.yogamatters.com/,Health and Fitness,1024.0,2.27,0.094,63.23,fast,Fast,36.0,6934.67,873.49,0.02,7272.16,1078.27,5791.06,5839.55,312.0,,,,0.0,,,True,,2025-11-20 16:08:07
+720,https://www.yogabycandace.com/blog,Health and Fitness,4300.8,0.913,0.702,40.38,medium,medium,31.0,5274.08,2366.03,0.0,6353.62,950.94,4389.94,6943.39,154.0,,,,0.0,,,True,,2025-11-20 16:08:41
+721,https://iloveveterinary.com/,Health and Fitness,2457.6,0.611,0.598,92.26,medium,medium,62.0,901.02,729.7,0.0,10595.91,1411.0,3059.23,4105.64,879.0,,,,0.0,,,True,,2025-11-20 16:09:41
+722,https://www.viovet.co.uk/blog,Health and Fitness,4812.8,3.1,0.414,106.2,fast,medium,91.0,803.08,523.06,0.04,2355.99,114.0,2842.17,1585.36,64.0,,,,0.0,,,True,,2025-11-20 16:10:02
+723,https://www.vettimes.co.uk/,Health and Fitness,1740.8,1.2,0.267,71.51,fast,medium,53.0,5767.65,831.04,0.02,5776.85,324.0,3743.04,4982.17,125.0,,,,0.0,,,True,,2025-11-20 16:10:39
+724,https://www.reddit.com/r/AskVet/,Health and Fitness,2560.0,2.01,4.317,18.36,slow,medium,71.0,722.01,682.01,0.01,3810.82,652.5,2022.41,1971.77,67.0,,,,0.0,,,True,,2025-11-20 16:11:11
+725,https://www.avma.org/blog,Health and Fitness,302694.4,0.52,1.292,125.17,slow,medium,23.0,3503.43,758.35,0.89,4121.69,659.5,3186.48,2622.0,103.0,,,,0.0,,,True,,2025-11-20 16:11:39
+726,https://www.petpoisonhelpline.com/blog/,Health and Fitness,1331.2,2.37,2.079,23.02,slow,medium,19.0,4612.37,1048.2,0.55,5406.3,1067.5,2661.38,3915.97,150.0,,,,0.0,,,True,,2025-11-20 16:12:09
+727,https://medicalfuturist.com/,Health and Fitness,951398.4,0.338,0.347,214.51,slow,Fast,74.0,1721.0,300.0,0.0,2329.3,411.0,1422.99,2124.25,55.0,,,,0.0,,,True,,2025-11-20 16:12:32
+728,https://www.webmd.com/,Health and Fitness,6553.6,2.83,0.875,61.07,medium,medium,57.0,1671.14,522.03,0.0,11038.59,1463.5,2804.44,5442.2,892.0,,,,0.0,,,True,,2025-11-20 16:13:28
+729,https://www.everydayhealth.com/,Health and Fitness,2867.2,1.2,1.775,118.44,slow,medium,18.0,2737.22,1415.97,0.92,6877.04,1235.0,4927.88,4256.16,177.0,,,,0.0,,,True,,2025-11-20 16:14:19
+730,https://www.health.com/,Health and Fitness,34099.2,2.7,0.989,149.89,medium,medium,83.0,721.0,661.0,0.0,7082.46,334.5,1493.7,3251.96,442.0,,,,0.0,,,True,,2025-11-20 16:14:54
+731,https://www.medscape.com/,Health and Fitness,660275.2,1.31,0.405,233.91,slow,medium,68.0,1848.24,830.01,0.01,5242.03,426.5,2158.6,3833.52,218.0,,,,0.0,,,True,,2025-11-20 16:15:31
+732,https://www.healthline.com/,Health and Fitness,1228.8,1.05,0.275,58.32,fast,medium,40.0,5662.39,931.5,0.01,6376.32,1044.73,2770.47,8734.28,173.0,,,,0.0,,,True,,2025-11-20 16:16:06
+733,https://www.mercola.com/,Health and Fitness,10342.4,7.03,3.062,29.39,slow,Fast,62.0,2921.14,1068.75,0.26,2973.53,70.0,2812.72,2577.66,75.0,,,,0.0,,,True,,2025-11-20 16:16:29
+734,https://stripe.com,News,1511.45,1.48,0.99,1021.25,medium,2.29,80.0,1091.84,993.84,0.0,2291.64,357.0,1480.46,1511.45,272.0,,,,0.0,,,True,,2025-12-06 16:58:49
+735,https://vercel.com,News,4570.95,1.58,0.4,2893.01,fast,4.57,66.0,1101.01,401.0,0.0,4565.36,1544.0,1584.46,4570.95,358.0,,,,0.0,,,True,,2025-12-06 16:59:30
+736,https://netlify.com,News,2882.57,2.19,1.34,1316.24,slow,4.59,64.0,1745.21,1337.01,0.01,4592.07,499.51,2185.81,2882.57,91.0,,,,0.0,,,True,,2025-12-06 16:59:57
+737,https://cloudflare.com,Travel,1469.0,1.9,0.24,3465.0,,0.5,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 17:01:58
+738,https://linear.app,Travel,3949.74,2.27,0.64,1739.97,medium,3.37,72.0,1561.0,641.0,0.0,3371.0,406.0,2268.4,3949.74,100.0,,,,0.0,,,True,,2025-12-06 17:02:29
+739,https://figma.com,Travel,982.0,1.8,0.18,4992.0,,1.4,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 17:04:13
+740,https://canva.com,Sports,2860.67,1.36,0.83,2103.43,medium,3.96,64.0,1767.01,833.01,0.0,3956.67,802.51,1359.34,2860.67,125.0,,,,0.0,,,True,,2025-12-06 17:04:39
+741,https://gitlab.com,Sports,3376.66,1.9,1.15,1777.19,slow,4.19,63.0,1591.02,1151.01,0.02,4189.63,733.0,1901.96,3376.66,125.0,,,,0.0,,,True,,2025-12-06 17:05:07
+742,https://bitbucket.org,Sports,5597.48,2.89,1.0,1936.84,medium,5.5,48.0,3369.76,1003.02,0.05,5501.32,637.5,2889.66,5597.48,121.0,,,,0.0,,,True,,2025-12-06 17:05:42
+743,https://discord.com,Photography,12967.42,2.18,1.04,5948.36,slow,4.15,56.0,2035.08,1042.08,0.0,4145.62,949.69,2182.35,12967.42,120.0,,,,0.0,,,True,,2025-12-06 17:06:20
+744,https://zoom.us,Photography,8466.38,1.76,1.4,4810.44,slow,3.76,76.0,2182.78,1402.78,0.0,3763.65,205.0,1757.09,8466.38,104.0,,,,0.0,,,True,,2025-12-06 17:06:47
+745,https://shopify.com,Photography,3371.17,1.08,1.08,3121.45,slow,3.05,82.0,1244.51,1084.51,0.0,3051.52,312.5,1084.51,3371.17,105.0,,,,0.0,,,True,,2025-12-06 17:07:34
+746,https://woocommerce.com,Health and Fitness,10134.55,2.84,1.32,3568.5,slow,8.18,68.0,3538.67,1321.07,0.01,8179.5,149.19,2843.94,10134.55,217.0,,,,0.0,,,True,,2025-12-06 17:09:12
+747,https://bigcommerce.com,Health and Fitness,2928.26,4.54,0.57,644.99,medium,7.9,33.0,2146.0,573.0,0.36,7903.95,4501.5,4540.97,2928.26,174.0,,,,0.0,,,True,,2025-12-06 17:10:05
+748,https://squarespace.com,Health and Fitness,26650.67,9.46,1.28,2817.2,slow,7.14,50.0,1863.65,1278.53,0.0,7143.48,1024.5,9455.41,26650.67,163.0,,,,0.0,,,True,,2025-12-06 17:11:13
+749,https://wix.com,Social Networking and Messaging,3633.91,2.08,0.95,1747.07,medium,5.23,65.0,1149.0,952.0,0.0,5230.62,866.5,2077.83,3633.91,344.0,,,,0.0,,,True,,2025-12-06 17:12:00
+750,https://medium.com,Social Networking and Messaging,1991.21,1.0,0.49,1991.21,fast,2.84,67.0,1552.63,493.41,0.0,2835.07,822.0,1001.07,1991.21,33.0,,,,0.0,,,True,,2025-12-06 17:12:18
+751,https://substack.com,Social Networking and Messaging,6629.64,3.88,1.96,1708.67,slow,6.52,37.0,5421.21,1959.99,0.0,6515.06,578.0,3879.29,6629.64,298.0,,,,0.0,,,True,,2025-12-06 17:13:25
+752,https://twitch.tv,Law and Government,3913.21,4.89,0.83,800.25,medium,6.79,38.0,4205.52,829.0,0.0,6791.11,3300.5,4892.03,3913.21,242.0,,,,0.0,,,True,,2025-12-06 17:14:15
+753,https://stackoverflow.com,Law and Government,1890.27,2.35,0.71,804.37,medium,3.1,29.0,2910.76,710.38,0.74,3095.38,749.5,2349.13,1890.27,111.0,,,,0.0,,,True,,2025-12-06 17:14:42
+754,https://dev.to,Streaming Services,1901.33,1.34,0.57,1418.9,medium,1.62,98.0,838.04,572.0,0.0,1618.01,28.0,1339.51,1901.33,95.0,,,,0.0,,,True,,2025-12-06 17:15:04
+755,https://hashnode.com,Streaming Services,13055.75,2.1,0.88,6217.02,medium,11.45,59.0,1642.0,882.0,0.01,11448.58,2153.5,2099.25,13055.75,143.0,,,,0.0,,,True,,2025-12-06 17:15:57
+756,https://npmjs.com,Streaming Services,340.91,0.49,0.44,695.73,fast,0.83,99.0,830.46,439.68,0.01,830.46,9.0,486.36,340.91,21.0,,,,1.0,,,True,,2025-12-06 17:16:07
+757,https://pypi.org,Streaming Services,655.84,0.74,0.74,886.27,medium,1.04,96.0,1040.22,738.38,0.09,1042.27,0.0,738.38,655.84,29.0,,,,0.0,,,True,,2025-12-06 17:16:19
+758,https://microsoft.com,News,1590.0,4.6,0.71,2655.0,,2.3,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 17:16:24
+759,https://apple.com,News,4611.64,1.82,1.19,2533.87,slow,1.62,89.0,1614.02,1194.01,0.0,1616.02,23.0,1817.54,4611.64,51.0,,,,0.0,,,True,,2025-12-06 17:16:44
+760,https://samsung.com,News,6353.04,4.73,1.02,1343.14,slow,14.91,52.0,1603.71,1023.08,0.08,14911.63,2713.5,4730.33,6353.04,392.0,,,,0.0,,,True,,2025-12-06 17:18:00
+761,https://sony.com,News,4013.4,6.66,2.7,602.61,slow,8.89,29.0,4552.86,2695.8,0.02,8891.42,3958.0,6660.89,4013.4,118.0,,,,0.0,,,True,,2025-12-06 17:18:36
+762,https://dell.com,News,3159.71,1.78,0.65,1775.12,medium,5.38,73.0,1247.47,653.29,0.0,5379.7,480.5,1778.0,3159.71,212.0,,,,0.0,,,True,,2025-12-06 17:19:09
+763,https://hp.com,News,2530.64,4.24,1.32,596.85,slow,3.76,51.0,2311.68,1323.13,0.01,3757.2,657.26,4238.44,2530.64,99.0,,,,0.0,,,True,,2025-12-06 17:19:42
+764,https://lenovo.com,Travel,3442.17,5.1,1.85,674.94,slow,8.79,39.0,2662.37,1846.38,0.02,8793.03,2852.16,5102.99,3442.17,311.0,,,,0.0,,,True,,2025-12-06 17:20:26
+765,https://asus.com,Travel,3533.7,1.5,0.81,2355.8,medium,3.24,79.0,1032.03,806.02,0.01,3242.86,398.5,1499.72,3533.7,147.0,,,,0.0,,,True,,2025-12-06 17:20:50
+766,https://coca-cola.com,Travel,3091.8,2.97,1.18,1041.01,slow,3.84,58.0,1779.05,1181.76,0.01,3837.06,664.5,2968.83,3091.8,52.0,,,,0.0,,,True,,2025-12-06 17:21:15
+767,https://pepsi.com,Travel,16234.43,3.43,1.06,4733.07,slow,4.84,59.0,2473.92,1062.44,0.0,4844.68,420.5,3429.98,16234.43,92.0,,,,0.0,,,True,,2025-12-06 17:22:16
+768,https://nike.com,Travel,4379.12,3.69,1.31,1186.75,slow,7.05,39.0,3588.49,1314.64,0.0,7051.39,1789.5,3685.78,4379.12,291.0,,,,0.0,,,True,,2025-12-06 17:22:56
+769,https://adidas.com,Travel,11023.27,5.92,1.22,1862.04,slow,8.46,52.0,1715.54,1222.86,0.0,8459.21,1040.14,5921.93,11023.27,270.0,,,,0.0,,,True,,2025-12-06 17:24:14
+770,https://ford.com,Sports,5221.48,4.35,1.48,1200.34,slow,7.59,38.0,4357.94,1483.51,0.01,7586.72,773.0,4345.85,5221.48,295.0,,,,0.0,,,True,,2025-12-06 17:26:07
+771,https://toyota.com,Sports,18500.59,7.22,1.28,2562.41,slow,13.56,38.0,3408.55,1277.02,0.0,13560.15,4132.0,7217.11,18500.59,375.0,,,,0.0,,,True,,2025-12-06 17:27:16
+772,https://honda.com,Sports,14556.58,2.23,0.99,6527.61,medium,1.83,86.0,1796.05,987.39,0.0,1828.05,0.0,2232.68,14556.58,92.0,,,,0.0,,,True,,2025-12-06 17:27:35
+773,https://bmw.com,Sports,27087.56,2.53,0.87,10706.55,medium,2.14,84.0,2060.88,873.79,0.01,2139.58,0.0,2530.77,27087.56,72.0,,,,0.0,,,True,,2025-12-06 17:27:54
+774,https://walmart.com,Sports,2591.25,1.87,0.84,1385.7,medium,3.43,72.0,1180.91,840.85,0.03,3425.04,520.26,1871.41,2591.25,324.0,,,,0.0,,,True,,2025-12-06 17:28:20
+775,https://target.com,Sports,8539.9,3.6,0.88,2372.19,medium,6.73,45.0,2931.39,878.3,0.01,6730.25,1486.5,3603.26,8539.9,357.0,,,,0.0,,,True,,2025-12-06 17:29:07
+776,https://bestbuy.com,Photography,736.97,0.8,0.52,921.21,medium,1.58,83.0,691.3,515.5,0.0,1581.21,370.9,801.38,736.97,65.0,,,,0.0,,,True,,2025-12-06 17:29:22
+777,https://homedepot.com,Photography,6871.83,5.55,1.03,1238.17,slow,10.56,54.0,1273.84,1032.11,0.08,10563.19,3740.7,5554.88,6871.83,299.0,,,,0.0,,,True,,2025-12-06 17:30:35
+778,https://lowes.com,Photography,13028.06,8.88,0.52,1467.12,medium,18.58,35.0,8148.06,522.0,0.0,18583.8,4964.5,8880.37,13028.06,490.0,,,,0.0,,,True,,2025-12-06 17:32:03
+779,https://ikea.com,Photography,3243.13,0.87,0.73,3727.74,medium,1.36,96.0,1355.6,727.0,0.0,1355.6,0.0,869.53,3243.13,92.0,,,,0.0,,,True,,2025-12-06 17:32:21
+780,https://macys.com,Photography,5028.42,6.22,1.22,808.43,slow,7.96,50.0,1955.07,1219.04,0.0,7960.21,1058.5,6223.05,5028.42,321.0,,,,0.0,,,True,,2025-12-06 17:32:57
+781,https://nordstrom.com,Photography,201.42,0.69,0.69,291.91,medium,0.73,100.0,725.5,685.5,0.0,725.5,0.0,685.5,201.42,7.0,,,,1.0,,,True,,2025-12-06 17:33:09
+782,https://kohls.com,Health and Fitness,6191.64,3.52,0.96,1758.99,medium,11.03,54.0,1691.01,963.01,0.04,11034.97,1664.5,3517.65,6191.64,425.0,,,,0.0,,,True,,2025-12-06 17:34:27
+783,https://sephora.com,Health and Fitness,8506.29,4.03,0.58,2110.74,medium,12.6,57.0,1278.0,581.0,0.04,12597.42,5048.0,4029.42,8506.29,370.0,,,,0.0,,,True,,2025-12-06 17:35:43
+784,https://ulta.com,Health and Fitness,8268.96,5.6,0.95,1476.6,medium,13.13,35.0,4983.03,950.0,0.07,13129.45,3798.0,5604.21,8268.96,591.0,,,,0.0,,,True,,2025-12-06 17:37:08
+785,https://reuters.com,Health and Fitness,304.61,5.0,0.61,60.92,medium,2.7,,,,0.37,,,,304.61,14.0,,,,,,,True,,2025-12-06 17:37:26
+786,https://apnews.com,Health and Fitness,9243.33,5.87,0.94,1574.67,medium,20.23,37.0,3962.08,942.01,0.08,20231.35,1774.0,5871.22,9243.33,1611.0,,,,0.0,,,True,,2025-12-06 17:38:59
+787,https://npr.org,Health and Fitness,12251.29,13.92,1.28,880.12,slow,22.92,36.0,4154.6,1281.06,0.01,22924.89,2510.14,13917.05,12251.29,1857.0,,,,0.0,,,True,,2025-12-06 17:40:33
+788,https://theguardian.com,Social Networking and Messaging,3417.97,2.86,0.96,1195.09,medium,5.63,55.0,1399.59,959.38,0.17,5625.34,710.5,2861.89,3417.97,724.0,,,,0.0,,,True,,2025-12-06 17:41:30
+789,https://independent.co.uk,Social Networking and Messaging,6118.45,6.05,0.76,1011.31,medium,19.07,53.0,1599.89,758.05,0.07,19068.35,2242.5,6045.46,6118.45,1660.0,,,,0.0,,,True,,2025-12-06 17:43:05
+790,https://usatoday.com,Social Networking and Messaging,4751.32,4.13,0.86,1150.44,medium,6.06,54.0,1444.01,856.51,0.1,6057.6,1275.0,4132.67,4751.32,531.0,,,,0.0,,,True,,2025-12-06 17:43:56
+791,https://latimes.com,Social Networking and Messaging,2889.09,2.87,0.83,1006.65,medium,3.98,73.0,973.0,833.0,0.01,3981.03,400.5,2873.06,2889.09,122.0,,,,0.0,,,True,,2025-12-06 17:44:25
+792,https://coursera.org,Social Networking and Messaging,4104.55,2.89,0.56,1420.26,medium,7.6,58.0,1517.02,562.0,0.0,7596.53,3440.99,2893.7,4104.55,204.0,,,,0.0,,,True,,2025-12-06 17:45:08
+793,https://udemy.com,Social Networking and Messaging,4601.96,7.94,0.75,579.59,medium,11.59,35.0,6536.01,753.01,0.06,11592.01,6182.5,7940.89,4601.96,191.0,,,,0.0,,,True,,2025-12-06 17:45:59
+794,https://edx.org,Law and Government,4769.97,4.59,1.15,1039.21,slow,9.26,35.0,5812.08,1150.89,0.03,9258.89,5929.0,4593.15,4769.97,161.0,,,,0.0,,,True,,2025-12-06 17:46:55
+795,https://khanacademy.org,Law and Government,3860.06,2.86,1.84,1349.67,slow,3.05,46.0,2917.5,1844.97,0.13,3051.74,466.98,2855.3,3860.06,140.0,,,,0.0,,,True,,2025-12-06 17:47:28
+796,https://codecademy.com,Law and Government,4480.38,2.78,0.57,1611.65,medium,6.65,43.0,3827.53,566.0,0.0,6646.84,1697.5,2781.2,4480.38,159.0,,,,0.0,,,True,,2025-12-06 17:48:02
+797,https://mit.edu,Law and Government,1234.04,2.51,1.03,491.65,slow,1.61,88.0,1450.18,1025.38,0.0,1605.69,8.0,2514.67,1234.04,27.0,,,,0.0,,,True,,2025-12-06 17:48:20
+798,https://stanford.edu,Law and Government,4033.33,2.05,1.08,1967.48,slow,2.77,85.0,1510.06,1075.28,0.0,2766.61,168.5,2047.83,4033.33,87.0,,,,0.0,,,True,,2025-12-06 17:48:46
+799,https://harvard.edu,Law and Government,5587.39,1.74,0.71,3211.14,medium,4.27,75.0,4105.12,712.01,0.0,4271.23,88.0,1738.47,5587.39,78.0,,,,0.0,,,True,,2025-12-06 17:49:09
+800,https://usa.gov,Streaming Services,1217.6,1.77,0.58,687.91,medium,2.31,93.0,1228.87,578.24,0.01,2307.12,116.5,1768.28,1217.6,47.0,,,,0.0,,,True,,2025-12-06 17:49:28
+801,https://irs.gov,Streaming Services,1672.71,2.49,0.6,671.77,medium,2.22,83.0,1848.04,596.04,0.02,2223.71,143.0,2487.24,1672.71,52.0,,,,0.0,,,True,,2025-12-06 17:49:52
+802,https://fda.gov,Streaming Services,2647.0,2.7,0.66,2963.0,,3.0,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: NOT_HTML. The page provided is not HTML (served as MIME type text/plain).,2025-12-06 17:50:00
+803,https://cdc.gov,Streaming Services,3786.59,2.64,0.42,1434.31,fast,2.94,77.0,2903.04,421.39,0.05,2935.76,11.0,2640.53,3786.59,50.0,,,,0.0,,,True,,2025-12-06 17:50:55
+804,https://nasa.gov,Streaming Services,19645.51,2.25,0.72,8731.34,medium,7.55,69.0,7095.15,723.38,0.0,7551.16,105.0,2246.81,19645.51,84.0,,,,0.0,,,True,,2025-12-06 17:51:13
+805,https://usps.com,Streaming Services,3738.9,2.64,0.55,1416.25,medium,4.77,57.0,2231.07,551.01,0.0,4770.74,647.0,2639.38,3738.9,267.0,,,,0.0,,,True,,2025-12-06 17:52:14
+806,https://youtube.com,Streaming Services,2492.0,3.2,0.57,2190.0,,2.6,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 17:52:18
+807,https://instagram.com,Photography,7462.92,3.21,0.59,2324.9,medium,6.73,41.0,6706.0,586.5,0.01,6726.0,746.5,3208.79,7462.92,48.0,,,,0.0,,,True,,2025-12-06 17:52:42
+808,https://googlevideo.com,Streaming Services,1556.57,0.49,0.48,3176.67,fast,1.57,85.0,529.5,476.6,0.0,1566.4,341.0,492.97,1556.57,18.0,,,,0.0,,,True,,2025-12-06 17:52:54
+809,https://netflix.com,Streaming Services,4648.54,2.46,0.87,1889.65,medium,6.25,57.0,1736.0,867.0,0.01,6249.47,1244.9,2456.71,4648.54,82.0,,,,0.0,,,True,,2025-12-06 17:53:21
+810,https://whatsapp.net,Social Networking and Messaging,2813.49,2.62,1.05,1073.85,slow,1.31,89.0,1310.58,1051.72,0.02,1313.48,4.0,2620.94,2813.49,72.0,,,,0.0,,,True,,2025-12-06 17:53:42
+811,https://whatsapp.com,Social Networking and Messaging,2813.63,1.93,0.94,1457.84,medium,1.12,93.0,1113.5,939.2,0.02,1116.32,0.0,1934.57,2813.63,72.0,,,,0.0,,,True,,2025-12-06 17:54:03
+812,https://cdninstagram.com,Photography,1527.0,4.8,0.73,2253.0,,2.7,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 17:54:23
+813,https://snapchat.com,Social Networking and Messaging,16131.46,6.14,0.76,2627.27,medium,12.35,35.0,12277.0,762.0,0.0,12351.46,1295.0,6140.95,16131.46,63.0,,,,0.0,,,True,,2025-12-06 17:54:47
+814,https://health.mil,Health and Fitness,2195.0,3.8,0.65,1812.0,,2.5,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 17:56:48
+815,https://epicgames.com,Sports,4187.9,5.34,1.5,784.25,slow,7.83,32.0,6151.4,1501.59,0.0,7831.66,3217.47,5336.49,4187.9,92.0,,,,0.0,,,True,,2025-12-06 17:57:36
+816,https://discord.gg,Social Networking and Messaging,12968.44,2.39,1.27,5426.13,slow,4.62,56.0,1633.01,1273.01,0.0,4618.16,1240.0,2391.04,12968.44,121.0,,,,0.0,,,True,,2025-12-06 17:58:17
+817,https://nih.gov,Law and Government,4321.01,3.08,0.57,1402.93,medium,4.47,70.0,4462.66,574.89,0.01,4468.98,51.0,3079.65,4321.01,58.0,,,,0.0,,,True,,2025-12-06 17:58:37
+818,https://amazonvideo.com,Streaming Services,2268.92,2.77,2.49,819.1,slow,3.18,67.0,2760.6,2489.6,0.01,3175.6,127.5,2765.9,2268.92,68.0,,,,0.0,,,True,,2025-12-06 17:59:00
+819,https://miit.gov.cn,Law and Government,1767.0,4.3,0.37,2575.0,,2.3,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 17:59:20
+820,https://nist.gov,Law and Government,2324.03,2.21,0.99,1051.6,medium,3.08,58.0,1670.37,985.52,0.02,3078.62,1202.0,2213.26,2324.03,83.0,,,,0.0,,,True,,2025-12-06 18:00:06
+821,https://nytimes.com,News,34623.53,9.85,1.12,3515.08,slow,18.56,33.0,7676.76,1121.9,0.05,18556.45,7864.64,9848.76,34623.53,532.0,,,,0.0,,,True,,2025-12-06 18:01:35
+822,https://chatgpt.com,Social Networking and Messaging,3666.43,2.5,2.2,1466.57,slow,3.93,43.0,3927.9,2202.76,0.0,3927.9,545.0,2504.79,3666.43,234.0,,,,0.0,,,True,,2025-12-06 18:02:12
+823,https://flickr.com,Photography,3781.2,2.17,1.43,1742.49,slow,4.18,74.0,2476.83,1432.93,0.11,4178.99,110.0,2173.08,3781.2,271.0,,,,0.0,,,True,,2025-12-06 18:03:36
+824,https://cnn.com,News,20248.44,5.64,1.53,3590.15,slow,22.23,45.0,2167.4,1529.39,0.0,22229.75,3285.5,5638.5,20248.44,1185.0,,,,0.0,,,True,,2025-12-06 18:05:03
+825,https://nflxso.net,Sports,2526.0,5.0,0.8,1623.0,,2.6,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 18:05:23
+826,https://bbc.co.uk,News,4235.01,2.13,2.13,1988.27,slow,3.0,,,2132.0,0.0,,,2132.0,4235.01,164.0,,,,,,,True,,2025-12-06 18:06:07
+827,https://bbc.com,News,5610.0,5.24,0.9,1070.61,medium,9.89,57.0,1168.76,902.14,0.02,9891.37,3450.5,5241.49,5610.0,340.0,,,,0.0,,,True,,2025-12-06 18:06:57
+828,https://youtube-nocookie.com,Streaming Services,7.4,0.22,0.22,33.64,fast,0.44,100.0,442.5,221.0,0.0,442.5,0.0,221.0,7.4,3.0,,,,1.0,,,True,,2025-12-06 18:07:07
+829,https://moe.video,Streaming Services,867.98,4.28,0.46,202.8,fast,1.29,91.0,497.15,457.13,0.0,1285.06,25.5,4284.75,867.98,55.0,,,,0.0,,,True,,2025-12-06 18:07:49
+830,https://www.gov.uk,Law and Government,198.46,0.35,0.32,567.03,fast,0.38,88.0,381.0,321.0,0.25,383.0,0.0,352.97,198.46,16.0,,,,0.0,,,True,,2025-12-06 18:08:02
+831,https://booking.com,Travel,5223.12,3.68,0.83,1419.33,medium,5.82,59.0,1192.01,832.0,0.0,5817.19,1519.5,3677.92,5223.12,208.0,,,,0.0,,,True,,2025-12-06 18:08:40
+832,https://washingtonpost.com,News,4188.42,2.68,0.83,1562.84,medium,8.15,61.0,1111.0,831.0,0.03,8149.16,3532.0,2683.29,4188.42,183.0,,,,0.0,,,True,,2025-12-06 18:09:21
+833,https://dailymail.co.uk,News,12085.54,6.63,0.96,1822.86,medium,17.74,57.0,1131.01,964.03,0.0,17738.09,3504.5,6629.78,12085.54,1490.0,,,,0.0,,,True,,2025-12-06 18:11:22
+834,https://dailymotion.com,News,1767.0,4.6,0.34,2317.0,,2.6,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: NO_FCP. The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP),2025-12-06 18:11:42
+835,https://netflix.net,Streaming Services,202.6,2.95,1.62,68.68,slow,1.66,81.0,1655.55,1615.55,0.0,1655.55,0.0,2945.14,202.6,10.0,,,,1.0,,,True,,2025-12-06 18:11:55
+836,https://espn.com,Sports,6447.63,3.35,1.09,1924.67,slow,8.47,42.0,3189.72,1086.01,0.09,8465.94,1089.89,3345.77,6447.63,260.0,,,,0.0,,,True,,2025-12-06 18:12:39
+837,https://telegram.org,Social Networking and Messaging,2129.87,1.64,0.28,1298.7,fast,0.81,97.0,801.0,281.0,0.0,809.0,0.0,1644.2,2129.87,51.0,,,,1.0,,,True,,2025-12-06 18:12:56
+838,https://telegram.me,Social Networking and Messaging,2130.39,1.35,0.51,1578.07,medium,0.81,98.0,811.0,511.0,0.0,813.0,0.0,1352.73,2130.39,52.0,,,,1.0,,,True,,2025-12-06 18:13:14
+839,https://cnbc.com,News,11967.96,7.08,1.25,1690.39,slow,17.8,27.0,1805.31,1245.11,0.66,17798.37,3886.0,7082.53,11967.96,1238.0,,,,0.0,,,True,,2025-12-06 18:14:55
+840,https://indiatimes.com,News,4321.04,4.96,0.64,871.18,medium,11.98,52.0,1942.02,638.0,0.0,11980.4,1376.5,4960.31,4321.04,1305.0,,,,0.0,,,True,,2025-12-06 18:15:54
+841,https://beian.gov.cn,Law and Government,2953.0,4.1,0.58,2771.0,,1.7,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 18:16:14
+842,https://nflxvideo.net,Sports,1809.0,5.0,0.49,1680.0,,1.7,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 18:16:34
+843,https://nflximg.com,Sports,2791.0,3.8,0.77,1691.0,,1.6,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT),2025-12-06 18:16:54
+844,https://foxnews.com,News,10858.19,5.16,1.1,2104.3,slow,16.94,50.0,1922.71,1097.86,0.0,16937.55,2609.15,5163.78,10858.19,965.0,,,,0.0,,,True,,2025-12-06 18:18:20
+845,https://discord.media,Social Networking and Messaging,17.36,0.24,0.21,72.33,fast,0.24,100.0,241.0,209.0,0.0,241.0,0.0,236.01,17.36,7.0,,,,1.0,,,True,,2025-12-06 18:18:30
+846,https://live-video.net,Streaming Services,1689.0,4.9,0.7,2863.0,,1.9,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 18:18:49
+847,https://cdnvideo.ru,Streaming Services,12765.03,11.03,2.7,1157.3,slow,14.53,29.0,12861.16,2696.02,0.02,14528.1,770.0,11025.59,12765.03,305.0,,,,0.0,,,True,,2025-12-06 18:20:26
+848,https://supabase.com,Social Networking and Messaging,1506.93,0.96,0.56,1569.72,medium,2.53,73.0,1345.0,562.0,0.03,2526.55,560.0,964.61,1506.93,133.0,,,,0.0,,,True,,2025-12-06 18:20:55
+849,https://railway.app,News,3726.77,5.18,1.27,719.45,slow,8.13,49.0,1912.7,1274.01,0.04,8128.71,4127.06,5177.1,3726.77,113.0,,,,0.0,,,True,,2025-12-06 18:21:46
+850,https://render.com,News,3070.83,2.76,0.32,1112.62,fast,4.12,62.0,1121.01,321.0,0.0,4115.46,1393.5,2758.22,3070.83,184.0,,,,0.0,,,True,,2025-12-06 18:22:21
+851,https://fly.io,Travel,2742.79,2.08,0.69,1318.65,medium,2.98,74.0,2655.01,690.0,0.0,2984.81,211.0,2083.93,2742.79,25.0,,,,0.0,,,True,,2025-12-06 18:22:39
+852,https://planetscale.com,Sports,521.46,0.4,0.37,1303.65,fast,0.49,100.0,487.89,365.82,0.0,487.89,0.0,401.09,521.46,21.0,,,,0.0,,,True,,2025-12-06 18:22:52
+853,https://neon.tech,Photography,8177.62,0.92,0.63,8888.72,medium,4.0,97.0,1231.0,631.0,0.0,4005.0,81.0,917.52,8177.62,155.0,,,,0.0,,,True,,2025-12-06 18:23:20
+854,https://clerk.dev,Health and Fitness,1897.11,1.89,0.67,1003.76,medium,2.86,81.0,1371.0,671.0,0.0,2861.65,287.0,1890.84,1897.11,119.0,,,,0.0,,,True,,2025-12-06 18:23:48
+855,https://auth0.com,Law and Government,8110.71,2.12,0.94,3825.81,medium,7.76,46.0,3608.04,942.55,0.11,7756.37,707.0,2120.59,8110.71,324.0,,,,0.0,,,True,,2025-12-06 18:24:23
+856,https://algolia.com,Streaming Services,30927.79,6.58,1.8,4700.27,slow,15.45,50.0,14631.9,1799.41,0.07,15445.67,236.0,6578.39,30927.79,399.0,,,,0.0,,,True,,2025-12-06 18:25:03
+857,https://segment.com,News,4244.52,6.2,0.64,684.6,medium,6.42,52.0,1963.01,640.7,0.0,6419.07,1334.0,6196.13,4244.52,199.0,,,,0.0,,,True,,2025-12-06 18:26:15
+858,https://mixpanel.com,Travel,3371.2,2.62,0.91,1286.72,medium,5.53,55.0,1875.75,911.72,0.01,5527.87,1509.04,2619.77,3371.2,137.0,,,,0.0,,,True,,2025-12-06 18:26:49
+859,https://posthog.com,Sports,5613.82,3.18,0.85,1765.35,medium,5.84,27.0,4452.02,846.7,0.25,5837.02,2080.5,3183.73,5613.82,122.0,,,,0.0,,,True,,2025-12-06 18:27:17
+860,https://vercel.app,Photography,4570.56,1.27,0.63,3598.87,medium,4.47,66.0,1331.01,631.0,0.0,4471.02,1189.5,1271.14,4570.56,358.0,,,,0.0,,,True,,2025-12-06 18:27:53
+861,https://deno.com,Health and Fitness,2693.11,2.36,0.36,1141.15,fast,2.07,80.0,1325.53,364.0,0.0,2067.37,272.5,2358.44,2693.11,102.0,,,,0.0,,,True,,2025-12-06 18:28:30
+862,https://fresh.deno.dev,Social Networking and Messaging,606.23,0.57,0.28,1063.56,fast,0.45,100.0,450.0,277.5,0.0,450.0,0.0,573.3,606.23,19.0,,,,1.0,,,True,,2025-12-06 18:28:44
+863,https://replit.com,Law and Government,5376.38,2.16,0.65,2489.06,medium,4.3,57.0,2320.13,645.05,0.0,4299.2,784.5,2159.18,5376.38,159.0,,,,0.0,,,True,,2025-12-06 18:29:17
+864,https://codesandbox.io,Streaming Services,3850.93,2.68,2.68,1436.91,slow,3.62,66.0,3493.0,2681.0,0.01,3617.0,56.0,2681.0,3850.93,58.0,,,,0.0,,,True,,2025-12-06 18:29:38
+865,https://glitch.com,News,1226.0,2.0,0.28,3836.0,,1.1,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 18:31:40
+866,https://codepen.io,Travel,2862.55,2.43,2.21,1178.0,slow,3.27,49.0,2301.76,2212.62,0.03,3271.68,723.16,2430.63,2862.55,91.0,,,,0.0,,,True,,2025-12-06 18:32:06
+867,https://jsfiddle.net,Sports,3820.11,1.83,1.82,2087.49,slow,2.36,64.0,2361.51,1823.51,0.01,2361.51,334.0,1832.3,3820.11,48.0,,,,0.0,,,True,,2025-12-06 18:32:28
+868,https://gumroad.com,Photography,607.76,0.85,0.56,715.01,medium,0.96,100.0,642.01,562.01,0.01,958.79,22.75,847.31,607.76,41.0,,,,0.0,,,True,,2025-12-06 18:32:50
+869,https://lemonsqueezy.com,Health and Fitness,3512.46,2.12,1.99,1656.82,slow,3.13,59.0,3129.21,1992.01,0.01,3129.21,310.0,2124.04,3512.46,46.0,,,,0.0,,,True,,2025-12-06 18:33:13
+870,https://paddle.com,Social Networking and Messaging,2872.52,1.62,0.58,1773.16,medium,3.6,80.0,1731.02,580.0,0.0,3604.22,270.0,1616.51,2872.52,87.0,,,,0.0,,,True,,2025-12-06 18:33:41
+871,https://convertkit.com,Law and Government,3239.24,1.72,0.6,1883.28,medium,4.97,60.0,1762.03,602.0,0.0,4970.58,1461.49,1715.92,3239.24,186.0,,,,0.0,,,True,,2025-12-06 18:34:23
+872,https://beehiiv.com,Streaming Services,9769.14,6.53,1.17,1496.04,slow,9.28,52.0,1588.08,1166.56,0.0,9279.1,2253.0,6533.7,9769.14,234.0,,,,0.0,,,True,,2025-12-06 18:35:22
+873,https://airtable.com,News,10971.58,4.46,2.18,2460.0,slow,4.85,34.0,4433.82,2183.06,0.05,4850.82,716.5,4455.62,10971.58,113.0,,,,0.0,,,True,,2025-12-06 18:36:00
+874,https://notion.site,Travel,11817.0,1.63,0.89,7249.69,medium,6.24,59.0,2347.7,890.18,0.01,6241.51,711.5,1627.45,11817.0,178.0,,,,0.0,,,True,,2025-12-06 18:36:26
+875,https://coda.io,Sports,22551.75,2.64,0.69,8542.33,medium,3.77,67.0,1309.52,689.51,0.0,3771.56,577.5,2639.93,22551.75,317.0,,,,0.0,,,True,,2025-12-06 18:36:58
+876,https://clickup.com,Photography,17056.16,4.16,1.4,4100.04,slow,12.22,44.0,2763.01,1403.01,0.0,12217.86,906.0,4163.26,17056.16,236.0,,,,0.0,,,True,,2025-12-06 18:37:37
+877,https://monday.com,Health and Fitness,17819.24,4.31,0.76,4134.39,medium,10.75,34.0,7714.02,763.0,0.1,10751.58,1317.5,4310.58,17819.24,455.0,,,,0.0,,,True,,2025-12-06 18:38:58
+878,https://asana.com,Social Networking and Messaging,4913.97,2.5,0.6,1965.59,medium,7.06,41.0,5425.54,601.01,0.01,7061.01,1942.0,2504.55,4913.97,314.0,,,,0.0,,,True,,2025-12-06 18:40:12
+879,https://trello.com,Law and Government,4371.02,0.89,0.55,4911.26,medium,3.12,72.0,554.7,554.7,0.03,3123.42,854.5,894.54,4371.02,100.0,,,,0.0,,,True,,2025-12-06 18:40:35
+880,https://miro.com,Streaming Services,3145.94,4.71,1.38,667.93,slow,31.83,48.0,1979.0,1375.0,0.0,31825.16,14120.0,4708.84,3145.94,117.0,,,,0.0,,,True,,2025-12-06 18:42:03
+881,https://figma.design,News,11074.13,7.16,0.6,1546.67,medium,8.95,32.0,8858.21,602.0,0.19,8949.98,639.84,7158.39,11074.13,193.0,,,,0.0,,,True,,2025-12-06 18:42:38
+882,https://framer.com,Travel,6803.38,2.72,1.04,2501.24,slow,4.85,65.0,1315.02,1035.01,0.18,4850.67,355.5,2722.56,6803.38,404.0,,,,0.0,,,True,,2025-12-06 18:43:25
+883,https://webflow.com,Sports,1429.0,2.3,0.11,4510.0,,1.0,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 18:45:28
+884,https://bubble.io,Photography,1414.0,1.4,0.23,3677.0,,0.8,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 18:47:34
+885,https://retool.com,Health and Fitness,2626.13,5.9,0.36,445.11,fast,27.7,58.0,1141.01,364.0,0.0,27699.3,9830.0,5896.6,2626.13,237.0,,,,0.0,,,True,,2025-12-06 18:48:50
+886,https://zapier.com,Social Networking and Messaging,9764.84,2.16,0.77,4520.76,medium,10.13,62.0,1289.01,765.71,0.01,10130.42,5832.0,2158.57,9764.84,214.0,,,,0.0,,,True,,2025-12-06 18:50:19
+887,https://make.com,Law and Government,5152.32,3.22,0.94,1600.1,medium,4.88,77.0,1885.85,937.94,0.0,4882.94,199.0,3219.07,5152.32,276.0,,,,0.0,,,True,,2025-12-06 18:51:11
+888,https://n8n.io,Streaming Services,7412.12,1.77,0.92,4187.64,medium,2.43,88.0,1701.02,921.01,0.0,2429.08,123.0,1768.87,7412.12,157.0,,,,0.0,,,True,,2025-12-06 18:51:40
+889,https://postman.com,News,4687.39,3.17,1.01,1478.67,slow,4.45,43.0,4086.09,1006.58,0.0,4447.21,806.42,3167.56,4687.39,200.0,,,,0.0,,,True,,2025-12-06 18:52:16
+890,https://insomnia.rest,Travel,5053.83,0.94,0.68,5376.41,medium,3.99,91.0,1062.05,682.04,0.01,3992.77,211.5,939.49,5053.83,93.0,,,,0.0,,,True,,2025-12-06 18:52:39
+891,httpie.io,Sports,819.0,2.0,0.2,4729.0,,1.2,,,,,,,,,,,,,,,,False,API status 400: Request contains an invalid argument.,2025-12-06 18:52:40
+892,https://linear.com,Photography,3844.41,5.31,1.65,723.99,slow,4.89,35.0,4821.53,1649.33,0.01,4891.53,811.5,5305.93,3844.41,177.0,,,,0.0,,,True,,2025-12-06 18:53:11
+893,https://height.app,Health and Fitness,729.0,1.6,0.11,3709.0,,0.9,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 18:53:32
+894,https://plane.so,Social Networking and Messaging,3528.57,4.93,0.32,715.73,fast,7.97,40.0,3796.1,321.01,0.0,7970.62,1863.5,4927.88,3528.57,150.0,,,,0.0,,,True,,2025-12-06 18:54:15
+895,https://cal.com,Law and Government,2254.66,1.95,0.68,1156.24,medium,3.88,78.0,1202.01,682.0,0.02,3879.03,366.0,1948.23,2254.66,164.0,,,,0.0,,,True,,2025-12-06 18:54:49
+896,https://calendly.com,Streaming Services,1433.42,1.0,0.54,1433.42,medium,1.92,91.0,1908.41,538.36,0.0,1920.41,20.51,1000.24,1433.42,73.0,,,,0.0,,,True,,2025-12-06 18:55:08
+897,https://loom.com,News,6032.99,3.1,0.79,1946.13,medium,6.59,56.0,1564.03,794.01,0.06,6592.54,1359.71,3096.28,6032.99,189.0,,,,0.0,,,True,,2025-12-06 18:55:41
+898,https://tldv.io,Travel,5761.16,2.8,0.84,2057.56,medium,3.41,64.0,2003.01,839.86,0.0,3412.86,437.5,2797.89,5761.16,148.0,,,,0.0,,,True,,2025-12-06 18:56:18
+899,https://grain.com,Sports,1328.28,3.01,0.73,441.29,medium,3.12,53.0,2266.93,726.2,0.0,3115.21,894.81,3008.98,1328.28,100.0,,,,0.0,,,True,,2025-12-06 18:56:44
+900,https://descript.com,Photography,5778.29,2.07,1.0,2791.44,medium,5.37,63.0,1215.01,995.01,0.0,5373.92,1099.5,2072.19,5778.29,249.0,,,,0.0,,,True,,2025-12-06 18:57:27
+901,https://riverside.fm,Health and Fitness,28466.36,2.21,1.96,12880.71,slow,8.9,31.0,6329.51,1957.06,0.13,8904.41,1197.5,2207.31,28466.36,213.0,,,,0.0,,,True,,2025-12-06 18:58:10
+902,https://restream.io,Law and Government,3068.39,1.24,0.29,2474.51,fast,3.96,90.0,918.39,285.5,0.0,3959.17,231.5,1243.07,3068.39,149.0,,,,0.0,,,True,,2025-12-06 18:58:35
+903,https://obsidian.md,Streaming Services,1549.71,0.93,0.32,1666.35,fast,1.46,98.0,1022.0,322.0,0.0,1457.95,40.0,925.1,1549.71,18.0,,,,0.0,,,True,,2025-12-06 18:58:50
+904,https://roamresearch.com,News,3358.13,1.65,1.49,2035.23,slow,4.78,47.0,2254.79,1491.39,0.15,4777.82,1355.96,1647.09,3358.13,64.0,,,,0.0,,,True,,2025-12-06 18:59:17
+905,https://logseq.com,Travel,3222.19,0.7,0.57,4603.13,medium,1.02,98.0,1022.19,572.29,0.0,1022.19,49.0,701.12,3222.19,31.0,,,,0.0,,,True,,2025-12-06 18:59:34
+906,https://reflect.app,Sports,2331.25,0.58,0.35,4019.4,fast,1.59,96.0,681.01,350.01,0.0,1593.46,160.5,577.26,2331.25,33.0,,,,0.0,,,True,,2025-12-06 19:00:00
+907,https://craft.do,Photography,3729.52,3.41,1.94,1093.7,slow,3.12,72.0,2495.38,1943.77,0.0,3116.59,61.5,3409.61,3729.52,105.0,,,,0.0,,,True,,2025-12-06 19:00:40
+908,https://bear.app,Health and Fitness,1403.12,3.51,0.32,399.75,fast,1.67,68.0,1662.17,322.01,0.34,1674.28,78.93,3510.85,1403.12,43.0,,,,0.0,,,True,,2025-12-06 19:01:05
+909,https://ulysses.app,Social Networking and Messaging,1579.28,2.24,0.66,705.04,medium,0.91,94.0,905.66,656.81,0.03,905.66,0.0,2242.22,1579.28,59.0,,,,1.0,,,True,,2025-12-06 19:01:31
+910,https://wsj.com,News,386.05,4.3,0.52,89.78,medium,1.9,,,,0.64,,,,386.05,16.0,,,,,,,True,,2025-12-06 19:01:45
+911,https://ft.com,News,2352.4,2.74,1.03,858.54,slow,2.99,87.0,1527.8,1031.01,0.0,2991.34,46.0,2737.51,2352.4,190.0,,,,0.0,,,True,,2025-12-06 19:02:14
+912,https://economist.com,News,5680.84,3.78,1.16,1502.87,slow,6.13,44.0,2625.04,1156.93,0.07,6134.56,1375.5,3784.45,5680.84,138.0,,,,0.0,,,True,,2025-12-06 19:02:49
+913,https://time.com,News,3370.71,1.72,0.42,1959.72,fast,5.7,67.0,885.0,425.0,0.01,5697.51,1561.0,1715.19,3370.71,111.0,,,,0.0,,,True,,2025-12-06 19:03:24
+914,https://newsweek.com,News,6815.16,3.55,0.8,1919.76,medium,9.75,58.0,1432.02,802.91,0.0,9752.62,1056.0,3548.02,6815.16,328.0,,,,0.0,,,True,,2025-12-06 19:04:00
+915,https://politico.com,News,6738.63,3.62,1.11,1861.5,slow,9.67,57.0,1549.04,1110.06,0.05,9665.88,775.5,3620.9,6738.63,598.0,,,,0.0,,,True,,2025-12-06 19:04:46
+916,https://thehill.com,News,10670.54,6.27,1.15,1701.84,slow,14.36,55.0,1223.02,1148.02,0.02,14363.14,2992.49,6270.63,10670.54,746.0,,,,0.0,,,True,,2025-12-06 19:06:13
+917,https://axios.com,News,3362.48,1.85,0.55,1817.56,medium,4.91,61.0,2588.76,551.01,0.0,4909.46,535.0,1853.18,3362.48,151.0,,,,0.0,,,True,,2025-12-06 19:06:52
+918,https://vox.com,News,6282.25,2.95,1.46,2129.58,slow,9.3,45.0,2728.05,1457.5,0.0,9302.29,1104.5,2950.97,6282.25,367.0,,,,0.0,,,True,,2025-12-06 19:08:02
+919,https://vice.com,News,7204.93,5.18,0.91,1390.91,medium,15.27,48.0,2329.03,909.01,0.05,15269.77,1073.5,5183.15,7204.93,1379.0,,,,0.0,,,True,,2025-12-06 19:09:30
+920,https://slate.com,News,7987.49,4.05,0.6,1972.22,medium,18.74,50.0,2280.02,600.1,0.0,18744.49,1113.5,4047.38,7987.49,1918.0,,,,0.0,,,True,,2025-12-06 19:11:02
+921,https://salon.com,News,3543.19,1.93,0.51,1835.85,medium,6.53,66.0,1231.05,511.01,0.0,6525.7,931.0,1934.95,3543.19,516.0,,,,0.0,,,True,,2025-12-06 19:11:50
+922,https://variety.com,News,8721.67,7.89,0.68,1105.41,medium,17.15,55.0,841.01,680.01,0.12,17146.57,2853.5,7889.43,8721.67,1857.0,,,,0.0,,,True,,2025-12-06 19:13:43
+923,https://hollywoodreporter.com,News,5651.9,4.72,0.96,1197.44,medium,15.09,38.0,1111.01,963.01,0.41,15088.6,2175.0,4723.4,5651.9,1311.0,,,,0.0,,,True,,2025-12-06 19:15:14
+924,https://deadline.com,News,2762.0,3.7,0.52,2775.0,,2.9,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 19:20:35
+925,https://ew.com,News,8061.1,4.5,0.67,1791.36,medium,8.5,61.0,1054.41,665.0,0.0,8499.94,865.0,4504.25,8061.1,615.0,,,,0.0,,,True,,2025-12-06 19:21:26
+926,https://expedia.com,Travel,3877.16,3.27,0.83,1185.68,medium,5.67,53.0,2528.0,834.0,0.03,5670.52,639.5,3266.67,3877.16,173.0,,,,0.0,,,True,,2025-12-06 19:21:56
+927,https://hotels.com,Travel,2949.7,2.84,0.99,1038.63,medium,5.48,60.0,1132.0,992.0,0.0,5484.08,1316.0,2838.02,2949.7,143.0,,,,0.0,,,True,,2025-12-06 19:22:29
+928,https://trivago.com,Travel,1592.5,2.06,0.55,773.06,medium,3.57,67.0,804.25,551.0,0.0,3572.82,1055.99,2056.88,1592.5,123.0,,,,0.0,,,True,,2025-12-06 19:22:53
+929,https://kayak.com,Travel,6349.65,3.33,2.27,1906.8,slow,6.75,50.0,3091.02,2271.01,0.11,6752.44,314.5,3334.02,6349.65,912.0,,,,0.0,,,True,,2025-12-06 19:24:16
+930,https://skyscanner.com,Travel,2078.76,2.24,0.74,928.02,medium,2.81,80.0,2314.41,739.01,0.0,2813.36,149.5,2237.87,2078.76,139.0,,,,0.0,,,True,,2025-12-06 19:24:37
+931,https://momondo.com,Travel,6459.94,3.46,2.27,1867.03,slow,6.89,16.0,6810.02,2271.01,0.4,6892.12,615.0,3455.09,6459.94,905.0,,,,0.0,,,True,,2025-12-06 19:25:28
+932,https://hostelworld.com,Travel,1601.0,3.1,0.52,1825.0,,2.7,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 19:27:32
+933,https://agoda.com,Travel,8284.18,4.28,0.95,1935.56,medium,5.96,58.0,1075.01,952.01,0.08,5962.76,969.0,4279.16,8284.18,146.0,,,,0.0,,,True,,2025-12-06 19:28:06
+934,https://trip.com,Travel,13538.52,3.74,2.08,3619.93,slow,6.33,46.0,3228.82,2075.73,0.18,6333.07,300.0,3741.8,13538.52,242.0,,,,0.0,,,True,,2025-12-06 19:28:40
+935,https://viator.com,Travel,6224.72,7.91,1.28,786.94,slow,7.31,36.0,4746.23,1275.6,0.0,7310.15,1050.0,7910.59,6224.72,339.0,,,,0.0,,,True,,2025-12-06 19:29:23
+936,https://getyourguide.com,Travel,2842.96,2.34,1.13,1214.94,slow,5.5,56.0,1799.4,1130.9,0.0,5495.13,1450.5,2337.19,2842.96,422.0,,,,0.0,,,True,,2025-12-06 19:30:11
+937,https://lonelyplanet.com,Travel,5233.02,3.59,0.69,1457.67,medium,6.15,53.0,5559.5,695.0,0.03,6145.02,344.0,3590.04,5233.02,180.0,,,,0.0,,,True,,2025-12-06 19:30:51
+938,https://frommers.com,Travel,7857.52,5.23,0.8,1502.39,medium,19.8,29.0,1895.26,797.7,0.61,19802.86,2221.5,5226.64,7857.52,1851.0,,,,0.0,,,True,,2025-12-06 19:32:35
+939,https://fodors.com,Travel,4972.33,3.73,1.03,1333.06,slow,14.43,43.0,3030.03,1025.71,0.0,14428.55,6135.79,3732.81,4972.33,312.0,,,,0.0,,,True,,2025-12-06 19:33:47
+940,https://ricksteves.com,Travel,1844.92,2.23,0.8,827.32,medium,2.24,59.0,2241.51,797.02,0.001,2241.51,71.0,2231.21,1844.92,37.0,,,,0.0,,,True,,2025-12-06 19:34:06
+941,https://travelocity.com,Travel,2906.6,2.06,0.91,1410.97,medium,5.24,62.0,1031.0,911.0,0.1,5236.16,1544.5,2055.78,2906.6,132.0,,,,0.0,,,True,,2025-12-06 19:34:46
+942,https://orbitz.com,Travel,2839.55,1.93,0.83,1471.27,medium,4.86,66.0,1036.0,833.0,0.04,4860.31,931.0,1926.96,2839.55,131.0,,,,0.0,,,True,,2025-12-06 19:35:21
+943,https://cheapoair.com,Travel,9502.06,3.57,0.84,2661.64,medium,10.64,60.0,995.49,838.63,0.0,10640.57,1748.5,3566.78,9502.06,451.0,,,,0.0,,,True,,2025-12-06 19:36:06
+944,https://hotwire.com,Travel,3940.97,3.48,1.16,1132.46,slow,5.18,45.0,3179.71,1162.73,0.0,5180.94,802.0,3480.26,3940.97,172.0,,,,0.0,,,True,,2025-12-06 19:36:38
+945,https://si.com,Sports,7112.08,3.1,1.22,2294.22,slow,7.19,55.0,1586.01,1222.76,0.0,7189.48,1227.0,3104.28,7112.08,426.0,,,,0.0,,,True,,2025-12-06 19:37:26
+946,https://bleacherreport.com,Sports,415.17,0.65,0.26,638.72,fast,0.32,100.0,315.0,255.0,0.0,315.0,0.0,649.04,415.17,19.0,,,,1.0,,,True,,2025-12-06 19:37:37
+947,https://cbssports.com,Sports,4273.08,1.21,1.13,3531.47,slow,4.5,71.0,1276.53,1129.7,0.03,4500.38,556.5,1214.83,4273.08,250.0,,,,0.0,,,True,,2025-12-06 19:38:33
+948,https://foxsports.com,Sports,9527.54,5.85,1.85,1628.64,slow,11.46,35.0,9782.62,1851.02,0.14,11456.49,400.5,5853.48,9527.54,778.0,,,,0.0,,,True,,2025-12-06 19:39:22
+949,https://nbcsports.com,Sports,6435.47,4.27,0.96,1507.14,medium,10.14,62.0,1158.0,958.0,0.09,10135.76,576.5,4267.72,6435.47,616.0,,,,0.0,,,True,,2025-12-06 19:40:23
+950,https://mlb.com,Sports,12750.07,8.58,3.01,1486.02,slow,14.43,26.0,7888.85,3014.51,0.02,14427.79,2631.22,8581.02,12750.07,407.0,,,,0.0,,,True,,2025-12-06 19:41:41
+951,https://nba.com,Sports,7775.29,5.38,1.12,1445.22,slow,7.71,48.0,1559.14,1121.61,0.13,7714.99,2245.0,5384.2,7775.29,350.0,,,,0.0,,,True,,2025-12-06 19:42:42
+952,https://nfl.com,Sports,51379.91,7.96,0.85,6454.76,medium,26.0,30.0,3557.52,849.4,0.22,26003.85,15496.5,7957.03,51379.91,573.0,,,,0.0,,,True,,2025-12-06 19:44:32
+953,https://nhl.com,Sports,5638.48,3.46,0.98,1629.62,medium,5.32,44.0,4097.8,984.2,0.02,5323.66,685.8,3459.53,5638.48,214.0,,,,0.0,,,True,,2025-12-06 19:45:09
+954,https://fifa.com,Sports,12035.85,5.12,2.55,2350.75,slow,10.94,6.0,9350.32,2545.33,0.53,10939.1,1275.5,5117.49,12035.85,201.0,,,,0.0,,,True,,2025-12-06 19:46:04
+955,https://uefa.com,Sports,6344.45,5.37,0.79,1181.46,medium,5.99,30.0,3591.78,788.01,0.27,5987.74,779.5,5365.01,6344.45,490.0,,,,0.0,,,True,,2025-12-06 19:47:11
+956,https://premierleague.com,Sports,2925.0,2.9,0.34,2455.0,,1.9,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 19:49:12
+957,https://skysports.com,Sports,833.95,2.59,0.63,321.99,medium,1.63,91.0,1263.52,631.01,0.01,1630.26,8.5,2592.98,833.95,57.0,,,,0.0,,,True,,2025-12-06 19:49:37
+958,https://goal.com,Sports,5574.32,7.51,0.89,742.25,medium,11.09,34.0,8269.23,894.73,0.01,11094.59,1750.5,7510.93,5574.32,750.0,,,,0.0,,,True,,2025-12-06 19:51:13
+959,https://espnfc.com,Sports,4972.67,3.25,1.13,1530.05,slow,7.5,43.0,2920.04,1128.01,0.1,7502.15,1022.0,3248.2,4972.67,220.0,,,,0.0,,,True,,2025-12-06 19:51:57
+960,https://f1.com,Sports,8184.1,3.83,0.84,2136.84,medium,5.58,77.0,2191.02,843.07,0.05,5578.59,136.5,3828.85,8184.1,191.0,,,,0.0,,,True,,2025-12-06 19:52:24
+961,https://nascar.com,Sports,7073.25,2.05,0.78,3450.37,medium,3.78,69.0,1216.35,779.01,0.02,3778.0,602.0,2050.06,7073.25,182.0,,,,0.0,,,True,,2025-12-06 19:52:56
+962,https://pgatour.com,Sports,16029.26,9.35,0.63,1714.36,medium,13.31,37.0,5026.04,631.01,0.0,13311.56,4568.7,9352.98,16029.26,431.0,,,,0.0,,,True,,2025-12-06 19:54:04
+963,https://atptour.com,Sports,11312.46,4.69,0.76,2412.04,medium,5.63,66.0,2053.74,763.9,0.12,5626.34,271.5,4691.6,11312.46,244.0,,,,0.0,,,True,,2025-12-06 19:54:39
+964,https://smugmug.com,Photography,5766.84,2.57,1.55,2243.91,slow,3.93,66.0,3932.03,1552.44,0.09,3932.03,92.0,2567.68,5766.84,87.0,,,,0.0,,,True,,2025-12-06 19:55:01
+965,https://zenfolio.com,Photography,3959.43,1.0,0.38,3959.43,fast,1.48,95.0,1472.02,383.01,0.04,1476.12,64.0,1003.88,3959.43,129.0,,,,0.0,,,True,,2025-12-06 19:55:25
+966,https://format.com,Photography,31030.93,2.98,1.15,10413.06,slow,2.5,72.0,2471.01,1151.0,0.14,2499.01,50.0,2983.01,31030.93,117.0,,,,0.0,,,True,,2025-12-06 19:55:55
+967,https://photoshelter.com,Photography,3236.17,3.57,2.03,906.49,slow,2.35,68.0,2349.44,2027.37,0.01,2349.44,160.0,3573.85,3236.17,73.0,,,,0.0,,,True,,2025-12-06 19:56:21
+968,https://squarespace.com/photography,Photography,3851.28,2.42,1.4,1591.44,slow,4.78,52.0,2222.18,1399.04,0.0,4779.97,896.5,2423.61,3851.28,144.0,,,,0.0,,,True,,2025-12-06 19:57:21
+969,https://wix.com/photography,Photography,1727.0,4.7,0.36,1632.0,,2.7,,,,,,,,,,,,,,,,False,Request timeout after retries,2025-12-06 19:59:25
+970,https://pixieset.com,Photography,4821.74,1.0,0.52,4821.74,medium,3.05,83.0,1199.02,522.53,0.0,3047.91,339.6,998.72,4821.74,102.0,,,,0.0,,,True,,2025-12-06 19:59:49
+971,https://shootproof.com,Photography,1395.82,1.18,0.9,1182.9,medium,1.29,95.0,1292.03,903.01,0.0,1294.03,30.0,1176.51,1395.82,41.0,,,,0.0,,,True,,2025-12-06 20:00:04
+972,https://photobucket.com,Photography,8499.61,7.32,3.13,1161.15,slow,9.58,13.0,6893.56,3127.37,0.25,9584.04,3114.29,7316.6,8499.61,151.0,,,,0.0,,,True,,2025-12-06 20:00:54
+973,https://imgur.com,Photography,12586.09,5.64,1.06,2231.58,slow,16.15,41.0,3951.89,1060.22,0.08,16149.43,662.0,5640.35,12586.09,1137.0,,,,0.0,,,True,,2025-12-06 20:02:06
+974,https://giphy.com,Photography,8444.03,2.2,0.32,3838.2,fast,5.87,61.0,5784.52,321.01,0.0,5870.52,264.0,2197.31,8444.03,112.0,,,,0.0,,,True,,2025-12-06 20:02:36
+975,https://tenor.com,Photography,15495.01,0.97,0.4,15974.24,fast,3.92,79.0,3922.67,400.51,0.0,3922.67,22.0,968.94,15495.01,97.0,,,,0.0,,,True,,2025-12-06 20:02:50
+976,https://gettyimages.com,Photography,8427.62,1.55,1.0,5437.17,medium,3.46,79.0,1917.0,996.14,0.0,3459.66,243.5,1553.88,8427.62,137.0,,,,0.0,,,True,,2025-12-06 20:03:12
+977,https://alamy.com,Photography,11949.01,6.56,0.79,1821.5,medium,10.36,35.0,8775.05,792.81,0.02,10357.62,1291.5,6557.65,11949.01,102.0,,,,0.0,,,True,,2025-12-06 20:03:50
+978,https://webmd.com,Health and Fitness,6259.92,3.87,0.75,1617.55,medium,13.04,57.0,1385.58,752.03,0.0,13043.15,1220.0,3866.01,6259.92,1668.0,,,,0.0,,,True,,2025-12-06 20:05:00
+979,https://healthline.com,Health and Fitness,6220.36,3.32,1.43,1873.6,slow,6.04,62.0,1773.0,1433.0,0.02,6040.83,435.01,3320.82,6220.36,172.0,,,,0.0,,,True,,2025-12-06 20:05:26
+980,https://medicalnewstoday.com,Health and Fitness,2920.06,2.44,1.24,1196.75,slow,3.78,74.0,1637.0,1237.0,0.03,3784.0,292.0,2435.69,2920.06,128.0,,,,0.0,,,True,,2025-12-06 20:05:48
+981,https://everydayhealth.com,Health and Fitness,4183.6,5.24,1.17,798.4,slow,6.5,20.0,3011.72,1170.01,0.91,6499.34,814.0,5241.38,4183.6,157.0,,,,0.0,,,True,,2025-12-06 20:06:23
+982,https://health.com,Health and Fitness,3099.07,1.82,0.9,1702.79,medium,7.41,70.0,936.01,896.01,0.0,7407.77,677.5,1817.02,3099.07,452.0,,,,0.0,,,True,,2025-12-06 20:06:56
+983,https://prevention.com,Health and Fitness,5113.71,3.06,0.86,1671.15,medium,6.96,49.0,2845.03,859.01,0.02,6963.43,825.5,3058.97,5113.71,294.0,,,,0.0,,,True,,2025-12-06 20:07:37
+984,https://menshealth.com,Health and Fitness,6029.3,3.73,0.85,1616.43,medium,8.27,46.0,2611.02,851.0,0.04,8267.42,1975.92,3729.53,6029.3,323.0,,,,0.0,,,True,,2025-12-06 20:08:26
+985,https://womenshealthmag.com,Health and Fitness,5432.29,3.4,0.82,1597.73,medium,8.15,46.0,2709.02,818.01,0.01,8145.69,1892.5,3401.62,5432.29,286.0,,,,0.0,,,True,,2025-12-06 20:09:13
+986,https://weather.gov,Law and Government,1220.83,1.82,0.72,670.79,medium,1.74,90.0,1731.02,723.39,0.03,1737.02,0.0,1817.1,1220.83,48.0,,,,0.0,,,True,,2025-12-06 20:09:28
+987,https://dmv.ca.gov,Law and Government,1982.54,2.32,1.14,854.54,slow,2.47,85.0,1694.65,1136.04,0.03,2466.6,120.5,2320.52,1982.54,77.0,,,,0.0,,,True,,2025-12-06 20:09:51
+988,https://benefits.gov,Law and Government,1031.48,1.66,0.58,621.37,medium,2.17,91.0,1304.4,575.81,0.01,2166.37,148.5,1657.88,1031.48,52.0,,,,0.0,,,True,,2025-12-06 20:10:10
+989,https://senate.gov,Law and Government,3093.01,2.16,0.78,1431.95,medium,3.36,68.0,3359.77,778.46,0.14,3362.12,151.0,2155.48,3093.01,52.0,,,,1.0,,,True,,2025-12-06 20:10:29
+990,https://house.gov,Law and Government,1392.86,2.61,0.64,533.66,medium,1.8,81.0,1007.52,636.03,0.2,1802.52,115.0,2610.84,1392.86,35.0,,,,0.0,,,True,,2025-12-06 20:10:49
+991,https://craigslist.org,News,1054.04,6.54,1.39,161.17,slow,2.09,77.0,2029.99,1386.98,0.0,2087.74,28.0,6538.39,1054.04,41.0,,,,0.0,,,True,,2025-12-06 20:11:41
+992,https://imdb.com,Streaming Services,1.31,1.12,0.46,1.17,fast,0.46,100.0,462.0,462.0,0.0,462.0,0.0,1119.22,1.31,2.0,,,,1.0,,,True,,2025-12-06 20:11:52
+993,https://archive.org,News,695.16,1.92,0.3,362.06,fast,1.14,90.0,877.51,296.0,0.15,1136.86,11.0,1920.34,695.16,106.0,,,,0.0,,,True,,2025-12-06 20:12:12
+994,https://pinterest.com,Photography,5059.0,9.0,0.97,1241.0,,5.6,,,,,,,,,,,,,,,,False,API status 500,2025-12-06 20:13:16
+995,https://reddit.com,Social Networking and Messaging,4646.36,2.69,1.03,1727.27,slow,4.55,51.0,2197.78,1032.53,0.06,4545.54,1077.0,2693.91,4646.36,101.0,,,,0.0,,,True,,2025-12-06 20:14:03
+996,https://quora.com,News,1922.49,2.24,0.71,858.25,medium,1.51,90.0,1437.5,707.15,0.04,1511.2,88.0,2240.92,1922.49,27.0,,,,0.0,,,True,,2025-12-06 20:14:20
+997,https://4chan.org,Social Networking and Messaging,117.57,0.44,0.41,267.2,fast,0.46,100.0,464.85,414.02,0.0,464.85,0.0,439.54,117.57,20.0,,,,1.0,,,True,,2025-12-06 20:14:31
+998,https://huffpost.com,News,10910.82,3.95,1.15,2762.23,slow,13.16,53.0,1612.03,1145.71,0.0,13163.74,2537.8,3947.26,10910.82,1243.0,,,,0.0,,,True,,2025-12-06 20:15:52
+999,https://buzzfeed.com,News,3795.78,2.37,1.03,1601.59,slow,8.25,64.0,1066.51,1026.51,0.01,8251.22,843.0,2370.02,3795.78,697.0,,,,0.0,,,True,,2025-12-06 20:16:51
+1000,https://thesun.co.uk,News,5292.01,2.84,0.62,1863.38,medium,11.9,61.0,1271.01,621.0,0.01,11897.96,1337.0,2839.09,5292.01,841.0,,,,0.0,,,True,,2025-12-06 20:18:23
+1001,https://nypost.com,News,22771.26,4.05,0.92,5622.53,medium,15.2,48.0,1184.2,918.0,0.21,15199.86,1506.5,4052.81,22771.26,1236.0,,,,0.0,,,True,,2025-12-06 20:19:41
+1002,https://unsplash.com,Photography,1821.51,0.49,0.3,3717.37,fast,2.1,92.0,1552.0,299.0,0.0,2103.4,142.5,491.32,1821.51,111.0,,,,0.0,,,True,,2025-12-06 20:19:59
+1003,https://pexels.com,Photography,2094.94,1.13,0.83,1853.93,medium,3.21,72.0,2299.05,833.02,0.01,3209.07,348.5,1128.8,2094.94,77.0,,,,0.0,,,True,,2025-12-06 20:20:17
+1004,https://deviantart.com,Photography,1.21,0.23,0.23,5.26,fast,0.23,100.0,233.0,233.0,0.0,233.0,0.0,233.0,1.21,1.0,,,,1.0,,,True,,2025-12-06 20:20:26
+1005,https://metacafe.com,Streaming Services,5673.0,5.9,1.66,775.0,,5.5,,,,,,,,,,,,,,,,False,API status 400: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_CONNECTION_FAILED),2025-12-06 20:20:46
+1006,https://tumblr.com,Social Networking and Messaging,17397.28,4.02,0.79,4327.68,medium,15.34,36.0,15106.3,793.01,0.04,15336.51,1450.0,4022.15,17397.28,1202.0,,,,0.0,,,True,,2025-12-06 20:22:14
+1007,https://wordpress.com,News,2314.2,0.9,0.61,2571.33,medium,2.67,97.0,1178.01,606.01,0.0,2668.66,53.5,902.47,2314.2,64.0,,,,0.0,,,True,,2025-12-06 20:22:32
+1008,https://blogger.com,News,1815.57,1.89,1.35,960.62,slow,1.62,87.0,1614.19,1346.89,0.0,1616.19,0.0,1891.29,1815.57,56.0,,,,1.0,,,True,,2025-12-06 20:22:48
+1009,https://wix.com/blog,Photography,3507.95,1.42,0.91,2470.39,medium,4.67,81.0,1692.0,912.0,0.0,4666.53,264.5,1419.03,3507.95,353.0,,,,0.0,,,True,,2025-12-06 20:23:18
+1010,https://fandom.com,Streaming Services,5008.3,1.8,0.72,2782.39,medium,4.67,87.0,1065.47,721.95,0.11,4670.15,181.0,1802.53,5008.3,288.0,,,,0.0,,,True,,2025-12-06 20:23:48
+1011,https://wikia.com,News,2369.4,1.07,1.07,2214.39,slow,2.32,86.0,2321.94,1068.7,0.0,2321.94,0.0,1068.7,2369.4,101.0,,,,0.0,,,True,,2025-12-06 20:24:04
+1012,https://medium.com/blog,News,2181.29,2.17,1.09,1005.2,slow,2.69,60.0,2392.91,1092.23,0.08,2692.85,444.5,2171.06,2181.29,58.0,,,,0.0,,,True,,2025-12-06 20:24:24
+1013,https://substack.com/blog,News,2072.52,2.02,2.02,1026.0,slow,3.32,61.0,2015.06,2015.06,0.0,3319.06,435.0,2015.06,2072.52,114.0,,,,0.0,,,True,,2025-12-06 20:24:45
+1014,https://patch.com,News,3516.92,2.99,0.82,1176.23,medium,12.64,36.0,1890.06,824.52,0.36,12642.91,2140.0,2994.63,3516.92,1080.0,,,,0.0,,,True,,2025-12-06 20:26:08
+1015,https://scribd.com,Photography,4388.04,2.52,2.52,1741.29,slow,6.32,42.0,2675.14,2515.1,0.0,6318.91,1237.0,2515.1,4388.04,172.0,,,,0.0,,,True,,2025-12-06 20:26:42

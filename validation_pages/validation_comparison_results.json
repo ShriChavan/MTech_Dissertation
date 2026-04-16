@@ -1,0 +1,31 @@
+{
+  "experiment": "Real-World Validation of Prescriptive Optimization Model",
+  "timestamp": "2026-01-08T12:07:20.116534",
+  "slow_page": {
+    "url": "https://baddummypage.onrender.com/",
+    "pagespeed_score": 55.00000000000001,
+    "predicted_class": "slow",
+    "probabilities": {
+      "fast": 0.027354838326573372,
+      "medium": 0.31918618083000183,
+      "slow": 0.6534589529037476
+    }
+  },
+  "fast_page": {
+    "url": "https://gooddummypage.onrender.com/",
+    "pagespeed_score": 100,
+    "predicted_class": "fast",
+    "probabilities": {
+      "fast": 0.9973559379577637,
+      "medium": 0.002046364126726985,
+      "slow": 0.0005977552500553429
+    }
+  },
+  "validation_success": true,
+  "key_improvements": {
+    "fcp_reduction_pct": -92.3524670905346,
+    "lcp_reduction_pct": -97.29883603238866,
+    "page_size_reduction_pct": -99.85450493452963,
+    "performance_score_improvement": 44.99999999999999
+  }
+}
